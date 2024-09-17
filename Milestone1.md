@@ -6,7 +6,9 @@ There are two main users of the system: the patients and the clinicians. Each on
 
 
 2. Use Case View
-Actors: Patients Medical Staff in EDs
+Actors: Patients and Medical Staff (Clinicians) in EDs
+
+![Alt](Untitled.svg)
 
 
 3. Use Case Tables
@@ -76,3 +78,5 @@ Actors: Patients Medical Staff in EDs
 | Assumptions | Clinician has an account (See Use Case 2 “Authentication”). Clinician has already reviewed the virtual triage case, previously submitted by a patient (See Use Case 5 “Clinician Review Virtual Triage”). |
 | Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
+
+
