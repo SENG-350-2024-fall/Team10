@@ -87,5 +87,5 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Ella | |
 | Andra | |
 | Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Use Case Diagram | 
-| Shyla | |
-| Alex | Use Cases: “Patient Virtual Triage” |
+| Shyla | Edited Summary, Use Case: “Clinician Provides Referral / Diagnosis”, Edited Use Case 1, Edited Use Case Diagram|
+| Alex | Use Case: “Patient Virtual Triage” |
