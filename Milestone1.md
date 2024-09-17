@@ -23,4 +23,46 @@ Describe the system in your own words (0.5-1 page)
 | Description | A patient wants to create an account in order to use and interact with the system.|
 | Actors | Patient |
 | Assumptions | The patient has access to a device that can access the internet |
-| Steps | Patient searches up the system name and navigates to the “Sign up” button. Patient then enters their health number and creates a password. |
+| Steps | <ul><li>Patient searches up the system name and navigates to the “Sign up” button.</li><li>Patient enters their health number and creates a password.</li></ul> |
+
+| Use Case 2 |  |
+| ----------- | ---------------------- |
+| Description |  |
+| Actors |  |
+| Assumptions |  |
+| Steps |  |
+
+| Use Case 3 |  |
+| ----------- | ---------------------- |
+| Description |  |
+| Actors |  |
+| Assumptions |  |
+| Steps |  |
+
+| Use Case 4 |  |
+| ----------- | ---------------------- |
+| Description |  |
+| Actors |  |
+| Assumptions |  |
+| Steps |  |
+
+| Use Case 5 | Clinician Reviews Virtual Triage |
+| ----------- | ---------------------- |
+| Description |  |
+| Actors |  |
+| Assumptions |  |
+| Steps |  |
+
+| Use Case 6 |  |
+| ----------- | ---------------------- |
+| Description |  |
+| Actors |  |
+| Assumptions |  |
+| Steps |  |
+
+| Use Case 7 |  |
+| ----------- | ---------------------- |
+| Description |  |
+| Actors |  |
+| Assumptions |  |
+| Steps |  |
