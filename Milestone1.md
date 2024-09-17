@@ -48,10 +48,12 @@ Describe the system in your own words (0.5-1 page)
 
 | Use Case 5 | Clinician Reviews Virtual Triage |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Description | Clinician Review Virtual Triage
+The clinician reviews the responses and information provided by the patient on the questionnaire. Using this information and the clinicians medical knowledge the clinician then triages the patient by severity and provides then with further instruction (referral, prescription, advice) |
+| Actors | Clinician |
+| Assumptions | A client has filled out and submitted a questionnaire.  |
+| Steps | <ul><li>Clinician logs into account.</li><li>Navigate to patient case.</li><li>Assess individual case and provide diagnosis / next steps.</li><li>Submit diagnosis.</li></ul> |
+| Issues | <ul><li>No patients </li><li>Diagnosis not successfully submitted </li><li>Staff takes too long to get to patients’ questionnaire</li></ul> |
 
 | Use Case 6 |  |
 | ----------- | ---------------------- |
