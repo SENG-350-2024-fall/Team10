@@ -40,12 +40,13 @@ Actors: Patients Medical Staff in EDs
 | Assumptions |  |
 | Steps |  |
 
-| Use Case 4 |  |
+| Use Case 4 | Patient Virtual Triage |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Description | The patient can complete a dynamic virtual questionnaire that adapts to the patient's previous answers. |
+| Actors | Patient |
+| Assumptions | The patient is already registered in the system. See use case 1. <br> The patient is logged in to the system. |
+| Steps |  1.  The patient licks the “new virtual triage” button. <br> 2. The patient is taken to the virtual triage page. <br> 3. The patient is asked a question about their current situation/symptoms. <br> 4. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain. <br> 5. The patient clicks the “submit” button to submit the virtual triage for review. <br> 6. The patient is provided with a next course of action upon completion of their virtual triage’s review. |
+| Issues | Virtual triage review may take too long. <br> No clinicians available to review the triage.|
 
 | Use Case 5 | Clinician Reviews Virtual Triage |
 | ----------- | ---------------------- |
