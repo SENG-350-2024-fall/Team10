@@ -22,12 +22,17 @@ Actors: Patients Medical Staff in EDs
 | Assumptions | The patient has access to a device that can access the internet |
 | Steps | <ul><li>Patient searches up the system name and navigates to the “Sign up” button.</li><li>Patient enters their health number and creates a password.</li></ul> |
 
-| Use Case 2 |  |
+
+| Use Case 2 | Authentication |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Description | The patient can log into the system |
+| Actors | Patient |
+| Assumptions | - The patient is already registered in the system (see Use Case 1 “Register Account”) <br> - Available clinics are already registered in the system|
+| Steps | 1. The patient visits the website URL and sees the “Log in” button <br> 2. The patient clicks the button and is asked for their health number and password <br> 3. The patient enters their correct health number and password <br> 4. The patient is taken to the home page of thet application|
+| Variations | Alternative flow: <br> 3. b) The patient enters incorrect information as their credentials <br> 4. b) The patient is prompted to retry logging in <br> 5) After 3 incorrect attempts, the patient must reset their password |
+| Non-Functional | The database must securely store credentials in an encrypted format |
+| Issues | The patient tries to log in before creating an account |
+
 
 | Use Case 3 |  |
 | ----------- | ---------------------- |
