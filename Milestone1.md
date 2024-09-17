@@ -49,8 +49,7 @@ Actors: Patients Medical Staff in EDs
 
 | Use Case 5 | Clinician Reviews Virtual Triage |
 | ----------- | ---------------------- |
-| Description | Clinician Review Virtual Triage
-The clinician reviews the responses and information provided by the patient on the questionnaire. Using this information and the clinicians medical knowledge the clinician then triages the patient by severity and provides then with further instruction (referral, prescription, advice) |
+| Description | The clinician reviews the responses and information provided by the patient on the questionnaire. Using this information and the clinicians medical knowledge the clinician then triages the patient by severity and provides then with further instruction (referral, prescription, advice) |
 | Actors | Clinician |
 | Assumptions | A client has filled out and submitted a questionnaire.  |
 | Steps | <ul><li>Clinician logs into account.</li><li>Navigate to patient case.</li><li>Assess individual case and provide diagnosis / next steps.</li><li>Submit diagnosis.</li></ul> |
