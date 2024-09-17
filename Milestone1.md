@@ -51,10 +51,10 @@ Describe the system in your own words (0.5-1 page)
 | Description |  |
 | Actors |  |
 | Assumptions | The patient licks the “new virtual triage” button. |
-| Steps | 1. The patient is taken to the virtual triage page.<br>
-2. The patient is asked a question about their current situation/symptoms.<br>
-3. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain.<br>
-4. The patient clicks the “submit” button to submit the virtual triage for review. <br>
+| Steps | 1. The patient is taken to the virtual triage page.<br/>
+2. The patient is asked a question about their current situation/symptoms.<br/>
+3. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain.<br/>
+4. The patient clicks the “submit” button to submit the virtual triage for review. <br/>
 5. The patient is provided with a next course of action upon completion of their virtual triage’s review. |
 | Issues | Virtual triage review may take too long. | 
 
