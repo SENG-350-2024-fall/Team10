@@ -80,3 +80,11 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
 
 
+# 4. Contributions
+
+| Name | Contributions | 
+| Ella | |
+| Andra | |
+| Val | | 
+| Shyla | |
+| Alex | |
