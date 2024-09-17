@@ -53,9 +53,10 @@ Actors: Patients Medical Staff in EDs
 | Assumptions |  |
 | Steps |  |
 
-| Use Case 7 |  |
+| Use Case 7 | Clinician Provides Referral or Diagnosis |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Description | After reviewing the virtual triage case, the clinician will provide their referral and or diagnosis of the submission. This will allow the patient to confirm the next steps they need to take.  |
+| Actors | Clinician |
+| Assumptions | Clinician has an account (See Use Case 2 “Authentication”). Clinician has already reviewed the virtual triage case, previously submitted by a patient (See Use Case 5 “Clinician Review Virtual Triage”). |
+| Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
+| Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
