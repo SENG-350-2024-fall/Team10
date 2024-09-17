@@ -24,6 +24,9 @@ Describe the system in your own words (0.5-1 page)
 | Actors | Patient |
 | Assumptions | The patient has access to a device that can access the internet |
 | Steps | <ul><li>Patient searches up the system name and navigates to the “Sign up” button.</li><li>Patient enters their health number and creates a password.</li></ul> |
+| Variations | If patient already has an account, they must sign in (enter email and password) rather than sign up. |
+| Non-Functional | <ul><li>Fast </li><li>Available in both English and French</li></ul> |
+| Issues | <ul><li>No connection </li><li>Patient forgets login</li></ul> |
 
 | Use Case 2 |  |
 | ----------- | ---------------------- |
