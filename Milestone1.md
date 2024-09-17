@@ -19,6 +19,7 @@ Describe the system in your own words (0.5-1 page)
 3. Use Case Tables
 
 | Use Case 1 | Register Account |
+| ----------- | ---------------------- |
 | Description | A patient wants to create an account in order to use and interact with the system.|
 | Actors | Patient |
 | Assumptions | The patient has access to a device that can access the internet |
