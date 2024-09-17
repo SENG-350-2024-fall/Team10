@@ -56,9 +56,9 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 
 | Use Case 5 | Clinician Reviews Virtual Triage |
 | ----------- | ---------------------- |
-| Description | The clinician reviews the responses and information provided by the patient on the questionnaire. Using this information and the clinicians medical knowledge the clinician then triages the patient by severity and provides then with further instruction (referral, prescription, advice) |
+| Description | The clinician reviews the responses and information provided by the patient on the questionnaire (see use case 4). Using this information and the clinicians medical knowledge the clinician then triages the patient by severity and provides then with further instruction (ie. referral, prescription, advice) |
 | Actors | Clinician |
-| Assumptions | A client has filled out and submitted a questionnaire.  |
+| Assumptions | A client has filled out and submitted a questionnaire (see use case 4).  |
 | Steps | 1. Clinician logs into account.<br>2. Navigate to patient case. <br>3. Assess individual case and provide diagnosis / next steps. <br>4. Submit diagnosis.<br> |
 | Issues | <ul><li>No patients </li><li>Diagnosis not successfully submitted </li><li>Staff takes too long to get to patients’ questionnaire</li></ul> |
 
