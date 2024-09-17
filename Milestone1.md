@@ -88,4 +88,4 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Andra | |
 | Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Use Case Diagram | 
 | Shyla | |
-| Alex | |
+| Alex | Use Cases: “Patient Virtual Triage” |
