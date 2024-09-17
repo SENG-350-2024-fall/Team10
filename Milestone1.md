@@ -83,6 +83,7 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 # 4. Contributions
 
 | Name | Contributions | 
+| ----------- | ---------------------- |
 | Ella | |
 | Andra | |
 | Val | | 
