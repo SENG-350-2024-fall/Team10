@@ -15,13 +15,13 @@ Actors: Patients and Medical Staff (Clinicians) in EDs
 
 | Use Case 1 | Register Account |
 | ----------- | ---------------------- |
-| Description | A patient wants to create an account in order to use and interact with the system.|
-| Actors | Patient |
-| Assumptions | The patient has access to a device that can access the internet |
-| Steps | <ul><li>Patient searches up the system name and navigates to the “Sign up” button.</li><li>Patient enters their health number and creates a password.</li></ul> |
-| Variations | If patient already has an account, they must sign in (enter email and password) rather than sign up. |
-| Non-Functional | <ul><li>Fast </li><li>Available in both English and French</li></ul> |
-| Issues | <ul><li>No connection </li><li>Patient forgets login</li></ul> |
+| Description | A patient/clinician want to create an account to use and interact with the system.|
+| Actors | Patient, Clinician |
+| Assumptions | The patient/clinician has access to a device that can access the internet |
+| Steps | 1. a. Patient searches up the system name and navigates to the “Sign up” button. <br> 1. b. Clinician receives an invitation email to register and navigates to the "Clinician Sign up" button. <br> 2. a. Patient enters their health number and creates a password. <br> 2. b. Clinician enters their employee number and creates a password.|
+| Variations | 2. If patient/clinician already has an account, they must sign in (See Use Case 2 "Authentication") rather than sign up. |
+| Non-Functional | 1. Fast <br> 2. Available in both English and French |
+| Issues | 1. No connection <br> 2. Patient/Clinician forgets login |
 
 
 | Use Case 2 | Authentication |
