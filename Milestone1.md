@@ -39,19 +39,24 @@ Describe the system in your own words (0.5-1 page)
 | Assumptions |  |
 | Steps |  |
 
-| Use Case 4 |  |
+| Use Case 4 | Patient Virtual Triage |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
+| Description | The patient can complete a dynamic virtual questionnaire that adapts to the patient's previous answers. |
+| Actors | Patient |
+| Assumptions | The patient is already registered in the system. See use case 1. <br> The patient is logged in to the system. |
 | Steps |  |
 
 | Use Case 5 | Clinician Reviews Virtual Triage |
 | ----------- | ---------------------- |
 | Description |  |
 | Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Assumptions | The patient licks the “new virtual triage” button. |
+| Steps | 1. The patient is taken to the virtual triage page.<br>
+2. The patient is asked a question about their current situation/symptoms.<br>
+3. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain.<br>
+4. The patient clicks the “submit” button to submit the virtual triage for review. <br>
+5. The patient is provided with a next course of action upon completion of their virtual triage’s review. |
+| Issues | Virtual triage review may take too long. | 
 
 | Use Case 6 |  |
 | ----------- | ---------------------- |
