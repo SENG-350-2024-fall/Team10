@@ -8,7 +8,7 @@ There are two main users of the system: the patients and the clinicians. Each on
 # 2. Use Case View
 Actors: Patients and Medical Staff (Clinicians) in EDs
 
-![Alt](Untitled.svg)
+![Alt](UseCase.svg)
 
 
 # 3. Use Case Tables
