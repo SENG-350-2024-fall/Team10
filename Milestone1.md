@@ -10,6 +10,7 @@ Actors: Patients and Medical Staff (Clinicians) in EDs
 
 ![Alt](UseCase.svg)
 
+Note: if viewing in dark mode and you cannot see the lines, please try viewing in light mode (with white background)
 
 # 3. Use Case Tables
 
