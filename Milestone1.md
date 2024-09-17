@@ -69,7 +69,6 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Assumptions | Clinician has reviewed virtual triage case (see Use Case 5) and submitted recommendations to the system (see Use Case 7). |
 | Steps | 1. Patient signs into their system account (see Use Case 2) <br> 2. Patient checks notification from clinician<br> 3. Patient waits for ED notification<br>|
 | Variations| 3b. Patient follows Clinicians referral that is external to the system (visit GP, over the counter medication, call hotline, or visit ED immediately)|
-| Non Functional | |
 | Issues | <ul><li>Untimely status notification |
 
 | Use Case 7 | Clinician Provides Referral or Diagnosis |
