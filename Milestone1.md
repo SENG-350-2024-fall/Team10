@@ -56,7 +56,7 @@ Actors: Patients Medical Staff in EDs
 | Description | The clinician reviews the responses and information provided by the patient on the questionnaire. Using this information and the clinicians medical knowledge the clinician then triages the patient by severity and provides then with further instruction (referral, prescription, advice) |
 | Actors | Clinician |
 | Assumptions | A client has filled out and submitted a questionnaire.  |
-| Steps | <ul><li>Clinician logs into account.</li><li>Navigate to patient case.</li><li>Assess individual case and provide diagnosis / next steps.</li><li>Submit diagnosis.</li></ul> |
+| Steps | 1. Clinician logs into account.<br>2. Navigate to patient case. <br>3. Assess individual case and provide diagnosis / next steps. <br>4. Submit diagnosis.<br> |
 | Issues | <ul><li>No patients </li><li>Diagnosis not successfully submitted </li><li>Staff takes too long to get to patients’ questionnaire</li></ul> |
 
 | Use Case 6 | Patient Check Referral / Notification |
