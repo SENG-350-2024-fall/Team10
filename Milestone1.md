@@ -86,6 +86,6 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | ----------- | ---------------------- |
 | Ella | |
 | Andra | |
-| Val | | 
+| Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Use Case Diagram | 
 | Shyla | |
 | Alex | |
