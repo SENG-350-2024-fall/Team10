@@ -1,37 +1,39 @@
-System Description
+# 1. System Description
+
+The system aims to target the currently very long ED wait times by allowing patients to forsee their waiting time, register online, and have clinicians assess what the patients next steps should be. The patient can either wait from the comfort of their own home or be redirected to a general practitioner or a pharmacy. This kind of system would be practical in the medical field worldwide, especially ones with a higher demand for doctors. Additionally, there are many cases of people misusing Emergency Departments for issues that do not require emergency care. This system will filter out false emergencies and reduce wait times in general.
+
+There are two main users of the system: the patients and the clinicians. Each one is required to create an account and each actor is granted different permissions within the system. The patient will only have access to ED wait times, ED queue registration, their personal account and medical records, and communication with clinicians. The clinicians will have access to all patient files, all wait times, patients’ submitted assessment questionnaires, and communication with all clinics and all patients. The clinicians will be able to suggest a course of action for the patient to take based on their assessment of their questionnaire and figure out whether waiting for emergency services is appropriate in the patient’s case.
 
 
-Describe the system in your own words (0.5-1 page)
-The system aims to target the currently very long ED wait times by allowing patients to forsee their waiting time, register online, and have clinicians assess what the patients next steps should be. The patient can either wait from the comfort of their own home or be redirected to a general practitioner or a pharmacy. This kind of system would be practical in the medical field worldwide, especially ones with a higher demand for doctors. Additionally, there are many cases of people misusing Emergency Rooms for issues that do not require emergency care. This system will filter out false emergencies and reduce wait times in general.
+# 2. Use Case View
+Actors: Patients and Medical Staff (Clinicians) in EDs
 
-There are two main users of the system: the patients and the clinicians. Each one is required to create an account and each actor is granted different permissions within the system. The patient will only have access to wait times, ED queue registration, their own account and medical records, and to communication with medical staff. The medical staff will have access to all patient files, all wait times, patients’ submitted assessment questionnaires, and communication with all clinics and all patients. The medical staff will be able to suggest a course of action for the patient to take based on their assessment of their questionnaire and figure out whether waiting for emergency services is appropriate in the patient’s case.
+![Alt](UseCase.svg)
 
-Bullet Point: Interactive virtual software that enables patients to get the help they need faster than everyone waiting in the ED Patients can view the stat Patient logs in/registers Dynamic questionnaire that adapts to the patient's previous answers. Recommends next steps: Go to GP Over the counter medication Use hotline Visit ED immediately Visit ED when notified by system
+Note: if viewing in dark mode and you cannot see the lines, please try viewing in light mode (with white background)
 
-
-2. Use Case View
-Actors: Patients Medical Staff in EDs
-
-
-3. Use Case Tables
+# 3. Use Case Tables
 
 | Use Case 1 | Register Account |
 | ----------- | ---------------------- |
-| Description | A patient wants to create an account in order to use and interact with the system.|
-| Actors | Patient |
-| Assumptions | The patient has access to a device that can access the internet |
-| Steps | <ul><li>Patient searches up the system name and navigates to the “Sign up” button.</li><li>Patient enters their health number and creates a password.</li></ul> |
+| Description | A patient/clinician want to create an account to use and interact with the system.|
+| Actors | Patient, Clinician |
+| Assumptions | The patient/clinician has access to a device that can access the internet |
+| Steps | 1. a. Patient searches up the system name and navigates to the “Sign up” button. <br> 1. b. Clinician receives an invitation email to register and navigates to the "Clinician Sign up" button. <br> 2. a. Patient enters their health number and creates a password. <br> 2. b. Clinician enters their employee number and creates a password.|
+| Variations | 2. If patient/clinician already has an account, they must sign in (See Use Case 2 "Authentication") rather than sign up. |
+| Non-Functional | 1. Fast <br> 2. Available in both English and French |
+| Issues | 1. No connection <br> 2. Patient/Clinician forgets login |
 
 
 | Use Case 2 | Authentication |
 | ----------- | ---------------------- |
 | Description | The patient can log into the system |
-| Actors | Patient |
-| Assumptions | - The patient is already registered in the system (see Use Case 1 “Register Account”) <br> - Available clinics are already registered in the system|
-| Steps | 1. The patient visits the website URL and sees the “Log in” button <br> 2. The patient clicks the button and is asked for their health number and password <br> 3. The patient enters their correct health number and password <br> 4. The patient is taken to the home page of thet application|
-| Variations | Alternative flow: <br> 3. b) The patient enters incorrect information as their credentials <br> 4. b) The patient is prompted to retry logging in <br> 5) After 3 incorrect attempts, the patient must reset their password |
+| Actors | User = Patient and Clinician |
+| Assumptions | - The user is already registered in the system (see Use Case 1 “Register Account”) <br> - Available clinics are already registered in the system|
+| Steps | 1. The user visits the website URL and sees the “Log in” button <br> 2. The user clicks the button and is asked for their credentials <br> 3. The user enters their correct credentials <br> 4. The user is taken to the home page of thet application|
+| Variations | Alternative flow: <br> 3. b) The user enters incorrect information as their credentials <br> 4. b) The user is prompted to retry logging in <br> 5) After 3 incorrect attempts, the user must reset their password |
 | Non-Functional | The database must securely store credentials in an encrypted format |
-| Issues | The patient tries to log in before creating an account |
+| Issues | The user tries to log in before creating an account |
 
 
 | Use Case 3 | Check ED / Clinic Wait Times |
@@ -44,30 +46,37 @@ Actors: Patients Medical Staff in EDs
 | Non-Functional Requirements | - The clinic wait time display must be real-time -> servers must be scalable for busy hours and must have a load balancer <br> Website must be available 99.9% of the time|
 | Issues |- Website is down and shows inaccurate times <br> - ED is too busy to update the business of the clinic and the times are inaccurate <br> - Patients with severe emergency issues may take precedence and come unannounced <br> - Patient does not share location with their browser and has to manually enter it (lowers usability a little) |
 
-| Use Case 4 |  |
+| Use Case 4 | Patient Virtual Triage |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Description | The patient can complete a dynamic virtual questionnaire that adapts to the patient's previous answers. |
+| Actors | Patient |
+| Assumptions | The patient is already registered in the system. See use case 1. <br> The patient is logged in to the system. |
+| Steps |  1.  The patient licks the “new virtual triage” button. <br> 2. The patient is taken to the virtual triage page. <br> 3. The patient is asked a question about their current situation/symptoms. <br> 4. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain. <br> 5. The patient clicks the “submit” button to submit the virtual triage for review. <br> 6. The patient is provided with a next course of action upon completion of their virtual triage’s review (See use case 5). |
+| Issues | Virtual triage review may take too long. <br> No clinicians available to review the triage.|
 
 | Use Case 5 | Clinician Reviews Virtual Triage |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Description | The clinician reviews the responses and information provided by the patient on the questionnaire (see use case 4). Using this information and the clinicians medical knowledge the clinician then triages the patient by severity and provides then with further instruction (ie. referral, prescription, advice) |
+| Actors | Clinician |
+| Assumptions | A client has filled out and submitted a questionnaire (see use case 4).  |
+| Steps | 1. Clinician logs into account.<br>2. Navigate to patient case. <br>3. Assess individual case and provide diagnosis / next steps. <br>4. Submit diagnosis.<br> |
+| Issues | <ul><li>No patients </li><li>Diagnosis not successfully submitted </li><li>Staff takes too long to get to patients’ questionnaire</li></ul> |
 
-| Use Case 6 |  |
+| Use Case 6 | Patient Check Referral / Notification |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Description | The patient views the next step(s) recommendation of the clinician through a notification in the system. |
+| Actors | Patient |
+| Assumptions | Clinician has reviewed virtual triage case (see Use Case 5) and submitted recommendations to the system (see Use Case 7). |
+| Steps | 1. Patient signs into their system account (see Use Case 2) <br> 2. Patient checks notification from clinician<br> 3. Patient waits for ED notification<br>|
+| Variations| 3b. Patient follows Clinicians referral that is external to the system (visit GP, over the counter medication, call hotline, or visit ED immediately)|
+| Issues | <ul><li>Untimely status notification |
 
-| Use Case 7 |  |
+| Use Case 7 | Clinician Provides Referral or Diagnosis |
 | ----------- | ---------------------- |
-| Description |  |
-| Actors |  |
-| Assumptions |  |
-| Steps |  |
+| Description | After reviewing the virtual triage case, the clinician will provide their referral and or diagnosis of the submission. This will allow the patient to confirm the next steps they need to take.  |
+| Actors | Clinician |
+| Assumptions | Clinician has an account (See Use Case 2 “Authentication”). Clinician has already reviewed the virtual triage case, previously submitted by a patient (See Use Case 5 “Clinician Review Virtual Triage”). |
+| Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
+| Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
+
+
