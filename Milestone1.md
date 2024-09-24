@@ -87,6 +87,14 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
 
+| Use Case 9 | Update ED Information |
+| ----------- | ---------------------- |
+| Description |   |
+| Actors | ED Admin |
+| Assumptions | ED is registered with the system (See Use Case 2 “Authentication”) |
+| Steps | 1. ED Admin logs into system <br> 2. ED navigates to the information tab and changes the necessary information <br> 3. Admin submits the changes |
+| Variations| - Change ED hours <br> -Change ED wait times |
+| Issues | 1.Wait times aren't accurate |
 
 # 4. Contributions
 
