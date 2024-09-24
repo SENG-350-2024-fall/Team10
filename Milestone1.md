@@ -1,8 +1,8 @@
 # 1. System Description
 
-The system aims to target the currently very long ED wait times by allowing patients to forsee their waiting time, register online, and have clinicians assess what the patients next steps should be. The patient can either wait from the comfort of their own home or be redirected to a general practitioner or a pharmacy. This kind of system would be practical in the medical field worldwide, especially ones with a higher demand for doctors. Additionally, there are many cases of people misusing Emergency Departments for issues that do not require emergency care. This system will filter out false emergencies and reduce wait times in general.
+The system aims to target the currently very long Emergency Department (ED) wait times by allowing patients to forsee their waiting time, register online, and have virtual triage clinicians assess what the patients next steps should be. The patient can either wait from the comfort of their own home or be redirected to a general practitioner or a pharmacy. This kind of system would be practical in the medical field worldwide, especially ones with a higher demand for doctors. Additionally, there are many cases of people misusing ED for issues that do not require emergency care. This system will filter out false emergencies and reduce wait times in general.
 
-There are two main users of the system: the patients and the clinicians. Each one is required to create an account and each actor is granted different permissions within the system. The patient will only have access to ED wait times, ED queue registration, their personal account and medical records, and communication with clinicians. The clinicians will have access to all patient files, all wait times, patients’ submitted assessment questionnaires, and communication with all clinics and all patients. The clinicians will be able to suggest a course of action for the patient to take based on their assessment of their questionnaire and figure out whether waiting for emergency services is appropriate in the patient’s case.
+There are four main users of the system: the patients, virtual triage clinicians, general practitioners (GP), and ED admin. Each one is required to create an account and each actor is granted different permissions within the system. The five use case diagrams below, outline the main functionalities of each user.
 
 
 # 2. Use Case View
@@ -124,5 +124,5 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Ella | Use Case: "Patient Check Referral/Notification", edited use case 1 with Shyla|
 | Andra | Use Cases: "Clinician Reviews Virtual Triage" / "Register Account", Markdown Formatting |
 | Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Use Case Diagram | 
-| Shyla | Edited Summary, Use Case: “Clinician Provides Referral / Diagnosis”, Edited Use Case 1 with Ella, Edited Use Case Diagram|
+| Shyla | Edited Summary, Use Cases: “Clinician Provides Referral / Diagnosis”, "Update or View Patient Queue", Edited Use Case 1 with Ella, Use Case Diagram for GP|
 | Alex | Use Cases: “Patient Virtual Triage”, Markdown Formatting |
