@@ -13,7 +13,9 @@ Virtual Triage Clinician
 GP/clinic
 
 
+Use Case 3 Diagram 1 - Patient wants to only check times
 
+Use Case 3 Diagram 2 - Patient wants to be triaged
 ![Alt](UseCase.svg)
 
 Note: if viewing in dark mode and you cannot see the lines, please try viewing in light mode (with white background)
@@ -47,7 +49,7 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Description | The patient can view current wait times for nearby in person clinics and emergency departments. |
 | Actors | Patient |
 | Assumptions |- The patient is already registered in the system (see Use Case 1 “Register Account”). <br> - The patient is logged in (and is not about to have a timed-out session) (see Use Case 2 “Authentication”). <br> - The patient allows their location to be shared with their browser|
-| Steps | 1. The patient clicks the “View Wait Times” button <br> 2. The patient is shown clinics near them in a map format <br> 3. The patient can hover over each clinic to view their wait times. <br> 4. The patient clicks on a clinic to register in line. <br> 5. The patient is presented the triage questionnaire (see Use Case 4 “Patient Virtual Triage”) <br> 6. Upon completion of the questionnaire, the patient submits the questionnaire for review (see Use Case 5 “Clinician Review Virtual Triage”). |
+| Steps | 1. The patient clicks the “View Wait Times” button <br> 2. The patient is shown clinics near them in a map format <br> 3. The patient can hover over each clinic to view their wait times. |
 | Variations | 3.b) The patient chooses “List View” and sees the clinics near them with their wait times in a list format |
 | Non-Functional Requirements | - The clinic wait time display must be real-time -> servers must be scalable for busy hours and must have a load balancer <br> Website must be available 99.9% of the time|
 | Issues |- Website is down and shows inaccurate times <br> - ED is too busy to update the business of the clinic and the times are inaccurate <br> - Patients with severe emergency issues may take precedence and come unannounced <br> - Patient does not share location with their browser and has to manually enter it (lowers usability a little) |
