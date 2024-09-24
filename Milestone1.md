@@ -18,11 +18,15 @@ ED Admin Use Case Diagram:
 
 Patient Wait Times Use Case Diagram:
 
+![Alt](Patient1.svg)
+
 Patient Virtual Triage Use Case Diagram:
 
 ![Alt](patientB.drawio.svg)
 
-Note: if viewing in dark mode and you cannot see the lines, please try viewing in light mode (with white background)
+Virtual Triage Clinician Use Case Diagram:
+
+![Alt](VirtualTriageClinician.drawio.svg)
 
 # 3. Use Case Tables
 
@@ -91,12 +95,15 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
 
-| Use Case 10 | Find Closest ED |
+| Use Case 10 | Virtual Triage Clinician puts patient in queue  |
 | ----------- | ---------------------- |
-| Description | A patient can view the locations of ED's in their area. |
-| Actors | Patient |
-| Assumptions | Patient has an account (See Use Case 2 “Authentication”). |
-| Steps | 1. Patient logs in (See Use Case 2 "Authentication"). <br> 2. Patient navigates to the ED map. <br> 3. Patient views ED's. |
+| Description | THe virtual triage clinician adds a patient to the waiting queue for their ED after reviewing their virtual triage. |
+| Actors | Virtual Triage Clinician |
+| Assumptions | The virtual triage clinician has completed all steps in use case 5. |
+| Steps | All steps in use case 5 complete. <br> Virtual triage clincian puts patient into appropriate ED queue. |
+| Issues | Staff takes too long to get to patients’ questionnaire, ED wait time is too long |
+
+
 
 | Use Case 8 | Update or View Patient Queue |
 | ----------- | ---------------------- |
@@ -116,6 +123,13 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Variations| - Change ED hours <br> - Change ED wait times |
 | Issues | 1.Wait times aren't accurate |
 
+| Use Case 10 | Find Closest ED |
+| ----------- | ---------------------- |
+| Description | A patient can view the locations of ED's in their area. |
+| Actors | Patient |
+| Assumptions | Patient has an account (See Use Case 2 “Authentication”). |
+| Steps | 1. Patient logs in (See Use Case 2 "Authentication"). <br> 2. Patient navigates to the ED map. <br> 3. Patient views ED's. |
+
 
 # 4. Contributions
 
@@ -123,6 +137,6 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | ----------- | ---------------------- |
 | Ella | Use Case: "Patient Check Referral/Notification", edited use case 1 with Shyla|
 | Andra | Use Cases: "Clinician Reviews Virtual Triage" / "Register Account", Markdown Formatting |
-| Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Use Case Diagram | 
 | Shyla | Edited Summary, Use Cases: “Clinician Provides Referral / Diagnosis”, "Update or View Patient Queue", Edited Use Case 1 with Ella, Use Case Diagram for GP|
+| Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Patient Virtual Triage Use Case Diagram| 
 | Alex | Use Cases: “Patient Virtual Triage”, Markdown Formatting |
