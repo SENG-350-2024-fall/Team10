@@ -88,6 +88,12 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
 
+| Use Case 10 | Find Closest ED |
+| ----------- | ---------------------- |
+| Description | A patient can view the locations of ED's in their area. |
+| Actors | Patient |
+| Assumptions | Patient has an account (See Use Case 2 “Authentication”). |
+| Steps | 1. Patient logs in (See Use Case 2 "Authentication"). <br> 2. Patient navigates to the ED map. <br> 3. Patient views ED's. |
 
 | Use Case 8 | Update or View Patient Queue |
 | ----------- | ---------------------- |
