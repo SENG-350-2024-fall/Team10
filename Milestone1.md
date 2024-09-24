@@ -6,7 +6,13 @@ There are two main users of the system: the patients and the clinicians. Each on
 
 
 # 2. Use Case View
-Actors: Patients and Clinicians in EDs
+Actors: 
+Patient
+ED Admin
+Virtual Triage Clinician
+GP/clinic
+
+
 
 ![Alt](UseCase.svg)
 
