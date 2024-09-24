@@ -22,21 +22,21 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 
 | Use Case 1 | Register Account |
 | ----------- | ---------------------- |
-| Description | A patient/clinician want to create an account to use and interact with the system.|
-| Actors | Patient, Clinician |
-| Assumptions | The patient/clinician has access to a device that can access the internet |
-| Steps | 1. a. Patient searches up the system name and navigates to the “Sign up” button. <br> 1. b. Clinician receives an invitation email to register and navigates to the "Clinician Sign up" button. <br> 2. a. Patient enters their health number and creates a password. <br> 2. b. Clinician enters their employee number and creates a password.|
-| Variations | 2. If patient/clinician already has an account, they must sign in (See Use Case 2 "Authentication") rather than sign up. |
+| Description | A user wants to create an account to use and interact with the system.|
+| Actors | User = Patient, Virtual Triage Clinician, GP, ED |
+| Assumptions | The user has access to a device that can access the internet |
+| Steps | 1. a. Patient searches up the system name and navigates to the “Sign up” button. <br> 1. b. Virtual Triage Clinician, GP, or ED receives an invitation email to register and navigates to the "Provider Sign up" button. <br> 2. a. Patient enters their health number and creates a password. <br> 2. b.  Virtual Triage Clinician, GP, or ED enters their employee number and creates a password.|
+| Variations | 2. If the user already has an account, they must sign in (See Use Case 2 "Authentication") rather than sign up. |
 | Non-Functional | 1. Fast <br> 2. Available in both English and French |
-| Issues | 1. No connection <br> 2. Patient/Clinician forgets login |
+| Issues | 1. No connection <br> 2. User forgets login |
 
 
 | Use Case 2 | Authentication |
 | ----------- | ---------------------- |
-| Description | The patient can log into the system |
-| Actors | User = Patient and Clinician |
-| Assumptions | - The user is already registered in the system (see Use Case 1 “Register Account”) <br> - Available clinics are already registered in the system|
-| Steps | 1. The user visits the website URL and sees the “Log in” button <br> 2. The user clicks the button and is asked for their credentials <br> 3. The user enters their correct credentials <br> 4. The user is taken to the home page of thet application|
+| Description | The user can log into the system |
+| Actors | User = Patient, Virtual Triage Clinician, GP, ED |
+| Assumptions | - The user is already registered in the system (see Use Case 1 “Register Account”) <br> - Available EDs are already registered in the system|
+| Steps | 1. The user visits the website URL and sees the “Log in” button <br> 2. The user clicks the button and is asked for their credentials <br> 3. The user enters their correct credentials <br> 4. The user is taken to the home page of the application|
 | Variations | Alternative flow: <br> 3. b) The user enters incorrect information as their credentials <br> 4. b) The user is prompted to retry logging in <br> 5) After 3 incorrect attempts, the user must reset their password |
 | Non-Functional | The database must securely store credentials in an encrypted format |
 | Issues | The user tries to log in before creating an account |
