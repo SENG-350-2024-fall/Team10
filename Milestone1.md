@@ -13,9 +13,9 @@ Virtual Triage Clinician
 GP/clinic
 
 
-Use Case 3 Diagram 1 - Patient wants to only check times
+Use Case 3 Diagram  - Patient wants to only check times
 
-Use Case 3 Diagram 2 - Patient wants to be triaged
+Use Case 4 Diagram - Patient Virtual Triage
 ![Alt](UseCase.svg)
 
 Note: if viewing in dark mode and you cannot see the lines, please try viewing in light mode (with white background)
@@ -59,7 +59,7 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Description | The patient can complete a dynamic virtual questionnaire that adapts to the patient's previous answers. |
 | Actors | Patient |
 | Assumptions | The patient is already registered in the system. See use case 1. <br> The patient is logged in to the system. |
-| Steps |  1.  The patient licks the “new virtual triage” button. <br> 2. The patient is taken to the virtual triage page. <br> 3. The patient is asked a question about their current situation/symptoms. <br> 4. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain. <br> 5. The patient clicks the “submit” button to submit the virtual triage for review. <br> 6. The patient is provided with a next course of action upon completion of their virtual triage’s review (See use case 5). |
+| Steps |  1.  The patient licks the “new virtual triage” button. <br> 2. The patient is taken to the virtual triage page. <br> 3. The patient is asked a question about their current situation/symptoms. <br> 4. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain. <br> 5. The patient clicks the “submit” button to submit the virtual triage for review. <br> 6. The patient is provided with a next course of action upon completion of their virtual triage’s review (See use case 5).|
 | Issues | Virtual triage review may take too long. <br> No clinicians available to review the triage.|
 
 | Use Case 5 | Clinician Reviews Virtual Triage |
