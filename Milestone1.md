@@ -84,7 +84,7 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 
 | Name | Contributions | 
 | ----------- | ---------------------- |
-| Ella | |
+| Ella | Use Case: "Patient Check Referral/Notification", edited use case 1 with Shyla|
 | Andra | Use Cases: "Clinician Reviews Virtual Triage" / "Register Account", Markdown Formatting |
 | Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Use Case Diagram | 
 | Shyla | Edited Summary, Use Case: “Clinician Provides Referral / Diagnosis”, Edited Use Case 1, Edited Use Case Diagram|
