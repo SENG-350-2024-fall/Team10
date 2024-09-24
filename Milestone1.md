@@ -17,6 +17,7 @@ ED Admin Use Case Diagram:
 ![Alt](EDAdminUseCase.svg)
 
 Patient Wait Times Use Case Diagram:
+
 ![Alt](Patient1.svg)
 
 Patient Virtual Triage Use Case Diagram:
