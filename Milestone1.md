@@ -26,9 +26,9 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Use Case 1 | Register Account |
 | ----------- | ---------------------- |
 | Description | A user wants to create an account to use and interact with the system.|
-| Actors | User = Patient, Virtual Triage Clinician, GP, ED |
+| Actors | User = Patient, Virtual Triage Clinician, GP, ED Admin|
 | Assumptions | The user has access to a device that can access the internet |
-| Steps | 1. a. Patient searches up the system name and navigates to the “Sign up” button. <br> 1. b. Virtual Triage Clinician, GP, or ED receives an invitation email to register and navigates to the "Provider Sign up" button. <br> 2. a. Patient enters their health number and creates a password. <br> 2. b.  Virtual Triage Clinician, GP, or ED enters their employee number and creates a password.|
+| Steps | 1. a. Patient searches up the system name and navigates to the “Sign up” button. <br> 1. b. Virtual Triage Clinician, GP, or ED Admin receives an invitation email to register and navigates to the "Provider Sign up" button. <br> 2. a. Patient enters their health number and creates a password. <br> 2. b.  Virtual Triage Clinician, GP, or ED Admin enters their employee number and creates a password.|
 | Variations | 2. If the user already has an account, they must sign in (See Use Case 2 "Authentication") rather than sign up. |
 | Non-Functional | 1. Fast <br> 2. Available in both English and French |
 | Issues | 1. No connection <br> 2. User forgets login |
@@ -37,7 +37,7 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Use Case 2 | Authentication |
 | ----------- | ---------------------- |
 | Description | The user can log into the system |
-| Actors | User = Patient, Virtual Triage Clinician, GP, ED |
+| Actors | User = Patient, Virtual Triage Clinician, GP, ED Admin |
 | Assumptions | - The user is already registered in the system (see Use Case 1 “Register Account”) <br> - Available EDs are already registered in the system|
 | Steps | 1. The user visits the website URL and sees the “Log in” button <br> 2. The user clicks the button and is asked for their credentials <br> 3. The user enters their correct credentials <br> 4. The user is taken to the home page of the application|
 | Variations | Alternative flow: <br> 3. b) The user enters incorrect information as their credentials <br> 4. b) The user is prompted to retry logging in <br> 5) After 3 incorrect attempts, the user must reset their password |
@@ -88,6 +88,16 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
 
+
+| Use Case 8 | Update or View Patient Queue |
+| ----------- | ---------------------- |
+| Description | GP can view a list of patients who have been referred to the clinic. Additionally, ED Admin can view a list of patients who have been referred to the ED, and the waitlist. |
+| Actors | User = GP, ED Admin |
+| Assumptions | User has an account (See Use Case 2 “Authentication”). |
+| Steps | 1. User logs in (See Use Case 2 "Authentication"). <br> 2. User navigates to the patient queue. <br> 3. User views patient queue. |
+| Variations | 3. a) ED Admin sends notification to patient. |
+
+  
 | Use Case 9 | Update ED Information |
 | ----------- | ---------------------- |
 | Description |   |
@@ -97,6 +107,7 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Variations| - Change ED hours <br> -Change ED wait times |
 | Issues | 1.Wait times aren't accurate |
 
+
 # 4. Contributions
 
 | Name | Contributions | 
@@ -104,5 +115,5 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Ella | Use Case: "Patient Check Referral/Notification", edited use case 1 with Shyla|
 | Andra | Use Cases: "Clinician Reviews Virtual Triage" / "Register Account", Markdown Formatting |
 | Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Use Case Diagram | 
-| Shyla | Edited Summary, Use Case: “Clinician Provides Referral / Diagnosis”, Edited Use Case 1, Edited Use Case Diagram|
+| Shyla | Edited Summary, Use Case: “Clinician Provides Referral / Diagnosis”, Edited Use Case 1 with Ella, Edited Use Case Diagram|
 | Alex | Use Cases: “Patient Virtual Triage”, Markdown Formatting |
