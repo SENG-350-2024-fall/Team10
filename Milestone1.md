@@ -12,10 +12,13 @@ ED Admin
 Virtual Triage Clinician
 GP/clinic
 
+ED Admin Use Case Diagram:
 
-Use Case 3 Diagram  - Patient wants to only check times
+![Alt](EDAdminUseCase.svg)
 
-Use Case 4 Diagram - Patient Virtual Triage
+Patient Wait Times Use Case Diagram:
+
+Patient Virtual Triage Use Case Diagram:
 
 ![Alt](patientB.drawio.svg)
 
@@ -106,11 +109,11 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
   
 | Use Case 9 | Update ED Information |
 | ----------- | ---------------------- |
-| Description |   |
+| Description | Admin can update information about their ED. This includes things such as address, hours, and wait times. Patients can view this information before visiting their local ED. |
 | Actors | ED Admin |
 | Assumptions | ED is registered with the system (See Use Case 2 “Authentication”) |
 | Steps | 1. ED Admin logs into system <br> 2. ED navigates to the information tab and changes the necessary information <br> 3. Admin submits the changes |
-| Variations| - Change ED hours <br> -Change ED wait times |
+| Variations| - Change ED hours <br> - Change ED wait times |
 | Issues | 1.Wait times aren't accurate |
 
 
