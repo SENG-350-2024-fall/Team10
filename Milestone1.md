@@ -147,4 +147,4 @@ Virtual Triage Clinician Use Case Diagram:
 | Andra | Use Cases: "Clinician Reviews Virtual Triage" / "Register Account", Markdown Formatting |
 | Shyla | Edited Summary, Use Cases: “Clinician Provides Referral / Diagnosis”, "Update or View Patient Queue", Edited Use Case 1 with Ella, Use Case Diagram for GP|
 | Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Patient Virtual Triage Use Case Diagram| 
-| Alex | Use Cases: “Patient Virtual Triage”, Markdown Formatting |
+| Alex | Use Cases: “Patient Virtual Triage”, "Virtual Triage Clinician puts patient in queue", Edited multiple use cases to include virutal triage clinician,  Markdown Formatting, Virtual Triage Clincian Use Case Diagram  |
