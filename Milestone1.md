@@ -24,7 +24,9 @@ Patient Virtual Triage Use Case Diagram:
 
 ![Alt](patientB.drawio.svg)
 
-Note: if viewing in dark mode and you cannot see the lines, please try viewing in light mode (with white background)
+Virtual Triage Clinician Use Case Diagram:
+
+![Alt](VirtualTriageClinician.drawio.svg)
 
 # 3. Use Case Tables
 
