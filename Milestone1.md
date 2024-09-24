@@ -8,9 +8,13 @@ There are four main users of the system: the patients, virtual triage clinicians
 # 2. Use Case View
 Actors: 
 Patient
-ED Admin
-Virtual Triage Clinician
-GP/clinic
+, ED Admin
+, Virtual Triage Clinician
+, GP
+
+GP Use Case Diagram:
+
+![Alt](GPuseCaseDiagram.svg)
 
 ED Admin Use Case Diagram:
 
@@ -94,6 +98,14 @@ Virtual Triage Clinician Use Case Diagram:
 | Assumptions | Clinician has an account (See Use Case 2 “Authentication”). Clinician has already reviewed the virtual triage case, previously submitted by a patient (See Use Case 5 “Clinician Review Virtual Triage”). |
 | Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
+
+| Use Case 10 | Virtual Triage Clinician puts patient in queue  |
+| ----------- | ---------------------- |
+| Description | THe virtual triage clinician adds a patient to the waiting queue for their ED after reviewing their virtual triage. |
+| Actors | Virtual Triage Clinician |
+| Assumptions | The virtual triage clinician has completed all steps in use case 5. |
+| Steps | All steps in use case 5 complete. <br> Virtual triage clincian puts patient into appropriate ED queue. |
+| Issues | Staff takes too long to get to patients’ questionnaire, ED wait time is too long |
 
 
 | Use Case 8 | Update or View Patient Queue |
