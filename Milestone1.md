@@ -16,7 +16,8 @@ GP/clinic
 Use Case 3 Diagram  - Patient wants to only check times
 
 Use Case 4 Diagram - Patient Virtual Triage
-![Alt](UseCase.svg)
+
+![Alt](patientB.drawio.svg)
 
 Note: if viewing in dark mode and you cannot see the lines, please try viewing in light mode (with white background)
 
