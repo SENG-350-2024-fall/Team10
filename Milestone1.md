@@ -107,6 +107,7 @@ Virtual Triage Clinician Use Case Diagram:
 | Steps | All steps in use case 5 complete. <br> Virtual triage clincian puts patient into appropriate ED queue. |
 | Issues | Staff takes too long to get to patients’ questionnaire, ED wait time is too long |
 
+
 | Use Case 8 | Update or View Patient Queue |
 | ----------- | ---------------------- |
 | Description | GP can view a list of patients who have been referred to the clinic. Additionally, ED Admin can view a list of patients who have been referred to the ED, and the waitlist. |
@@ -125,12 +126,25 @@ Virtual Triage Clinician Use Case Diagram:
 | Variations| - Change ED hours <br> - Change ED wait times |
 | Issues | 1.Wait times aren't accurate |
 
+
 | Use Case 10 | Find Closest ED |
 | ----------- | ---------------------- |
 | Description | A patient can view the locations of ED's in their area. |
 | Actors | Patient |
 | Assumptions | Patient has an account (See Use Case 2 “Authentication”). |
 | Steps | 1. Patient logs in (See Use Case 2 "Authentication"). <br> 2. Patient navigates to the ED map. <br> 3. Patient views ED's. |
+
+
+| Use Case 11 | Virtual Triage Clinician puts patient in queue  |
+| ----------- | ---------------------- |
+| Description | THe virtual triage clinician adds a patient to the waiting queue for their ED after reviewing their virtual triage. |
+| Actors | Virtual Triage Clinician |
+| Assumptions | The virtual triage clinician has completed all steps in use case 5. |
+| Steps | All steps in use case 5 complete. <br> Virtual triage clincian puts patient into appropriate ED queue. |
+| Issues | Staff takes too long to get to patients’ questionnaire, ED wait time is too long |
+
+
+
 
 
 # 4. Contributions
