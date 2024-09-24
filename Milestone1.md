@@ -13,8 +13,11 @@ Virtual Triage Clinician
 GP/clinic
 
 
+Use Case 3 Diagram  - Patient wants to only check times
 
-![Alt](UseCase.svg)
+Use Case 4 Diagram - Patient Virtual Triage
+
+![Alt](patientB.drawio.svg)
 
 Note: if viewing in dark mode and you cannot see the lines, please try viewing in light mode (with white background)
 
@@ -57,7 +60,7 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Description | The patient can complete a dynamic virtual questionnaire that adapts to the patient's previous answers. |
 | Actors | Patient |
 | Assumptions | The patient is already registered in the system. See use case 1. <br> The patient is logged in to the system. |
-| Steps |  1.  The patient licks the “new virtual triage” button. <br> 2. The patient is taken to the virtual triage page. <br> 3. The patient is asked a question about their current situation/symptoms. <br> 4. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain. <br> 5. The patient clicks the “submit” button to submit the virtual triage for review. <br> 6. The patient is provided with a next course of action upon completion of their virtual triage’s review (See use case 5). |
+| Steps |  1.  The patient licks the “new virtual triage” button. <br> 2. The patient is taken to the virtual triage page. <br> 3. The patient is asked a question about their current situation/symptoms. <br> 4. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain. <br> 5. The patient clicks the “submit” button to submit the virtual triage for review. <br> 6. The patient is provided with a next course of action upon completion of their virtual triage’s review (See use case 5).|
 | Issues | Virtual triage review may take too long. <br> No clinicians available to review the triage.|
 
 | Use Case 5 | Clinician Reviews Virtual Triage |
@@ -85,6 +88,7 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
 
+
 | Use Case 8 | Update or View Patient Queue |
 | ----------- | ---------------------- |
 | Description | GP can view a list of patients who have been referred to the clinic. Additionally, ED Admin can view a list of patients who have been referred to the ED, and the waitlist. |
@@ -92,6 +96,17 @@ Note: if viewing in dark mode and you cannot see the lines, please try viewing i
 | Assumptions | User has an account (See Use Case 2 “Authentication”). |
 | Steps | 1. User logs in (See Use Case 2 "Authentication"). <br> 2. User navigates to the patient queue. <br> 3. User views patient queue. |
 | Variations | 3. a) ED Admin sends notification to patient. |
+
+  
+| Use Case 9 | Update ED Information |
+| ----------- | ---------------------- |
+| Description |   |
+| Actors | ED Admin |
+| Assumptions | ED is registered with the system (See Use Case 2 “Authentication”) |
+| Steps | 1. ED Admin logs into system <br> 2. ED navigates to the information tab and changes the necessary information <br> 3. Admin submits the changes |
+| Variations| - Change ED hours <br> -Change ED wait times |
+| Issues | 1.Wait times aren't accurate |
+
 
 # 4. Contributions
 
