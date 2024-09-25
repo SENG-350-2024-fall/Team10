@@ -38,7 +38,7 @@ Virtual Triage Clinician Use Case Diagram:
 | ----------- | ---------------------- |
 | Description | A user wants to create an account to use and interact with the system.|
 | Actors | User = Patient, Virtual Triage Clinician, GP, ED Admin|
-| Assumptions | The user has access to a device that can access the internet |
+| Assumptions | The user has access to a device that can access the internet <br> Employees have an employee number |
 | Steps | 1. a. Patient searches up the system name and navigates to the “Sign up” button. <br> 1. b. Virtual Triage Clinician, GP, or ED Admin receives an invitation email to register and navigates to the "Provider Sign up" button. <br> 2. a. Patient enters their health number and creates a password. <br> 2. b.  Virtual Triage Clinician, GP, or ED Admin enters their employee number and creates a password.|
 | Variations | 2. If the user already has an account, they must sign in (See Use Case 2 "Authentication") rather than sign up. |
 | Non-Functional | 1. Fast <br> 2. Available in both English and French |
