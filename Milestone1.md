@@ -72,19 +72,19 @@ Virtual Triage Clinician Use Case Diagram:
 | Actors | Patient |
 | Assumptions | The patient is already registered in the system. See use case 1. <br> The patient is logged in to the system. |
 | Steps |  1.  The patient licks the “new virtual triage” button. <br> 2. The patient is taken to the virtual triage page. <br> 3. The patient is asked a question about their current situation/symptoms. <br> 4. The patient is shown the next question built off of the previous answer(s). Patient repeats until no questions remain. <br> 5. The patient clicks the “submit” button to submit the virtual triage for review. <br> 6. The patient is provided with a next course of action upon completion of their virtual triage’s review (See use case 5).|
-| Issues | Virtual triage review may take too long. <br> No clinicians available to review the triage.|
+| Issues | Virtual triage review may take too long. <br> No Virtual Triage Clinicians available to review the triage.|
 
 | Use Case 5 | Virtual Triage Clinician Reviews Virtual Triage |
 | ----------- | ---------------------- |
 | Description | The clinician reviews the responses and information provided by the patient on the questionnaire (see use case 4). Using this information and the clinicians medical knowledge the clinician then triages the patient by severity and provides then with further instruction (ie. referral, prescription, advice) |
-| Actors | Virtual Triage Clincian, Clinician |
+| Actors | Virtual Triage Clincian |
 | Assumptions | A client has filled out and submitted a questionnaire (see use case 4).  |
 | Steps | 1. Clinician logs into account.<br>2. Navigate to patient case. <br>3. Assess individual case and provide diagnosis / next steps. <br>4. Submit diagnosis.<br> |
 | Issues | <ul><li>No patients </li><li>Diagnosis not successfully submitted </li><li>Staff takes too long to get to patients’ questionnaire</li></ul> |
 
 | Use Case 6 | Patient Check Referral / Notification |
 | ----------- | ---------------------- |
-| Description | The patient views the next step(s) recommendation of the clinician through a notification in the system. |
+| Description | The patient views the next step(s) recommendation of the Virtual Triage Clinician through a notification in the system. |
 | Actors | Patient |
 | Assumptions | Clinician has reviewed virtual triage case (see Use Case 5) and submitted recommendations to the system (see Use Case 7). |
 | Steps | 1. Patient signs into their system account (see Use Case 2) <br> 2. Patient checks notification from clinician<br> 3. Patient waits for ED notification<br>|
@@ -93,23 +93,23 @@ Virtual Triage Clinician Use Case Diagram:
 
 | Use Case 7 | Virtual Triage Clinician Provides Referral or Diagnosis |
 | ----------- | ---------------------- |
-| Description | After reviewing the virtual triage case, the clinician will provide their referral and or diagnosis of the submission. This will allow the patient to confirm the next steps they need to take.  |
+| Description | After reviewing the virtual triage case, the Virtual Triage Clinician will provide their referral and or diagnosis of the submission. This will allow the patient to confirm the next steps they need to take.  |
 | Actors | Virtual Triage Clinician |
 | Assumptions | Clinician has an account (See Use Case 2 “Authentication”). Clinician has already reviewed the virtual triage case, previously submitted by a patient (See Use Case 5 “Clinician Review Virtual Triage”). |
 | Steps | 1. Clinician logs in (See Use Case 2 "Authentication"). <br> 2. Clinician navigates to the patients' virtual triage case. <br> 3. Clinician enters their medical referral or diagnosis through the patient profile. <br> 4. Clinician submits the referral or diagnosis.|
 | Issues | 1. How will the status be delivered to the patient? <br>2. How does the Clinician follow up with the patient?|
 
 
-| Use Case 8 | Update or View Patient Queue |
+| Use Case 8 | View Patient Queue |
 | ----------- | ---------------------- |
-| Description | GP can view a list of patients who have been referred to the clinic. Additionally, ED Admin can view a list of patients who have been referred to the ED, and the waitlist. |
-| Actors | User = GP, ED Admin, Virtual Triage Clinician |
+| Description | GP can view a list of patients who have been referred to the clinic. Additionally, ED Admin or Virtual Triage Clinician can view a list of patients who have been referred to the ED, and the waitlist. |
+| Actors | User = GP, ED Admin, or Virtual Triage Clinician |
 | Assumptions | User has an account (See Use Case 2 “Authentication”). |
 | Steps | 1. User logs in (See Use Case 2 "Authentication"). <br> 2. User navigates to the patient queue. <br> 3. User views patient queue. |
 | Variations | 3. a) ED Admin sends notification to patient. |
 
   
-| Use Case 9 | Update ED Information |
+| Use Case 9 | ED Admin Update ED Information |
 | ----------- | ---------------------- |
 | Description | Admin can update information about their ED. This includes things such as address, hours, and wait times. Patients can view this information before visiting their local ED. |
 | Actors | ED Admin |
@@ -119,7 +119,7 @@ Virtual Triage Clinician Use Case Diagram:
 | Issues | 1.Wait times aren't accurate |
 
 
-| Use Case 10 | Find Closest ED |
+| Use Case 10 | Patient Find Closest ED |
 | ----------- | ---------------------- |
 | Description | A patient can view the locations of ED's in their area. |
 | Actors | Patient |
@@ -127,7 +127,7 @@ Virtual Triage Clinician Use Case Diagram:
 | Steps | 1. Patient logs in (See Use Case 2 "Authentication"). <br> 2. Patient navigates to the ED map. <br> 3. Patient views ED's. |
 
 
-| Use Case 11 | Virtual Triage Clinician puts patient in queue  |
+| Use Case 11 | Virtual Triage Clinician Add Patient to ED queue  |
 | ----------- | ---------------------- |
 | Description | The virtual triage clinician adds a patient to the waiting queue for their ED after reviewing their virtual triage. |
 | Actors | Virtual Triage Clinician |
