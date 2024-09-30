@@ -124,7 +124,7 @@ Virtual Triage Clinician Use Case Diagram:
 | Description | A patient can view the locations of ED's in their area. |
 | Actors | Patient |
 | Assumptions | Patient has an account (See Use Case 2 “Authentication”). |
-| Steps | 1. Patient logs in (See Use Case 2 "Authentication"). <br> 2. Patient navigates to the ED map. <br> 3. Patient views ED's. |
+| Steps | 1. Patient logs in (See Use Case 2 "Authentication"). <br> 2. Patient navigates to the ED map. <br> 3. Patient views ED's on map. <br> 4. Patient can select desired ED to view wait times (See Use Case 3 "Check ED Wait Times") and begin virtual triage if desired (See Use Case 4 "Patient Virtual Triage"). |
 
 
 | Use Case 11 | Virtual Triage Clinician Add Patient to ED queue  |
@@ -143,7 +143,7 @@ Virtual Triage Clinician Use Case Diagram:
 
 | Name | Contributions | 
 | ----------- | ---------------------- |
-| Ella | Use Case: "Patient Check Referral/Notification", edited use case 1 with Shyla|
+| Ella | Use Case: "Patient Check Referral/Notification", edited use case 1 with Shyla, Patient Wait Times use case diagram, Use Case "Patient Find Closest ED", Markdown Formatting, group discussion/work session |
 | Andra | Use Cases: "Clinician Reviews Virtual Triage" / "Register Account" / "Update ED Information", ED Admin use case diagram, Markdown Formatting, General Editing, Disucssion |
 | Shyla | Edited Summary, Use Cases: “Clinician Provides Referral / Diagnosis”, "Update or View Patient Queue", Edited Use Case 1 with Ella, Use Case Diagram for GP|
 | Val | Summary, Use Cases: “Authentication” and “Check ED / Clinic Wait Times”, Patient Virtual Triage Use Case Diagram| 
