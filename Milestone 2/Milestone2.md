@@ -37,7 +37,7 @@
 
   #2:
   <br>
-  ![Alt]() 
+  ![Alt](GPStateDiagram.svg) 
   <br>
 
   #3:
