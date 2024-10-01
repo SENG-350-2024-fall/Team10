@@ -1,5 +1,5 @@
 
-# 4. Sequence Diagrams
+# 4. Sequence Models
 
   #1: 
   <br> 
@@ -9,7 +9,7 @@
   #2:
   <br>
   ![Alt](GPSequenceDiagram.drawio.svg) 
-  <br>This sequence diagram portrays the actions of the GP wanting to view the Virtual Triage of a patient in the clinic queue.
+  <br>This sequence diagram describes the interactions of the GP wanting to view the Virtual Triage of a patient in the clinic queue.
 
   #3:
   <br>
@@ -26,9 +26,9 @@
   ![Alt]()
   <br>
 
-# 5. Activity Diagram
+# 5. Activity Model
 
-# 6. State Machine Diagram
+# 6. State Models
 
   #1: 
   <br> 
@@ -38,7 +38,7 @@
   #2:
   <br>
   ![Alt](GPStateDiagram.svg) 
-  <br>
+ <br>This state machine diagram describes the appropriate events of the machine when the GP wants to view the Virtual Triage of a patient in the clinic queue.
 
   #3:
   <br>
