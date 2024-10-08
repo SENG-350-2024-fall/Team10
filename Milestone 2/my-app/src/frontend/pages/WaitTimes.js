@@ -64,8 +64,8 @@ const WaitTimes = ({ user }) => {
                             <Marker key={index} position={location.position} icon={redIcon}>
                                 <Popup>
                                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-                                        <span>{location.name}</span>
-                                        <span>Current Wait Time: {location.waitTime}</span>
+                                        <span style={{fontWeight: 'bold', fontSize: '1.5em'}}>{location.name}</span>
+                                        <span style={{fontSize:'1.2em'}}>Current Wait Time: <span style={{fontWeight:'bold'}}>{location.waitTime}</span></span>
                                         <Button component={Link} to={`/TriageForm`} style={{color: 'white', justifyContent: 'center', background:'green', width: '12em', height:'4em', marginTop:'10px'}}>
                                             Medical Triage
                                         </Button>
