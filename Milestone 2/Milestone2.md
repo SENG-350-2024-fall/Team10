@@ -1,3 +1,7 @@
+# Sprint Plan
+Week 1: Discuss diagrams and split work load, start initial code and make a home page
+Week 2: Discuss created diagrams, start on Wait Times Page
+
 
 # 4. Sequence Models
 
