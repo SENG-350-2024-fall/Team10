@@ -30,7 +30,7 @@ Week 4: Populate other pages with content (minimal functionality) <br>
   #5:
   <br>
   ![Alt](Patient_does_triage.drawio.svg)
-  <br> This sequence diagrams describes the process of a patient choosing to go through the triage process and register in the waiting queue <br>
+  <br> This sequence diagrams describes the process of a patient choosing to go through the triage process and register in the waiting queue. (click to view or view in light mode) <br>
   
   #6:
   <br>
