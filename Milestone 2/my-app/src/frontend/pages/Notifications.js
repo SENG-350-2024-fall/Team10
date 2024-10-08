@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 const Notifications = ({user}) => {
     
     return(
-        <div className='landing-page'>
+        <div >
             <h1 style ={{justifyContent: 'center', color: 'grey', textAlign: 'center', fontWeight: 'bold', fontSize: '5em'}}> Notifications
             </h1>
         </div>

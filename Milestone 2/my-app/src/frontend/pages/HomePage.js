@@ -10,9 +10,12 @@ const HomePage = ({user}) => {
     
     return(
         <div className='landing-page'>
-            <h1 style ={{justifyContent: 'center', color: 'grey', textAlign: 'center', fontWeight: 'bold', fontSize: '5em'}}> WELCOME TO MISTER ED
-            </h1> 
-            <img src={Logo}></img>
+            <div className='left-section'>
+                <h1 style ={{justifyContent: 'center', color: 'grey', textAlign: 'center', fontWeight: 'bold', fontSize: '2em'}}> HELLO patient, </h1> 
+                <h1 style ={{justifyContent: 'center', color: 'grey', textAlign: 'center', fontWeight: 'bold', fontSize: '5em'}}> WELCOME TO MISTER ED
+                </h1> 
+                <img src={Logo}></img>
+            </div>
             <div className='action-selection'>
             <Button component={Link} to={`/Profile`} style={{color: 'white', justifyContent: 'center', background:'#597D35', width: '11em', height:'5em', alignContent:'center', margin:'5px'}}>Profile</Button>
             <Button component={Link} to={`/WaitTimes`} style={{color: 'white', justifyContent: 'center', background:'#597D35', width: '11em', alignContent:'center', height:'5em', margin:'5px'}}>ED Wait Times</Button>
