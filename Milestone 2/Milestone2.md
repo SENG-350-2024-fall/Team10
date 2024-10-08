@@ -2,9 +2,13 @@
 
 # 1. Sprint Plan
 
-Week 2: Discuss created diagrams, start initial code, make homepage, and start on Wait Times Page <br>
-Week 3: Finalize diagrams, create database, server file, and API connections for Wait Times Process <br>
-Week 4: Populate other pages with content (minimal functionality) <br>
+This plan details our groups plan for the code portion only of our project:
+
+Milestone 2: Start initial code, make homepage, and start on Wait Times Page <br>
+Milestone 3: Create database, server file, and API connections for Wait Times Process <br>
+Milestone 4: Populate other pages with content (minimal functionality) <br>
+
+We were able to complete all functionality listed in Milestone 2 and didn't need to push anything to Milestone 3 or 4.
 
 # 2. Class Model
 
