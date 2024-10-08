@@ -44,6 +44,9 @@ Week 4: Populate other pages with content (minimal functionality) <br>
   <br> This sequence diagrams describes the process of a patient choosing to go through the triage process and register in the waiting queue. (click to view or view in light mode) <br>
 
 # 5. Activity Model
+  <br>
+  ![Alt](Diagrams/SwimLane.svg)
+  <br>
 
 
 # 6. State Models
