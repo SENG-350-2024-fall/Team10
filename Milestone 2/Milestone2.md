@@ -1,9 +1,18 @@
-# Sprint Plan
-Week 1: Discuss diagrams and split work load, start initial code and make a home page <br>
-Week 2: Discuss created diagrams, start on Wait Times Page <br>
+## Milestone 2
+
+# 1. Sprint Plan
+
+Week 2: Discuss created diagrams, start initial code, make homepage, and start on Wait Times Page <br>
 Week 3: Finalize diagrams, create database, server file, and API connections for Wait Times Process <br>
 Week 4: Populate other pages with content (minimal functionality) <br>
 
+# 2. Class Model
+
+  <br> 
+  ![Alt](ClassDiagram.svg)
+  <br>
+
+# 3. Collaboration Model
 
 # 4. Sequence Models
 
