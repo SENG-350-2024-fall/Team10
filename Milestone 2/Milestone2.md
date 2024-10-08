@@ -34,12 +34,12 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
   #3:
   <br>
-  ![Alt](Diagrams/ClinicianSequence.drawio)
+  ![Alt](Diagrams/ClinicianSequence.svg)
   <br>
   
   #4:
   <br>
-  ![Alt](Diagrams/Sequence_Patient1.svg)
+  ![Alt](Diagrams/Sequence_patient1.drawio.svg)
   <br>
 
   #5:
@@ -57,7 +57,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
   #1: 
   <br> 
-  ![Alt](Diagrams/)
+  ![Alt](Diagrams/EDAdminStateMachinepng.png)
   <br>
 
   #2:
