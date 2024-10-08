@@ -34,7 +34,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
   #3:
   <br>
-  ![Alt](Diagrams/ClinicianSequence.drawio)
+  ![Alt](Diagrams/ClinicianSequence.svg)
   <br>
   
   #4:
