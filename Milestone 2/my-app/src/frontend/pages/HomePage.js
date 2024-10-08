@@ -17,10 +17,10 @@ const HomePage = ({user}) => {
                 <img src={Logo}></img>
             </div>
             <div className='action-selection'>
-            <Button component={Link} to={`/Profile`} style={{color: 'white', justifyContent: 'center', background:'#597D35', width: '11em', height:'5em', alignContent:'center', margin:'5px'}}>Profile</Button>
-            <Button component={Link} to={`/WaitTimes`} style={{color: 'white', justifyContent: 'center', background:'#597D35', width: '11em', alignContent:'center', height:'5em', margin:'5px'}}>ED Wait Times</Button>
-            <Button component={Link} to={`/Status`} style={{color: 'white', justifyContent: 'center', background:'#0096C7', width: '11em', alignContent:'center',height:'5em', margin:'5px'}}>My Status</Button>
-            <Button component={Link} to={`/Notifications`} style={{color: 'white', justifyContent: 'center', background:'#990F02', width: '11em', alignContent:'center',height:'5em', margin:'5px'}}>Notifications</Button>
+            <Button component={Link} to={`/Profile`} style={{color: 'white', justifyContent: 'center', background:'#597D35', width: '20em', height:'5em', alignContent:'center', margin:'5px'}}>Profile</Button>
+            <Button component={Link} to={`/WaitTimes`} style={{color: 'white', justifyContent: 'center', background:'#597D35', width: '20em', alignContent:'center', height:'5em', margin:'5px'}}>ED Wait Times</Button>
+            <Button component={Link} to={`/Status`} style={{color: 'white', justifyContent: 'center', background:'#0096C7', width: '20em', alignContent:'center',height:'5em', margin:'5px'}}>My Status</Button>
+            <Button component={Link} to={`/Notifications`} style={{color: 'white', justifyContent: 'center', background:'#990F02', width: '20em', alignContent:'center',height:'5em', margin:'5px'}}>Notifications</Button>
             </div>
         </div>
     );
