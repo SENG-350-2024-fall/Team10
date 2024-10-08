@@ -56,6 +56,18 @@ const TriageForm = () => {
                 </label>
 
                 <label style={{ fontSize: '1.2em' }}>
+                    Personal Medical Number:
+                    <input
+                        type="text"
+                        name="symptoms"
+                        value={formData.symptoms}
+                        onChange={handleChange}
+                        required
+                        style={{ width: '100%', padding: '10px', margin: '5px 0', fontSize: '1em' }}
+                    />
+                </label>
+
+                <label style={{ fontSize: '1.2em' }}>
                     Symptoms:
                     <input
                         type="text"
