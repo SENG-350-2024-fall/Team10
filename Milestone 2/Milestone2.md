@@ -20,8 +20,13 @@
   <br>
   ![Alt](Sequence_Patient1.svg)
   <br>
-  
+
   #5:
+  <br>
+  ![Alt](Patient_does_triage.drawio.svg)
+  <br>
+  
+  #6:
   <br>
   ![Alt]()
   <br>
