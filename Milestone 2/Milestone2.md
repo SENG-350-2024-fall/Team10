@@ -8,70 +8,84 @@ Week 4: Populate other pages with content (minimal functionality) <br>
 
 # 2. Class Model
 
+  ![Alt](Diagrams/ClassDiagram.svg)
   <br> 
-  ![Alt](ClassDiagram.svg)
-  <br>
 
 # 3. Collaboration Model
+
+![Alt](Diagrams/.svg)
+  <br> 
 
 # 4. Sequence Models
 
   #1: 
   <br> 
-  ![Alt](EDAdminSequenceDiagram.drawio.svg)
+  ![Alt](Diagrams/EDAdminSequenceDiagram.drawio.svg)
   <br>
 
   #2:
   <br>
-  ![Alt](GPSequenceDiagram.drawio.svg) 
+  ![Alt](Diagrams/GPSequenceDiagram.drawio.svg) 
   <br>This sequence diagram describes the interactions of the GP wanting to view the Virtual Triage of a patient in the clinic queue.
 
   #3:
   <br>
-  ![Alt](ClinicianSequence.drawio)
+  ![Alt](Diagrams/ClinicianSequence.drawio)
   <br>
   
   #4:
   <br>
-  ![Alt](Sequence_Patient1.svg)
+  ![Alt](Diagrams/Sequence_Patient1.svg)
   <br>
 
   #5:
   <br>
-  ![Alt](Patient_does_triage.drawio.svg)
+  ![Alt](Diagrams/Patient_does_triage.drawio.svg)
   <br> This sequence diagrams describes the process of a patient choosing to go through the triage process and register in the waiting queue. (click to view or view in light mode) <br>
-  
-  #6:
-  <br>
-  ![Alt]()
-  <br>
 
 # 5. Activity Model
+
 
 # 6. State Models
 
   #1: 
   <br> 
-  ![Alt]()
+  ![Alt](Diagrams/)
   <br>
 
   #2:
   <br>
-  ![Alt](GPStateDiagram.svg) 
+  ![Alt](Diagrams/GPStateDiagram.svg) 
  <br>This state machine diagram describes the appropriate events of the machine when the GP wants to view the Virtual Triage of a patient in the clinic queue.
 
   #3:
   <br>
-  ![Alt]()
+  ![Alt](Diagrams/)
   <br>
   
   #4:
   <br>
-  ![Alt]()
+  ![Alt](Diagrams/)
   <br>
   
   #5:
   <br>
-  ![Alt]()
+  ![Alt](Diagrams/)
   <br>
+
+# 7. Data Flow Models
+
+
+# 8. Entity Relationship Model
+
+
+# 9. Component Model
+
+
+# 10. Deployment Model
+
+
+# 11. Contributions
+
+
 
