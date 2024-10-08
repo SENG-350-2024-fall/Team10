@@ -8,6 +8,7 @@ import Profile from './Profile.js';
 import Notifications from './Notifications.js';
 import Status from './Status.js';
 import WaitTimes from './WaitTimes.js';
+import TriageForm from './TriageForm.js';
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/Notifications" element={<Notifications />} />
             <Route path="/Status" element={<Status />} />
             <Route path="/WaitTimes" element={<WaitTimes />} />
+            <Route path="/TriageForm" element={<TriageForm />} />
             </Routes>
         </Router>
     );
