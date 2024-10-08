@@ -1,15 +1,39 @@
-.landing-page{
-    background-color: rgb(255, 255, 255);
+.landing-page {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 50px; /* Adds padding to the left and right */
+    background-color: rgb(255, 255, 255);
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+}
+
+.left-section h1 {
+    color: grey;
+    font-weight: bold;
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.left-section img {
+    max-width: 100%; /* Ensures image fits its container */
+    height: auto;
+}
+
+.action-selection {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh; /* Ensures it covers the entire viewport height */
-    margin: 0;
-    padding: 0;
 }
 
-.action-selection{
-    justify-content: center;
-    text-align: center;
+.action-selection Button {
+    margin: 10px 0; /* Adds space between buttons */
 }
