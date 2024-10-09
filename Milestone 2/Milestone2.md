@@ -15,10 +15,25 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   ![Alt](Diagrams/ClassDiagram.svg)
   <br> 
 
-# 3. Collaboration Model
+# 3. Collaboration Models
 
-![Alt](Diagrams/.svg)
-  <br> 
+  #1: ED Admin  
+  <br> This model focuses on the interactions between the ED Admin and the Mister ED system. 
+  <br>
+  ![Alt](Diagrams/EDAdminCollaborationDiagram.drawio.svg) 
+  <br>
+  #2: GP
+  <br>
+  ![Alt](Diagrams/GPCollaborationDiagram.svg)
+  <br>
+  #3: Patient
+  <br>
+   ![Alt](Diagrams/PatientCollaborationDiagram.svg)
+  <br>
+  #4: Clinician
+  <br>
+   ![Alt](Diagrams/clinicianCollaborationDiagram.svg)
+  <br>
 
 # 4. Sequence Models
 
