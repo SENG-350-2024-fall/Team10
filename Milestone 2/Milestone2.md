@@ -65,8 +65,8 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
   #3:
   <br>
-  ![Alt](Diagrams/)
-  <br>
+  ![Alt](Diagrams/Patient_triage_state_diagram.svg)
+  <br> This state machine shows the transition of state when a patient goes through the triage process with an ED
   
   #4:
   <br>
