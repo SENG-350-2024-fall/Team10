@@ -2,7 +2,7 @@
 
 # 1. Sprint Plan
 
-This plan details our groups plan for the code portion only of our project:
+This section details our plan for the code portion only of our project:
 
 Milestone 2: Start initial code, make homepage, and start on Wait Times Page <br>
 Milestone 3: Create database, server file, and API connections for Wait Times Process <br>
@@ -13,26 +13,29 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 # 2. Class Model
 
   ![Alt](Diagrams/ClassDiagram.svg)
-  <br> 
+  <br> This model details the fundamental entities of the entire Mister ED system, with all of the relationships and multiplicities included. There is a Patient, VirtualTriageClinician, EDAdmin, GP, ED, Clinic, and VirtualTriage Class with their associated attributes and methods required. 
 
 # 3. Collaboration Models
 
   #1: ED Admin  
-  <br> This model focuses on the interactions between the ED Admin and the Mister ED system. 
-  <br>
+  <br> 
   ![Alt](Diagrams/EDAdminCollaborationDiagram.drawio.svg) 
-  <br>
+  <br>This model focuses on the interactions between the ED Admin and the Mister ED system. The task for the ED Admin is updating ED Info. They go through the Login Page, Home Page, ED HomePage, and finally the corresponding ED Page it wants to update.
+  <br>  
   #2: GP
   <br>
   ![Alt](Diagrams/GPCollaborationDiagram.svg)
-  <br>
+  <br>This model focuses on the interactions between the GP and the Mister ED system. The task for the GP is viewing a Patients Virtual Triage. They go through the Login Page, Home Page, Clinic Queue, and then the Patient Account to view the Virtual Triage. 
+  <br>  
   #3: Patient
   <br>
    ![Alt](Diagrams/PatientCollaborationDiagram.svg)
-  <br>
+   <br>This model focuses on the interactions between the Patient and the Mister ED system. The task for the Patient is registering in an ED line and filling out their Virtual Triage Form. They go through the Login Page, Home Page, ED Page, and then fill out the Virtual Triage Form. 
+  <br>  
   #4: Clinician
-  <br>
+  <br> 
    ![Alt](Diagrams/clinicianCollaborationDiagram.svg)
+   <br>This model focuses on the interactions between the Clinician and the Mister ED system. The task for the Clinician is referring a patient. They go through the Login Page, Home Page, ED Page, Patient Account, and then finally they can refer the patient.
   <br>
 
 # 4. Sequence Models
@@ -107,5 +110,11 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
 # 11. Contributions
 
-
+| Name | Contributions | 
+| ----------- | ---------------------- |
+| Ella |  |
+| Andra |  |
+| Shyla | Class Model, Collaboration Models, State Model for GP, Sequence Model for GP, and Sprint Plan Editing|
+| Val | | 
+| Alex |  |
 
