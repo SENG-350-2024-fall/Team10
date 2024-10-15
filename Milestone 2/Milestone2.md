@@ -93,8 +93,8 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   
   #5:
   <br>
-  ![Alt](Diagrams/)
-  <br>
+  ![Alt](Diagrams/StateDiagramVTC.svg)
+  <br> This state machine shows the state transitions of the system when a virtual triage clinician logs into the system, selects a patient, views their virtual triage, and sends a referral.
 
 # 7. Data Flow Models
 Level 0 DFD: <br>
