@@ -13,7 +13,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 # 2. Class Model
 
   ![Alt](Diagrams/ClassDiagram.svg)
-  <br> This model details the fundamental entities of the entire Mister ED system, with all of the relationships and multiplicities included. There is a Patient, VirtualTriageClinician, EDAdmin, GP, ED, Clinic, and VirtualTriage Class with their associated attributes and methods required. 
+  <br> This model details the fundamental entities of the entire Mister ED system, with all of the relationships and multiplicities included with the 1 or M marker. There is a Patient, VirtualTriageClinician, EDAdmin, GP, ED, Clinic, and VirtualTriage Class with their associated attributes and methods required. 
 
 # 3. Collaboration Models
 
