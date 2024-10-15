@@ -43,7 +43,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   #1: 
   <br> 
   ![Alt](Diagrams/EDAdminSequenceDiagram.drawio.svg)
-  <br>
+  <br>This sequence diagram outlines how the ED admin interacts with the system to ensure the information regarding their ED is accurate and up to date.
 
   #2:
   <br>
@@ -100,10 +100,12 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
 
 # 8. Entity Relationship Model
-
+ ![Alt](Diagrams/ERD.png)
+  <br>
 
 # 9. Component Model
-
+ ![Alt](Diagrams/componentdiagram.png)
+  <br>
 
 # 10. Deployment Model
 
