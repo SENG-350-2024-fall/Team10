@@ -8,7 +8,7 @@ const Profile = ({ user }) => {
         email: 'johndoe@example.com',
         healthNumber: '1234567890',
         profilePicture: null,
-        age: '', // Default age
+        age: '48', // Default age
     };
     
 
