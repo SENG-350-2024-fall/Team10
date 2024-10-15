@@ -101,11 +101,11 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
 # 8. Entity Relationship Model
  ![Alt](Diagrams/ERD.png)
-  <br>
+  <br>This entity relationship diagram displays the systems entities in boxes with their corresponding attributes in bubbles. The diagram also displays how these entities relate to one another and interact via arrows.
 
 # 9. Component Model
  ![Alt](Diagrams/componentdiagram.png)
-  <br>
+  <br>The component model shows the main arts of the system in boxes with their connections shown with arrows
 
 # 10. Deployment Model
 
@@ -115,7 +115,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 | Name | Contributions | 
 | ----------- | ---------------------- |
 | Ella |  |
-| Andra |  |
+| Andra | ED sequence diagram, ED state machine, Component diagram, ERD |
 | Shyla | Class Model, Collaboration Models, State Model for GP, Sequence Model for GP, and Sprint Plan Editing|
 | Val | | 
 | Alex |  |
