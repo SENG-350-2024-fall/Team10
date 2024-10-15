@@ -7,3 +7,6 @@
     - 'npm run build'
     - 'npm start'
 - open localhost 3000
+
+Troubleshooting: 
+- if "npm start" doesn't work, make sure to go to src/frontend and run it there!
