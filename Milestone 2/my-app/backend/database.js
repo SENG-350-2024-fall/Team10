@@ -22,56 +22,6 @@ async function connect() {
 }
 
 
-
-//this function is the main one for passport logins.
-//It will query the database to update and add users
-async function userAuth(user, oauthProvider) {
-  try {
-    const connection = await connect();
-    console.log("connected to database");
-
-    if (oauthProvider === "google") {
-      const query = 'SELECT user_id,teacher FROM users WHERE googleId = ?';
-      const [results, fields] = await connection.execute(query, [user.googleId]);
-
-      if (results.length > 0) {
-        // User exists, update access and refresh tokens
-        console.log("updating the user in the database", results);
-        const userData = results[0];
-        user.user_id = userData.user_id;
-        console.log(userData);
-        const updateQuery = 'UPDATE users SET accessToken = ? WHERE user_id = ?;';
-        const [updateResult] = await connection.execute(updateQuery, [user.accessToken, userData.user_id]);
-        console.log(updateResult);
-        if (userData.teacher == 1) {
-          user.teacher = true;
-        } else {
-          user.teacher = false;
-        }
-
-        await connection.end();
-      } else {
-        console.log("creating the user in database");
-        // User doesn't exist, create a new record
-        const insertQuery = 'INSERT INTO users (googleId, displayName, accessToken, teacher) VALUES (?, ?, ?, ?)';
-        const [insertResult] = await connection.execute(insertQuery, [user.googleId, user.displayName, user.accessToken, false]);
-        user.user_id = insertResult.insertId;
-        user.teacher = false;
-        await connection.end();
-      }
-    }
-  } catch (error) {
-    console.error("Error in userAuth:", error);
-    return error;
-  } finally {
-    console.log("finished database work", user);
-    return user;
-  }
-}
-
-
-
-
 async function fetchAllPatients() {
   try {
     const connection = await connect();
@@ -180,7 +130,6 @@ async function deletePatient(id) {
 
 
 module.exports = {
-  userAuth,
   fetchAllPatients,
   fetchPatientsById,
   updatePatient,
