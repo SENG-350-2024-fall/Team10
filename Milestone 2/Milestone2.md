@@ -105,7 +105,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
 # 9. Component Model
  ![Alt](Diagrams/componentdiagram.png)
-  <br>The component model shows the main arts of the system in boxes with their connections shown with arrows
+  <br>The component model shows the main parts of the system depicted in boxes with the connections between entities shown with arrows. 
 
 # 10. Deployment Model
 
