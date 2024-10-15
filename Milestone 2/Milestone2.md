@@ -114,8 +114,8 @@ Level 1 DFD: <br>
   <br>The component model shows the main parts of the system depicted in boxes with the connections between entities shown with arrows. 
 
 # 10. Deployment Model
-
-
+ ![Alt](Diagrams/DeploymentDiagram.svg)
+<br> The deployment diagram shows how the system is deployed in a real world system using real physical devices, servers, etc. The nodes are shon in the blue boxes and the connections between the nodes are the solid lines/arrows.
 # 11. Contributions
 
 | Name | Contributions | 
