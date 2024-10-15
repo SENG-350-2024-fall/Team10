@@ -53,7 +53,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   #3:
   <br>
   ![Alt](Diagrams/ClinicianSequence.svg)
-  <br>
+  <br> This sequence diagram shows the interactions of the virtual triage clinician, Mister ED system, virtual triage, ED, and patient. It shows the interactions as the clinician logs in, views the virtual triage of a patient, and provideds a referral. 
   
   #4:
   <br>
@@ -67,7 +67,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
 # 5. Activity Model
 ![Alt](Diagrams/SwimLane.svg)
-
+<br> This activity swim lane diagram shows the process that occurs when a patient uses the system from start to finish. It shows how the activities switch between the patient, Mister ED System, Virtual Triage Clinician, and ED. It also shows the flow adn order of activities that occur during the process of a patient using the system. 
 
 # 6. State Models
 
@@ -93,8 +93,8 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   
   #5:
   <br>
-  ![Alt](Diagrams/)
-  <br>
+  ![Alt](Diagrams/StateDiagramVTC.svg)
+  <br> This state machine shows the state transitions of the system when a virtual triage clinician logs into the system, selects a patient, views their virtual triage, and sends a referral.
 
 # 7. Data Flow Models
 Level 0 DFD: <br>
@@ -123,6 +123,6 @@ Level 1 DFD: <br>
 | Ella | Data Flow Diagrams, Patient state machine, Patient sequence diagram, associated descriptions |
 | Andra | ED sequence diagram, ED state machine, Component diagram, ERD |
 | Shyla | Class Model, Collaboration Models, State Model for GP, Sequence Model for GP, and Sprint Plan Editing|
-| Val | Sequence Diagram 5, State Machine 3, frontend and backend code| 
-| Alex |  |
+| Val | | 
+| Alex | Swim Lane Activity Diagram, Virtual Triage Clinician state machine, Virtual Triage Clinician sequence diagram, Deployment Diagram, associated descriptions for diagrams |
 
