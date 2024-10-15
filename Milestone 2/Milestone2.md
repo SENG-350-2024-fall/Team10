@@ -58,12 +58,12 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   #4:
   <br>
   ![Alt](Diagrams/Sequence_patient1.drawio.svg)
-  <br>
+  <br> This sequence diagram displays the interactions between the patientm, system, and ED database when a patient logs in and views ED information. 
 
   #5:
   <br>
   ![Alt](Diagrams/Patient_does_triage.drawio.svg)
-  <br> This sequence diagrams describes the process of a patient choosing to go through the triage process and register in the waiting queue. (click to view or view in light mode) <br>
+  <br> This sequence diagram describes the process of a patient choosing to go through the triage process and register in the waiting queue. (click to view or view in light mode) <br>
 
 # 5. Activity Model
 ![Alt](Diagrams/SwimLane.svg)
@@ -88,8 +88,8 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   
   #4:
   <br>
-  ![Alt](Diagrams/)
-  <br>
+  ![Alt](Diagrams/patientstatemachine.png)
+  <br> This state machine shows the state transitions of the system when a patient logs into the system and views ED information. 
   
   #5:
   <br>
