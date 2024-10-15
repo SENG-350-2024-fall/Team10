@@ -74,7 +74,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   #1: 
   <br> 
   ![Alt](Diagrams/EDAdminStateMachinepng.png)
-  <br>
+  <br> This state machine illustrates the process followed and states visited for an ED admin to update information about their ED.
 
   #2:
   <br>
