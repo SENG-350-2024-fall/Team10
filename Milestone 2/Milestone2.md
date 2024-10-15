@@ -97,6 +97,12 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   <br>
 
 # 7. Data Flow Models
+Level 0 DFD: <br>
+![Alt](Diagrams/DFD-Level 0.drawio.svg)
+<br>
+Level 1 DFD: <br>
+![Alt](Diagrams/DFD-Level 1.drawio.svg)
+
 
 
 # 8. Entity Relationship Model
