@@ -53,7 +53,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
   #3:
   <br>
   ![Alt](Diagrams/ClinicianSequence.svg)
-  <br>
+  <br> This sequence diagram shows the interactions of the virtual triage clinician, Mister ED system, virtual triage, ED, and patient. It shows the interactions as the clinician logs in, views the virtual triage of a patient, and provideds a referral. 
   
   #4:
   <br>
