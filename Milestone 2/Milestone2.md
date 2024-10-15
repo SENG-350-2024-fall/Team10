@@ -120,7 +120,7 @@ Level 1 DFD: <br>
 
 | Name | Contributions | 
 | ----------- | ---------------------- |
-| Ella |  |
+| Ella | Data Flow Diagrams, Patient state machine, Patient sequence diagram, associated descriptions |
 | Andra | ED sequence diagram, ED state machine, Component diagram, ERD |
 | Shyla | Class Model, Collaboration Models, State Model for GP, Sequence Model for GP, and Sprint Plan Editing|
 | Val | | 
