@@ -107,11 +107,11 @@ Level 1 DFD: <br>
 
 # 8. Entity Relationship Model
  ![Alt](Diagrams/ERD.png)
-  <br>
+  <br>This entity relationship diagram displays the systems entities in boxes with their corresponding attributes in bubbles. The diagram also displays how these entities relate to one another and interact via arrows.
 
 # 9. Component Model
  ![Alt](Diagrams/componentdiagram.png)
-  <br>
+  <br>The component model shows the main parts of the system depicted in boxes with the connections between entities shown with arrows. 
 
 # 10. Deployment Model
 
@@ -121,7 +121,7 @@ Level 1 DFD: <br>
 | Name | Contributions | 
 | ----------- | ---------------------- |
 | Ella |  |
-| Andra |  |
+| Andra | ED sequence diagram, ED state machine, Component diagram, ERD |
 | Shyla | Class Model, Collaboration Models, State Model for GP, Sequence Model for GP, and Sprint Plan Editing|
 | Val | | 
 | Alex |  |
