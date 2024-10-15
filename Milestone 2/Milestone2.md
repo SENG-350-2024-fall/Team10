@@ -67,7 +67,7 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
 # 5. Activity Model
 ![Alt](Diagrams/SwimLane.svg)
-
+<br> This activity swim lane diagram shows the process that occurs when a patient uses the system from start to finish. It shows how the activities switch between the patient, Mister ED System, Virtual Triage Clinician, and ED. It also shows the flow adn order of activities that occur during the process of a patient using the system. 
 
 # 6. State Models
 
