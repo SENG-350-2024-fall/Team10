@@ -124,5 +124,5 @@ Level 1 DFD: <br>
 | Andra | ED sequence diagram, ED state machine, Component diagram, ERD |
 | Shyla | Class Model, Collaboration Models, State Model for GP, Sequence Model for GP, and Sprint Plan Editing|
 | Val | | 
-| Alex |  |
+| Alex | Swim Lane Activity Diagram, Virtual Triage Clinician state machine, Virtual Triage Clinician sequence diagram, Deployment Diagram, associated descriptions for diagrams |
 
