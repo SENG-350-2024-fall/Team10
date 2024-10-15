@@ -98,11 +98,11 @@ We were able to complete all functionality listed in Milestone 2 and didn't need
 
 # 7. Data Flow Models
 Level 0 DFD: <br>
-![Alt](Diagrams/DFD-Level 0.drawio.svg)
-<br>
+![Alt](Diagrams/DFD-Level0.drawio.svg)
+<br> This DFD shows the flow of information through the main processes of the MisterED system. These main processes include registering an account, registering an ED, completing a virtual triage, viewing/editing ED info, and managing patients. Entities such as the Patient, Virtual Triage Clinician, GP, and ED Admin interact with these processes through the exchange of information. 
 Level 1 DFD: <br>
-![Alt](Diagrams/DFD-Level 1.drawio.svg)
-
+![Alt](Diagrams/DFD-Level1.drawio.svg)
+<br> This DFD further breaks down the higher level processes identified in the level 0 DFD and identifies the main data stores of the system. These include the Users, EDs, Clinics, and Virtual Triage data stores. 
 
 
 # 8. Entity Relationship Model
