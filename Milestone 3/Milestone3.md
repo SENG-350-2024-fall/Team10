@@ -57,6 +57,10 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
 
 - state pattern
 - decorator pattern
+- singleton pattern - virtual triage, database
+- strategy pattern - different user roles (methods) but one overall user class
+- facade pattern - virtual triage
+
 
 
 # Contributions
