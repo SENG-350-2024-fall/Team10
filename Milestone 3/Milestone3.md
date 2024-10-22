@@ -2,6 +2,8 @@
 
 # Incremental Construction
 
+Milestone 3: Create database, server file, API connections for Wait Times Process, Patient Page
+Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue front-end
 
 # Architecture Tactics - Availability
 
