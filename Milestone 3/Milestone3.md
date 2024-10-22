@@ -10,9 +10,11 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
 # Architecture Tactics - Availability
 
 *for each Availability Tactic:
+<br>
    a. how it's manifested in the design
+   <br>
    b. how you plan to test whether your quality attribute objective will be met.
-
+<br>
 <br> 
 1. Self Test 
 <br>
@@ -28,14 +30,14 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
       b.
    <br>
    <br>
-3. graceful degradation
+3. Graceful Degradation
 <br>
       a. if map library breaks, display error message/page
    <br>
       b.
    <br>
    <br>
-4. retry
+4. Retry
 <br>
       a. automatically retry failed database interactions after a short waiting period
    <br>
@@ -43,8 +45,8 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
    <br>
    <br>
    
-5. removal from service
- <br>
+5. Removal from Service
+<br>
       a. remove triage feature when service unavailable
    <br>
       b.
