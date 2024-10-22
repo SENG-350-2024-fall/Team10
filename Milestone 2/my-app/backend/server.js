@@ -3,13 +3,17 @@ const bodyParser = require('body-parser');
 const patientsRouter = require('./patientData.js');
 const cors = require('cors');
 
-
 const app = express();
-const port = 4000;  // Or another port
-app.use(cors());
+const port = 4000;
 
-// Middleware
-app.use(bodyParser.json());
+// Enable CORS
+app.use(cors({
+    origin: 'http://localhost:3000',  // Allow frontend to access the backend
+}));
+
+// Middleware for parsing JSON and URL-encoded data
+app.use(bodyParser.json({ limit: '210mb' }));  // Increase JSON payload size limit
+app.use(bodyParser.urlencoded({ extended: true, limit: '210mb' }));  // Increase URL-encoded payload size limit
 
 // Use the patients router
 app.use('/patient_data', patientsRouter);

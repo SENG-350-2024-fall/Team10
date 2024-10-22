@@ -1,47 +1,85 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
+import axios from 'axios';  // Import axios for API requests
 
 const Profile = ({ user }) => {
-    // Assuming user object contains `name`, `email`, `healthNumber`, and `profilePicture` properties
     const initialUserData = user || {
-        name: 'John Doe',
-        email: 'johndoe@example.com',
-        healthNumber: '1234567890',
+        name: '',
+        email: '',
+        healthNumber: '',  // Corrected from 'healthcarenumber'
         profilePicture: null,
-        age: '48', // Default age
+        age: '',
     };
-    
 
-    const [isEditing, setIsEditing] = useState(false); // Toggle between edit and view modes
-    const [profileData, setProfileData] = useState(initialUserData); // Store profile data
-    const [formData, setFormData] = useState(initialUserData); // Store form input
-    const [imagePreview, setImagePreview] = useState(initialUserData.profilePicture); // Store image preview
+    const [isEditing, setIsEditing] = useState(false);
+    const [profileData, setProfileData] = useState(initialUserData);
+    const [formData, setFormData] = useState(initialUserData);
+    const [imagePreview, setImagePreview] = useState(initialUserData.profilePicture);
+    const [error, setError] = useState(null);  // State for error messages
 
-    // Handle input change for text fields
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    // Handle profile picture change
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            setFormData({ ...formData, profilePicture: file }); // Store file
-            setImagePreview(URL.createObjectURL(file)); // Preview the image
+            setFormData({ ...formData, profilePicture: file });
+            setImagePreview(URL.createObjectURL(file));
         }
     };
 
-    // Handle form submission to save changes
-    const handleSave = (e) => {
+    // Handle form submission to save changes to database
+    const handleSave = async (e) => {
         e.preventDefault();
-        setProfileData(formData); // Save form data to profileData
-        setIsEditing(false); // Switch back to view mode
+        try {
+            const formDataToSend = new FormData(); // Use FormData for handling files
+            formDataToSend.append('name', formData.name);
+            formDataToSend.append('email', formData.email);
+            formDataToSend.append('healthNumber', formData.healthNumber);  // Correct field name
+            formDataToSend.append('age', formData.age);
+            if (formData.profilePicture) {
+                formDataToSend.append('profilePicture', formData.profilePicture);
+            }
+    
+            // Check if updating or creating a new patient
+            if (profileData.healthNumber) {
+                // Send PUT request to update patient data in the database (update case)
+                await axios.put(`http://localhost:4000/patient_data/${formData.healthNumber}`, formDataToSend, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+            } else {
+                // Send POST request to create new patient data in the database (create case)
+                await axios.post('http://localhost:4000/patient_data', formDataToSend, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+            }
+    
+            setProfileData(formData);  // Update profile data locally
+            setIsEditing(false);  // Switch back to view mode
+            setError(null);  // Clear any errors
+        } catch (error) {
+            console.error('Error saving profile:', error);
+            setError('An error occurred while saving your profile.');  // Set error message
+        }
+    };
+    
+
+    const handleEdit = () => {
+        setFormData({ ...profileData });
+        setIsEditing(true);
     };
 
     return (
         <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px', textAlign: 'center' }}>
             <h1 style={{ color: 'grey', fontWeight: 'bold', fontSize: '3em' }}>Your Profile</h1>
+
+            {error && <p style={{ color: 'red' }}>{error}</p>}  {/* Display error message */}
 
             {isEditing ? (
                 // Edit mode: Show form inputs and image upload
@@ -75,7 +113,7 @@ const Profile = ({ user }) => {
                             <strong>Health Number:</strong>
                             <input
                                 type="text"
-                                name="healthNumber"
+                                name="healthNumber"  // Correct field name
                                 value={formData.healthNumber}
                                 onChange={handleChange}
                                 style={{ width: '100%', padding: '10px', marginTop: '10px' }}
@@ -103,18 +141,17 @@ const Profile = ({ user }) => {
                         )}
                     </div>
                     <div>
-                    <label>
-                        <strong>Age:</strong>
-                        <input
-                            type="number"
-                            name="age"
-                            value={formData.age}
-                            onChange={handleChange}
-                            style={{ width: '100%', padding: '10px', marginTop: '10px' }}
-                        />
-                    </label>
+                        <label>
+                            <strong>Age:</strong>
+                            <input
+                                type="number"
+                                name="age"
+                                value={formData.age}
+                                onChange={handleChange}
+                                style={{ width: '100%', padding: '10px', marginTop: '10px' }}
+                            />
+                        </label>
                     </div>
-
 
                     <Button
                         type="submit"
@@ -137,12 +174,11 @@ const Profile = ({ user }) => {
                     )}
                     <p><strong>Name:</strong> {profileData.name}</p>
                     <p><strong>Email:</strong> {profileData.email}</p>
-                    <p><strong>Health Number:</strong> {profileData.healthNumber}</p>
+                    <p><strong>Health Number:</strong> {profileData.healthNumber}</p>  {/* Correct field */}
                     <p><strong>Age:</strong> {profileData.age}</p>
 
-
                     <Button
-                        onClick={() => setIsEditing(true)} // Switch to edit mode
+                        onClick={handleEdit}
                         style={{ marginTop: '20px', backgroundColor: '#597D35', color: 'white', padding: '10px 20px' }}
                     >
                         Edit Profile
