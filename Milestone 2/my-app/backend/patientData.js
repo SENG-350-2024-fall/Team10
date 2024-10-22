@@ -68,20 +68,22 @@ router.get('/:healthNumber', async (req, res) => {
 
 // Create a new patient
 router.post('/', upload.single('profilePicture'), async (req, res) => {
-  try {
-    console.log('Received body:', req.body);
-    console.log('Received file:', req.file);
+    try {
+        console.log('Received body:', req.body);
+        console.log('Received file:', req.file);
 
-    const { healthcarenumber, name, age, phone_number } = req.body;
-    const profile_image = req.file ? `/uploads/${req.file.filename}` : null;
+        const { healthNumber, name, age, phoneNumber } = req.body;  // Corrected field names
+        const profile_image = req.file ? `/uploads/${req.file.filename}` : null;
 
-    await createPatient(healthcarenumber, name, age, phone_number, profile_image);
-    res.status(200).json({ message: 'Patient created successfully!' });
-  } catch (error) {
-    console.error('Error creating patient:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+        await createPatient(healthNumber, name, age, phoneNumber, profile_image);
+        res.status(200).json({ message: 'Patient created successfully!' });
+    } catch (error) {
+        console.error('Error creating patient:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
 });
+
+  
 
 // Update an existing patient
 router.put('/:healthNumber', upload.single('profilePicture'), async (req, res) => {
