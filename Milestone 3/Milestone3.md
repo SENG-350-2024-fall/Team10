@@ -22,4 +22,6 @@ for each:
 
 - state pattern
 - decorator pattern
-- 
+- singleton pattern - virtual triage, database
+- strategy pattern - different user roles (methods) but one overall user class
+- facade pattern - virtual triage
