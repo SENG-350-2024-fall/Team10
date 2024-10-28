@@ -59,7 +59,7 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
 - decorator pattern
 - singleton pattern - virtual triage, database
 - strategy pattern - different user roles (methods) but one overall user class
-- facade pattern - virtual triage
+- facade pattern - virtual triage, the virtual triage survey does under the hood math / evaluation of the patients inputs. The facade pattern should hide this evaluation from the patients and from the triage clinician.
 
 
 
