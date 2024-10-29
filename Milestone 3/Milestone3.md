@@ -57,10 +57,14 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
 
 - state pattern
 - decorator pattern
-- singleton pattern - virtual triage, database
-- strategy pattern - different user roles (methods) but one overall user class
-- facade pattern - The virtual triage uses a survey that patients fill out. The system then takes the info from the patients input and runs diagnosis to evaluate the patients input the provide the triage clinician with a useful analysis. The facade pattern should hides the in depth evaluation the system does from the both the patients and the triage clinician.
+**Singleton pattern** <br>
+In object oriented programming the singleton design pattern reduces the instances of a class to one. Mister ED encapsulates many different functionalities that require saving and modifying a lot of different information. To ensure the most up-to-date database is always being accessed, we implemented the singleton pattern to use one global database for all the necessary system information, including triage and patient information as well as ED information. <br>
 
+**Strategy pattern** <br>
+In software development, the strategy pattern allows developers to implement multiple algorithms that are interchangeable depending on the systems current user. Our systems supports several different use cases including a patient, triage clinician, ED admin among others. While the stategy pattern affects how nearly the entire system is viewed depending on the user, one notable example is that only the ED admin can access and modify ED wait times, while all other users can only view these wait times. <br>
+
+**Facade pattern** <br>
+Similarly to a real life facade, the facade pattern is a design pattern in which a front facing interface is used to maske more in-depth and complex structural code. In our Mister ED system, the virtual triage relies on a survey that patients fill out regarding their ailment. The system then takes the information from the patients input and runs diagnosis to evaluate the patients input the provide the triage clinician with a useful analysis. The facade pattern allows us to hide the in depth evaluation the system does from the both the patients and the triage clinician, but still provide the users with the necessary information. <br>
 
 
 # Contributions
