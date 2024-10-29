@@ -32,9 +32,9 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
    <br>
 3. Graceful Degradation
 <br>
-      a. if map library breaks, display error message/page
+      a. If the map library used to display ED locations and wait times breaks, the list view of the EDs and all other functionality of the system is still available to users. An error message is displayed on the map area indicating to users that the map functionality is temporarily unavailable. This approach ensures that the core functionality of the system is maintained and users are informed of unavailable services untill map functionality can be restored. 
    <br>
-      b.
+      b. This tactic can be tested by simulating a map outtage and ensuring that the error message is appropriately displayed and core functionality of the system is maintained. 
    <br>
    <br>
 4. Retry
@@ -47,9 +47,9 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
    
 5. Removal from Service
 <br>
-      a. remove triage feature when service unavailable
+      a. In the event of failures or high loads on the system, lower priority functionalities are temporarily disabled in order to prioritize critical functionalities of the system and manage resources effectively. The ED map and ED Wait Times features are manually disabled (in that order) upon high system stress loads. 
    <br>
-      b.
+      b. This tactic can be tested by ensuring that low priority features can easily be toggled on and off and that this does not impact the functionality of other critical system services such as Log-in and Virtual Triage. 
    <br>
    <br>
   
