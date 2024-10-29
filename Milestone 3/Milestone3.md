@@ -12,7 +12,7 @@ We were able to complete most of the goals for Milestone 3, the only task we are
 # Architecture Tactics - Availability
 
 <br> 
-1. Self Test 
+<b>1. Self Test</b>
 <br>
       a. We implemented a selt test tactic for the database connection. We did this by creating the file database.js. If the created database connection has any issues, it will output an error 
         log to the console.
@@ -21,7 +21,7 @@ We were able to complete most of the goals for Milestone 3, the only task we are
         regarding the database connection.
    <br>
    <br>
-2. Exception Handling
+<b>2. Exception Handling</b>
 <br>
       a. User friendly error messages are displayed to the user on the website when invalid information is inputted. More specifically, when a User is updating their profile, they get an error 
         message if they add non-character letters in their Name tab. 
@@ -29,22 +29,21 @@ We were able to complete most of the goals for Milestone 3, the only task we are
       b. This availability tactic can be tested manually by the developer to ensure if invalid information, looking the business logic of Mister ED, is inputted it would be carefully dealt with and properly showed to the user. We were able to validate this tactic by following this protocol completely.
    <br>
    <br>
-3. Graceful Degradation
+<b>3. Graceful Degradation</b>
 <br>
       a. If the map library used to display ED locations and wait times breaks, the list view of the EDs and all other functionality of the system is still available to users. An error message is displayed on the map area indicating to users that the map functionality is temporarily unavailable. This approach ensures that the core functionality of the system is maintained and users are informed of unavailable services untill map functionality can be restored. 
    <br>
       b. This tactic can be tested by simulating a map outtage and ensuring that the error message is appropriately displayed and core functionality of the system is maintained. 
    <br>
    <br>
-4. Retry
+<b>4. Retry</b>
 <br>
       a. This tactic is manifested within the database code, and it automatically retries any failed database interactions after waiting for a short period, around 10ms. If the task failed the second time due to reasons like a Network Connection error, it will provide an error message saying it tried twice and will not try again.
    <br>
       b. If this tactic can be simulated successfully by redoing the transaction, failing, and displaying the proper message that it pinged the database twice, then it will be considered successful. 
    <br>
    <br>
-   
-5. Removal from Service
+<b>5. Removal of Service</b>
 <br>
       a. In the event of failures or high loads on the system, lower priority functionalities are temporarily disabled in order to prioritize critical functionalities of the system and manage resources effectively. The ED map and ED Wait Times features are manually disabled (in that order) upon high system stress loads. 
    <br>
