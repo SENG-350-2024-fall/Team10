@@ -2,32 +2,31 @@
 
 # Incremental Construction
 
-Milestone 3: Create database, server file, API connections for Wait Times Process, Patient Page
+Milestone 3: Create database, server file, API connections for Wait Times Process, Patient Page, Log In Page
 <br>
 Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue front-end
 <br>
 
+We were able to complete most of the goals for Milestone 3, the only task we are pushing to next milestone is the Log In Page.
+<br>
 # Architecture Tactics - Availability
 
-*for each Availability Tactic:
-<br>
-   a. how it's manifested in the design
-   <br>
-   b. how you plan to test whether your quality attribute objective will be met.
-<br>
 <br> 
 1. Self Test 
 <br>
-      a. We implemented a selt test tactic for the database connection. We did this by creating the file    database.js. If the created database connection has any issues, it will output an error log to the console.
+      a. We implemented a selt test tactic for the database connection. We did this by creating the file database.js. If the created database connection has any issues, it will output an error 
+        log to the console.
    <br>
-      b. The database.js file gets automatically run when the database connection gets started or interrupted, therefore ensuring that any exceptions will get caught and dealt with properly regarding the database connection.
+      b. The database.js file gets automatically run when the database connection gets started or interrupted, therefore ensuring that any exceptions will get caught and dealt with properly 
+        regarding the database connection.
    <br>
    <br>
 2. Exception Handling
 <br>
-      a. show user friendly error messages on incorrect/invalid inputs to the system
+      a. User friendly error messages are displayed to the user on the website when invalid information is inputted. More specifically, when a User is updating their profile, they get an error 
+        message if they add non-character letters in their Name tab. 
    <br>
-      b.
+      b. This availability tactic can be tested manually by the developer to ensure if invalid information, looking the business logic of Mister ED, is inputted it would be carefully dealt with and properly showed to the user. We were able to validate this tactic by following this protocol completely.
    <br>
    <br>
 3. Graceful Degradation
@@ -39,9 +38,9 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
    <br>
 4. Retry
 <br>
-      a. automatically retry failed database interactions after a short waiting period
+      a. This tactic is manifested within the database code, and it automatically retries any failed database interactions after waiting for a short period, around 10ms. If the task failed the second time due to reasons like a Network Connection error, it will provide an error message saying it tried twice and will not try again.
    <br>
-      b.
+      b. If this tactic can be simulated successfully by redoing the transaction, failing, and displaying the proper message that it pinged the database twice, then it will be considered successful. 
    <br>
    <br>
    
@@ -67,3 +66,10 @@ Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue
 
 # Contributions
 
+| Name | Contributions | 
+| ----------- | ---------------------- |
+| Ella | |
+| Andra | |
+| Shyla | Self Test, Retry, Exception Handling Availability Tactic, Updating Code README.md , and Sprint Plan |
+| Val | | 
+| Alex | |
