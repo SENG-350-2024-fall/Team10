@@ -68,7 +68,7 @@ We were able to complete most of the goals for Milestone 3, the only task we are
 
 | Name | Contributions | 
 | ----------- | ---------------------- |
-| Ella | |
+| Ella | Graceful Degredation, Removal of Service |
 | Andra | |
 | Shyla | Self Test, Retry, Exception Handling Availability Tactic, Updating Code README.md , and Sprint Plan |
 | Val | | 
