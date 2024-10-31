@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import Button from '@mui/material/Button';
-import Switch from '@mui/material/Switch';  // Importing the Switch component
+import Switch from '@mui/material/Switch';
 import { Link } from 'react-router-dom';
 import mapMarker from '../assets/mapMarker.png';
 
-// Custom red marker icon
 const redIcon = new L.Icon({
     iconUrl: mapMarker,
     iconSize: [30, 30],
@@ -17,7 +16,8 @@ const redIcon = new L.Icon({
 });
 
 const WaitTimes = ({ user }) => {
-    const [isMapView, setIsMapView] = useState(true); // Toggle state, default to map view
+    const [isMapView, setIsMapView] = useState(true);
+    const [mapError, setMapError] = useState(false);
 
     const locations = [
         { name: 'Royal Jubilee Hospital', position: [48.4327, -123.3276], waitTime: '30 minutes' },
@@ -30,13 +30,25 @@ const WaitTimes = ({ user }) => {
 
     const position = locations[0].position;
 
+    useEffect(() => {
+        // Check if map library is available by attempting to render MapContainer
+        try {
+            const testMap = <MapContainer center={position} zoom={13} style={{ display: 'none' }} />;
+            setMapError(false);
+        } catch (error) {
+            console.error("Map library is unavailable:", error);
+            setMapError(true);
+            setIsMapView(false);
+        }
+    }, []);
+
     return (
         <div>
             <h1 style={{ justifyContent: 'center', color: 'grey', textAlign: 'center', fontWeight: 'bold', fontSize: '4em' }}>
                 Emergency Departments Near You
             </h1>
             <h1 style={{ justifyContent: 'center', color: 'black', textAlign: 'center', fontWeight: 'bold', fontSize: '1em' }}>
-                {isMapView ? "Click on a pin to view wait times" : "List of Nearby Emergency Departments"}
+                {mapError ? "Map view is currently unavailable - under maintenance" : isMapView ? "Click on a pin to view wait times" : "List of Nearby Emergency Departments"}
             </h1>
 
             {/* Toggle Switch for Map/List View */}
@@ -47,6 +59,7 @@ const WaitTimes = ({ user }) => {
                     onChange={() => setIsMapView(!isMapView)}
                     color="primary"
                     inputProps={{ 'aria-label': 'toggle between map and list view' }}
+                    disabled={mapError} // Disable switch if map is unavailable
                 />
                 <span style={{ fontSize: '1.2em', marginLeft: '10px' }}>Map View</span>
             </div>
@@ -78,34 +91,32 @@ const WaitTimes = ({ user }) => {
             ) : (
                 // List View
                 <div style={{ padding: '20px', backgroundColor: '#eeeeee', borderRadius: '30px', margin:'15px' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                    <thead>
-                        <tr>
-                            <th style={{ textAlign: 'left', padding: '10px', fontSize: '1.2em' }}>ED Name</th>
-                            <th style={{ textAlign: 'left', padding: '10px', fontSize: '1.2em' }}>Current Wait Time</th>
-                            <th style={{ textAlign: 'center', padding: '10px', fontSize: '1.2em' }}></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {locations.map((location, index) => (
-                            <tr key={index}>
-                                <td style={{ padding: '10px', fontSize: '1.2em' }}>{location.name}</td>
-                                <td style={{ padding: '10px', fontSize: '1.2em' }}>{location.waitTime}</td>
-                                <td style={{ textAlign: 'center', padding: '10px' }}>
-                                    <Button 
-                                        component={Link} 
-                                        to={`/TriageForm`} 
-                                        style={{color: 'white', background:'green', width: '12em', height:'3em'}}>
-                                        Medical Triage
-                                    </Button>
-                                </td>
+                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                        <thead>
+                            <tr>
+                                <th style={{ textAlign: 'left', padding: '10px', fontSize: '1.2em' }}>ED Name</th>
+                                <th style={{ textAlign: 'left', padding: '10px', fontSize: '1.2em' }}>Current Wait Time</th>
+                                <th style={{ textAlign: 'center', padding: '10px', fontSize: '1.2em' }}></th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-            
-
+                        </thead>
+                        <tbody>
+                            {locations.map((location, index) => (
+                                <tr key={index}>
+                                    <td style={{ padding: '10px', fontSize: '1.2em' }}>{location.name}</td>
+                                    <td style={{ padding: '10px', fontSize: '1.2em' }}>{location.waitTime}</td>
+                                    <td style={{ textAlign: 'center', padding: '10px' }}>
+                                        <Button 
+                                            component={Link} 
+                                            to={`/TriageForm`} 
+                                            style={{color: 'white', background:'green', width: '12em', height:'3em'}}>
+                                            Medical Triage
+                                        </Button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             )}
         </div>
     );
