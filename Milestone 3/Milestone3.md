@@ -92,5 +92,5 @@ Similarly to a real life facade, the facade pattern is a design pattern in which
 | Ella | Graceful Degredation, Removal of Service |
 | Andra | Singleton pattern, Strategy Pattern, Facade Pattern |
 | Shyla | Self Test, Retry, Exception Handling Availability Tactic, Updating Code README.md , and Sprint Plan |
-| Val | Coded the mentioned tactic/patterns| 
+| Val | Coded the mentioned tactic/patterns, edited removal of service, state pattern, singleton pattern, retry, graceful degradation| 
 | Alex | State Pattern, Decorator Pattern |
