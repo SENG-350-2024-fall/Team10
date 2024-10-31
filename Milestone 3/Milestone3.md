@@ -52,16 +52,19 @@ To test that this works, the try block had setMapError(true); and setIsMapView(f
 <b>4. Retry</b>
 <br>
       a. This tactic is manifested within the database code, and it automatically retries any failed database interactions after waiting for a short period, around 10ms. If the task failed the second time due to reasons like a Network Connection error, it will provide an error message saying it tried twice and will not try again.
-   <br>
+   <br> <img width="676" alt="Screenshot 2024-10-31 at 4 20 58 PM" src="https://github.com/user-attachments/assets/9d7cc888-3240-4e9e-a6cf-48cf9ff11770">
+<br> This is the function for retrying database interactions. It is wrapped around each database interaction. For example, here is the update function wrapped with the retry <img width="837" alt="Screenshot 2024-10-31 at 4 22 50 PM" src="https://github.com/user-attachments/assets/53d8e875-dc4c-4d6b-924c-4a9fed3d3dee">
+<br>
       b. If this tactic can be simulated successfully by redoing the transaction, failing, and displaying the proper message that it pinged the database twice, then it will be considered successful. 
    <br>
    <br>
 <b>5. Removal of Service</b>
 <br>
-      a. In the event of failures or high loads on the system, lower priority functionalities are temporarily disabled in order to prioritize critical functionalities of the system and manage resources effectively. The ED map and ED Wait Times features are manually disabled (in that order) upon high system stress loads. 
+      a. In the event of failures or high loads on the system, lower priority functionalities are temporarily disabled in order to prioritize critical functionalities of the system and manage resources effectively. The ED map and ED Wait Times features are still available, however, the Triage process is unavailable as it requires most traffic (to send the form, clinician review, send back etc).
    <br>
-      b. This tactic can be tested by ensuring that low priority features can easily be toggled on and off and that this does not impact the functionality of other critical system services such as Log-in and Virtual Triage. 
+      b. This tactic can be tested by ensuring that low priority features can easily be toggled on and off and that this does not impact the functionality of other critical system services such as Log-in and Virtual Triage. Below is demonstration of the high load state turned, the triage button greyed out, and and the error message to the user.
    <br>
+   <img width="1408" alt="Screenshot 2024-10-31 at 4 36 21 PM" src="https://github.com/user-attachments/assets/a262d7c7-f662-4c54-b954-e8cd5e6421c0">
    <br>
   
 # Design Patterns
