@@ -33,7 +33,11 @@ async function connect() {
             console.error(`Error on attempt ${attempt}:`, error.message);
 
             // If it's the last attempt, throw an error with a custom message
-            if (attempt === maxRetries) {
+            if (attempt < maxRetries) {
+                // Add a delay before the second attempt
+                await new Promise(resolve => setTimeout(resolve, 10));
+            } else {
+                // If it's the last attempt, throw an error with a custom message
                 throw new Error("Tried connecting to db twice - unsuccessful");
             }
         }
@@ -84,11 +88,9 @@ async function createPatient(healthNumber, name, age, phoneNumber, profile_image
 
 
 // Update an existing patient record
-async function updatePatient(healthNumber, name, age, phone_number, profile_image) {
+async function updatePatient(healthNumber, name, age, phoneNumber, profile_image) {
     try {
         const connection = await connect();
-
-        // Build the update query dynamically based on provided fields
         const fieldsToUpdate = [];
         const values = [];
 
@@ -100,19 +102,17 @@ async function updatePatient(healthNumber, name, age, phone_number, profile_imag
             fieldsToUpdate.push("age = ?");
             values.push(age);
         }
-        if (phone_number !== undefined) {
+        if (phoneNumber !== undefined) {  // Check if phoneNumber is provided
             fieldsToUpdate.push("phone_number = ?");
-            values.push(phone_number);
+            values.push(phoneNumber);
         }
         if (profile_image !== undefined) {
             fieldsToUpdate.push("profile_image = ?");
             values.push(profile_image);
         }
 
-        // Add the healthNumber for the WHERE clause
         values.push(healthNumber);
 
-        // Construct the full query
         const query = `UPDATE Patients SET ${fieldsToUpdate.join(", ")} WHERE healthcarenumber = ?`;
         const [result] = await connection.execute(query, values);
         await connection.end();
@@ -126,6 +126,7 @@ async function updatePatient(healthNumber, name, age, phone_number, profile_imag
         throw error;
     }
 }
+
 
 
 

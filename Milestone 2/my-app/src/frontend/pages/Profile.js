@@ -63,17 +63,16 @@ const Profile = ({ user }) => {
 
     const handleSave = async (e) => {
         e.preventDefault();
-
+    
         const nameRegex = /^[A-Za-z\s-]+$/;
-    if (!nameRegex.test(formData.name)) {
-        setError('Name can only contain letters.');
-        return; // Prevent form submission
-    }
-
+        if (!nameRegex.test(formData.name)) {
+            setError('Name can only contain letters.');
+            return;
+        }
+    
         try {
             const formDataToSend = new FormData();
     
-            // Only append fields that have changed
             if (formData.name !== initialUserData.name) {
                 formDataToSend.append('name', formData.name);
             }
@@ -90,6 +89,9 @@ const Profile = ({ user }) => {
                 formDataToSend.append('profilePicture', formData.profilePicture);
             }
     
+            // Log form data to verify phone number
+            console.log('Submitting form data:', Object.fromEntries(formDataToSend.entries()));
+    
             await axios.put(`http://localhost:4000/patient_data/${formData.healthNumber}`, formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
@@ -103,6 +105,7 @@ const Profile = ({ user }) => {
             setError('An error occurred while saving your profile: ' + (error.response ? error.response.data.error : error.message));
         }
     };
+    
     
 
     const handleEdit = () => {

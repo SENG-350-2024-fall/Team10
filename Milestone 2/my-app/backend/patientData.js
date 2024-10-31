@@ -93,22 +93,21 @@ router.post('/', upload.single('profilePicture'), async (req, res) => {
   
 
 // Update an existing patient
+// Update an existing patient
 router.put('/:healthNumber', upload.single('profilePicture'), async (req, res) => {
   try {
-    console.log('Received body:', req.body);
-    console.log('Received file:', req.file);
-
     const { healthNumber } = req.params;
-    const { name, age, phone_number } = req.body;
-    const profile_image = req.file ? `/uploads/${req.file.filename}` : null;
+    const { name, age, phoneNumber } = req.body;  // Ensure this matches `phoneNumber` from the frontend
+    const profile_image = req.file ? `/uploads/${req.file.filename}` : undefined;
 
-    await updatePatient(healthNumber, name, age, phone_number, profile_image);
+    await updatePatient(healthNumber, name, age, phoneNumber, profile_image); // Pass phoneNumber here
     res.status(200).json({ message: 'Patient updated successfully!' });
   } catch (error) {
     console.error('Error updating patient:', error);
     res.status(500).json({ error: 'Failed to update patient' });
   }
 });
+
 
 // Delete a patient by healthcare number
 router.delete('/:healthNumber', async (req, res) => {
