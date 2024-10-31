@@ -63,6 +63,13 @@ const Profile = ({ user }) => {
 
     const handleSave = async (e) => {
         e.preventDefault();
+
+        const nameRegex = /^[A-Za-z\s-]+$/;
+    if (!nameRegex.test(formData.name)) {
+        setError('Name can only contain letters.');
+        return; // Prevent form submission
+    }
+
         try {
             const formDataToSend = new FormData();
     
