@@ -60,10 +60,11 @@ To test that this works, the try block had setMapError(true); and setIsMapView(f
    <br>
 <b>5. Removal of Service</b>
 <br>
-      a. In the event of failures or high loads on the system, lower priority functionalities are temporarily disabled in order to prioritize critical functionalities of the system and manage resources effectively. The ED map and ED Wait Times features are manually disabled (in that order) upon high system stress loads. 
+      a. In the event of failures or high loads on the system, lower priority functionalities are temporarily disabled in order to prioritize critical functionalities of the system and manage resources effectively. The ED map and ED Wait Times features are still available, however, the Triage process is unavailable as it requires most traffic (to send the form, clinician review, send back etc).
    <br>
-      b. This tactic can be tested by ensuring that low priority features can easily be toggled on and off and that this does not impact the functionality of other critical system services such as Log-in and Virtual Triage. 
+      b. This tactic can be tested by ensuring that low priority features can easily be toggled on and off and that this does not impact the functionality of other critical system services such as Log-in and Virtual Triage. Below is demonstration of the high load state turned, the triage button greyed out, and and the error message to the user.
    <br>
+   <img width="1408" alt="Screenshot 2024-10-31 at 4 36 21 PM" src="https://github.com/user-attachments/assets/a262d7c7-f662-4c54-b954-e8cd5e6421c0">
    <br>
   
 # Design Patterns
