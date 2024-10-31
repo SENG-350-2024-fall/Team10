@@ -87,17 +87,33 @@ async function createPatient(healthNumber, name, age, phoneNumber, profile_image
 async function updatePatient(healthNumber, name, age, phone_number, profile_image) {
     try {
         const connection = await connect();
-        const query = 'UPDATE Patients SET name = ?, age = ?, phone_number = ?, profile_image = ? WHERE healthcarenumber = ?';
 
-        // Prepare values, replacing undefined with null
-        const values = [
-            name !== undefined ? name : null,
-            age !== undefined ? age : null,
-            phone_number !== undefined ? phone_number : null,
-            profile_image !== undefined ? profile_image : null,
-            healthNumber
-        ];
+        // Build the update query dynamically based on provided fields
+        const fieldsToUpdate = [];
+        const values = [];
 
+        if (name !== undefined) {
+            fieldsToUpdate.push("name = ?");
+            values.push(name);
+        }
+        if (age !== undefined) {
+            fieldsToUpdate.push("age = ?");
+            values.push(age);
+        }
+        if (phone_number !== undefined) {
+            fieldsToUpdate.push("phone_number = ?");
+            values.push(phone_number);
+        }
+        if (profile_image !== undefined) {
+            fieldsToUpdate.push("profile_image = ?");
+            values.push(profile_image);
+        }
+
+        // Add the healthNumber for the WHERE clause
+        values.push(healthNumber);
+
+        // Construct the full query
+        const query = `UPDATE Patients SET ${fieldsToUpdate.join(", ")} WHERE healthcarenumber = ?`;
         const [result] = await connection.execute(query, values);
         await connection.end();
 
@@ -110,6 +126,7 @@ async function updatePatient(healthNumber, name, age, phone_number, profile_imag
         throw error;
     }
 }
+
 
 
 // Delete a patient by healthcare number
