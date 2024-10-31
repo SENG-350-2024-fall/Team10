@@ -10,6 +10,8 @@ const port = 4000;
 app.use(cors({
     origin: 'http://localhost:3000',  // Allow frontend to access the backend
 }));
+app.use('/uploads', express.static('uploads'));
+
 
 // Middleware for parsing JSON and URL-encoded data
 app.use(bodyParser.json({ limit: '210mb' }));  // Increase JSON payload size limit

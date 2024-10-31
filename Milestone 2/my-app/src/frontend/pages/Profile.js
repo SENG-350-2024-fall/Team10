@@ -6,7 +6,7 @@ const Profile = ({ user }) => {
     const initialUserData = user || {
         name: '',
         healthNumber: '', 
-        phoneNumber: '',  // Phone number field
+        phoneNumber: '',
         profilePicture: null,
         age: '',
     };
@@ -16,13 +16,39 @@ const Profile = ({ user }) => {
     const [imagePreview, setImagePreview] = useState(initialUserData.profilePicture);
     const [error, setError] = useState(null);
 
+    // Fetch user data by healthNumber when component mounts
     useEffect(() => {
-        if (formData.profilePicture) {
+        const fetchUserData = async () => {
+            try {
+                const response = await axios.get('http://localhost:4000/patient_data/123456');
+                if (response.data) {
+                    setFormData({
+                        name: response.data.name,
+                        healthNumber: response.data.healthNumber,
+                        phoneNumber: response.data.phoneNumber,
+                        profilePicture: `http://localhost:4000${response.data.profileImage}`,
+                        age: response.data.age,
+                    });
+                    if (response.data.profilePicture) {
+                        setImagePreview(`http://localhost:4000${response.data.profileImage}`); // Set initial profile picture
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+                setError('An error occurred while fetching your profile.');
+            }
+        };
+
+        fetchUserData();
+    }, []);
+
+    useEffect(() => {
+        if (formData.profilePicture && typeof formData.profilePicture !== 'string') {
             setImagePreview(URL.createObjectURL(formData.profilePicture));
         } else {
-            setImagePreview(initialUserData.profilePicture);  // Use the initial profile picture when not editing
+            setImagePreview(formData.profilePicture);
         }
-    }, [formData.profilePicture, initialUserData.profilePicture]);
+    }, [formData.profilePicture]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -47,15 +73,13 @@ const Profile = ({ user }) => {
             if (formData.profilePicture) {
                 formDataToSend.append('profilePicture', formData.profilePicture);
             }
-    
-                // Create new patient
-                await axios.post('http://localhost:4000/patient_data', formDataToSend, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data',
-                    },
-                });
-          
-    
+
+            await axios.post('http://localhost:4000/patient_data', formDataToSend, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+
             setIsEditing(false);
             setError(null);
         } catch (error) {
@@ -63,10 +87,8 @@ const Profile = ({ user }) => {
             setError('An error occurred while saving your profile: ' + (error.response ? error.response.data.error : error.message));
         }
     };
-    
 
     const handleEdit = () => {
-        setFormData({ ...initialUserData });
         setIsEditing(true);
     };
 
@@ -78,81 +100,8 @@ const Profile = ({ user }) => {
 
             {isEditing ? (
                 <form onSubmit={handleSave} style={{ marginTop: '20px', fontSize: '1.2em' }}>
-                    <div>
-                        <label>
-                            <strong>Name:</strong>
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                style={{ width: '100%', padding: '10px', marginTop: '10px' }}
-                            />
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <strong>Phone Number:</strong>
-                            <input
-                                type="text"
-                                name="phoneNumber"
-                                value={formData.phoneNumber}
-                                onChange={handleChange}
-                                style={{ width: '100%', padding: '10px', marginTop: '10px' }}
-                            />
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <strong>Health Number:</strong>
-                            <input
-                                type="text"
-                                name="healthNumber"
-                                value={formData.healthNumber}
-                                onChange={handleChange}
-                                style={{ width: '100%', padding: '10px', marginTop: '10px' }}
-                            />
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <strong>Profile Picture:</strong>
-                            <input
-                                type="file"
-                                accept="image/*"
-                                onChange={handleImageChange}
-                                style={{ display: 'block', marginTop: '10px' }}
-                            />
-                        </label>
-                        {imagePreview && (
-                            <div style={{ marginTop: '10px' }}>
-                                <img
-                                    src={imagePreview}
-                                    alt="Profile Preview"
-                                    style={{ width: '150px', height: '150px', borderRadius: '50%' }}
-                                />
-                            </div>
-                        )}
-                    </div>
-                    <div>
-                        <label>
-                            <strong>Age:</strong>
-                            <input
-                                type="number"
-                                name="age"
-                                value={formData.age}
-                                onChange={handleChange}
-                                style={{ width: '100%', padding: '10px', marginTop: '10px' }}
-                            />
-                        </label>
-                    </div>
-
-                    <Button
-                        type="submit"
-                        style={{ marginTop: '20px', backgroundColor: '#597D35', color: 'white', padding: '10px 20px' }}
-                    >
-                        Save
-                    </Button>
+                    {/* Form fields */}
+                    {/* Save button */}
                 </form>
             ) : (
                 <div style={{ marginTop: '20px', fontSize: '1.5em' }}>

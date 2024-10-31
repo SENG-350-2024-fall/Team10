@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
-const { fetchAllPatients, fetchPatientById, createPatient, updatePatient, deletePatient } = require('./database.js');
+const { fetchAllPatients, fetchPatientByHealthNumber, createPatient, updatePatient, deletePatient } = require('./database.js');
 const router = express.Router();
 
 // Ensure upload directory exists
@@ -54,9 +54,15 @@ router.get('/:healthNumber', async (req, res) => {
   }
 
   try {
-    const patient = await fetchPatientById(healthNumber);
+    const patient = await fetchPatientByHealthNumber(healthNumber);
     if (patient) {
-      res.json(patient);
+      res.json({
+        name: patient.name,
+        age: patient.age,
+        healthNumber: patient.healthcarenumber,
+        phoneNumber: patient.phone_number,
+        profileImage: patient.profile_image,
+      });
     } else {
       res.status(404).json({ error: 'Patient not found' });
     }
@@ -65,6 +71,7 @@ router.get('/:healthNumber', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch patient' });
   }
 });
+
 
 // Create a new patient
 router.post('/', upload.single('profilePicture'), async (req, res) => {

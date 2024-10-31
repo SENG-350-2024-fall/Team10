@@ -10,31 +10,35 @@ console.log('Database Config:', {
 });
 
 // Connect to the database
-    async function connect() {
+async function connect() {
+    const maxRetries = 2;  // Define max number of retries
+    let connection;
+    
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
         try {
-            console.log('Connecting to MySQL with settings:', {
+            console.log(`Attempt ${attempt}: Connecting to MySQL...`);
+            
+            connection = await mysql.createConnection({
                 host: process.env.MYSQL_HOST || 'localhost',
                 user: process.env.MYSQL_USER || 'root',
                 password: process.env.DB_PASSWORD,
                 database: process.env.MYSQL_DATABASE || 'ED',
-                port: process.env.MYSQL_PORT || 3306 
+                port: process.env.MYSQL_PORT || 3306
             });
-    
-            const connection = await mysql.createConnection({
-                host: process.env.MYSQL_HOST || 'localhost',
-                user: process.env.MYSQL_USER || 'root',
-                password: process.env.DB_PASSWORD, // Make sure this is referenced correctly
-                database: process.env.MYSQL_DATABASE || 'ED',
-                port: process.env.MYSQL_PORT || 3306 
-            });
-    
+            
             console.log('Successfully connected to MySQL');
-            return connection;
+            return connection; // Exit if successful
+
         } catch (error) {
-            console.error('Error connecting to MySQL:', error);
-            throw error;
+            console.error(`Error on attempt ${attempt}:`, error.message);
+
+            // If it's the last attempt, throw an error with a custom message
+            if (attempt === maxRetries) {
+                throw new Error("Tried connecting to db twice - unsuccessful");
+            }
         }
     }
+}
     
 
 // Fetch all patients
