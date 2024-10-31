@@ -41,8 +41,13 @@ We were able to complete most of the goals for Milestone 3, the only task we are
 <br>
       a. If the map library used to display ED locations and wait times breaks, the list view of the EDs and all other functionality of the system is still available to users. An error message is displayed on the map area indicating to users that the map functionality is temporarily unavailable. This approach ensures that the core functionality of the system is maintained and users are informed of unavailable services untill map functionality can be restored. 
    <br>
-      b. This tactic can be tested by simulating a map outtage and ensuring that the error message is appropriately displayed and core functionality of the system is maintained. 
+      b. This tactic can be tested by simulating a map outtage and ensuring that the error message is appropriately displayed and core functionality of the system is maintained.
    <br>
+   <img width="1382" alt="Screenshot 2024-10-31 at 3 23 22 PM" src="https://github.com/user-attachments/assets/e59d4e1f-7611-4c60-ac50-e29009946418">
+ Here is the effect simulated. When the map has an error, it turns off as an option (users cannot use it) and only shows the list as well as an error message. Here is the code for this - a UseEffect hook is used to detect any live changes and deal with breaks.
+ <br>
+ <img width="849" alt="Screenshot 2024-10-31 at 3 25 57 PM" src="https://github.com/user-attachments/assets/8524d145-b6e1-403d-bc2f-a8d76b849944">
+To test that this works, the try block had setMapError(true); and setIsMapView(false); to immitate a break.
    <br>
 <b>4. Retry</b>
 <br>
