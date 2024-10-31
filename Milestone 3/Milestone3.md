@@ -30,7 +30,10 @@ We were able to complete most of the goals for Milestone 3, the only task we are
 <br>
       a. User friendly error messages are displayed to the user on the website when invalid information is inputted. More specifically, when a User is updating their profile, they get an error 
         message if they add non-character letters in their Name tab. 
-   <br>
+   <br> 
+   <img width="1053" alt="Screenshot 2024-10-31 at 3 12 05 PM" src="https://github.com/user-attachments/assets/af4b6201-cb69-4270-8e58-4e0d448d37c4">
+ <br>
+   
       b. This availability tactic can be tested manually by the developer to ensure if invalid information, looking the business logic of Mister ED, is inputted it would be carefully dealt with and properly showed to the user. We were able to validate this tactic by following this protocol completely.
    <br>
    <br>
