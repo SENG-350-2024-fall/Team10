@@ -52,7 +52,9 @@ To test that this works, the try block had setMapError(true); and setIsMapView(f
 <b>4. Retry</b>
 <br>
       a. This tactic is manifested within the database code, and it automatically retries any failed database interactions after waiting for a short period, around 10ms. If the task failed the second time due to reasons like a Network Connection error, it will provide an error message saying it tried twice and will not try again.
-   <br>
+   <br> <img width="676" alt="Screenshot 2024-10-31 at 4 20 58 PM" src="https://github.com/user-attachments/assets/9d7cc888-3240-4e9e-a6cf-48cf9ff11770">
+<br> This is the function for retrying database interactions. It is wrapped around each database interaction. For example, here is the update function wrapped with the retry <img width="837" alt="Screenshot 2024-10-31 at 4 22 50 PM" src="https://github.com/user-attachments/assets/53d8e875-dc4c-4d6b-924c-4a9fed3d3dee">
+<br>
       b. If this tactic can be simulated successfully by redoing the transaction, failing, and displaying the proper message that it pinged the database twice, then it will be considered successful. 
    <br>
    <br>
