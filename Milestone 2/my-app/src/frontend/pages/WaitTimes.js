@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import mapMarker from '../assets/mapMarker.png';
 
 const redIcon = new L.Icon({
@@ -18,6 +18,8 @@ const redIcon = new L.Icon({
 const WaitTimes = ({ user }) => {
     const [isMapView, setIsMapView] = useState(true);
     const [mapError, setMapError] = useState(false);
+    const [highLoad, setHighLoad] = useState(false); // Simulate high load state
+    const navigate = useNavigate();
 
     const locations = [
         { name: 'Royal Jubilee Hospital', position: [48.4327, -123.3276], waitTime: '30 minutes' },
@@ -41,6 +43,16 @@ const WaitTimes = ({ user }) => {
             setIsMapView(false);
         }
     }, []);
+
+    // Handler for triage form access during high load
+const handleTriageClick = (e) => {
+    if (highLoad) {
+        alert("We are sorry to inform that due to high loads on the system, we are unable to offer this feature at this time. Try again in a few minutes.");
+    } else {
+        navigate('/TriageForm');
+    }
+};
+
 
     return (
         <div>
@@ -79,7 +91,18 @@ const WaitTimes = ({ user }) => {
                                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
                                         <span style={{fontWeight: 'bold', fontSize: '1.5em'}}>{location.name}</span>
                                         <span style={{fontSize:'1.2em'}}>Current Wait Time: <span style={{fontWeight:'bold'}}>{location.waitTime}</span></span>
-                                        <Button component={Link} to={`/TriageForm`} style={{color: 'white', justifyContent: 'center', background:'green', width: '12em', height:'4em', marginTop:'10px'}}>
+                                        <Button 
+                                            onClick={handleTriageClick}
+                                     
+                                            style={{
+                                                color: 'white', 
+                                                justifyContent: 'center', 
+                                                background: highLoad ? 'gray' : 'green', 
+                                                width: '12em', 
+                                                height: '4em', 
+                                                marginTop: '10px'
+                                            }}
+                                        >
                                             Medical Triage
                                         </Button>
                                     </div>
@@ -106,9 +129,15 @@ const WaitTimes = ({ user }) => {
                                     <td style={{ padding: '10px', fontSize: '1.2em' }}>{location.waitTime}</td>
                                     <td style={{ textAlign: 'center', padding: '10px' }}>
                                         <Button 
-                                            component={Link} 
-                                            to={`/TriageForm`} 
-                                            style={{color: 'white', background:'green', width: '12em', height:'3em'}}>
+                                            onClick={handleTriageClick}
+                                            disabled={highLoad}
+                                            style={{
+                                                color: 'white', 
+                                                background: highLoad ? 'gray' : 'green', 
+                                                width: '12em', 
+                                                height: '3em'
+                                            }}
+                                        >
                                             Medical Triage
                                         </Button>
                                     </td>
