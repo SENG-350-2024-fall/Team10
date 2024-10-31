@@ -15,11 +15,16 @@ We were able to complete most of the goals for Milestone 3, the only task we are
 <b>1. Self Test</b>
 <br>
       a. We implemented a selt test tactic for the database connection. We did this by creating the file database.js. If the created database connection has any issues, it will output an error 
-        log to the console.
+        log to the console. It will also communicate a successful connection as shown in the image below. <br> 
+        <img width="485" alt="Screenshot 2024-10-31 at 2 41 55 PM" src="https://github.com/user-attachments/assets/eec9708d-e200-4aa9-b053-e6b52fcfd639">
+        
    <br>
       b. The database.js file gets automatically run when the database connection gets started or interrupted, therefore ensuring that any exceptions will get caught and dealt with properly 
-        regarding the database connection.
-   <br>
+        regarding the database connection. The code below shows how this is executed. The database will try to connect twice and if cannot connect, the error log will say which try failed.
+        
+   <br><img width="768" alt="Screenshot 2024-10-31 at 2 42 07 PM" src="https://github.com/user-attachments/assets/46a9ce10-618d-4e01-814b-50ee52245d49">
+
+   
    <br>
 <b>2. Exception Handling</b>
 <br>
