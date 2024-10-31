@@ -9,7 +9,7 @@ console.log('Database Config:', {
     MYSQL_PORT: process.env.MYSQL_PORT,
 });
 
-// Connect to the database
+
 async function connect() {
     const maxRetries = 2;  // Define max number of retries
     let connection;
@@ -43,53 +43,61 @@ async function connect() {
         }
     }
 }
-    
+
+const maxRetries = 2; 
+retryDelay = 10;
+
+// Retry function with delay
+async function retryWithDelay(operation, maxRetries, delay) {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            return await operation();
+        } catch (error) {
+            if (attempt < maxRetries) {
+                console.log(`Attempt ${attempt} failed. Retrying in ${delay}ms...`);
+                await new Promise((resolve) => setTimeout(resolve, delay));
+            } else {
+                console.error('Max retries reached. Operation failed.');
+                throw error;
+            }
+        }
+    }
+}
 
 // Fetch all patients
 async function fetchAllPatients() {
-    try {
+    return retryWithDelay(async () => {
         const connection = await connect();
         const [patients] = await connection.execute('SELECT * FROM Patients');
         await connection.end();
         return patients;
-    } catch (error) {
-        console.error('Error fetching patients:', error);
-        throw error;
-    }
+    }, maxRetries, retryDelay);
 }
 
 // Fetch a patient by healthcare number
 async function fetchPatientByHealthNumber(healthNumber) {
-    try {
+    return retryWithDelay(async () => {
         const connection = await connect();
         const [results] = await connection.execute('SELECT * FROM Patients WHERE healthcarenumber = ?', [healthNumber]);
         await connection.end();
         return results.length > 0 ? results[0] : null;
-    } catch (error) {
-        console.error('Error fetching patient:', error);
-        throw error;
-    }
+    }, maxRetries, retryDelay);
 }
 
 // Create a new patient record
 async function createPatient(healthNumber, name, age, phoneNumber, profile_image) {
-    try {
+    return retryWithDelay(async () => {
         const connection = await connect();
-        
         const query = 'INSERT INTO Patients (healthcarenumber, name, age, phone_number, profile_image) VALUES (?, ?, ?, ?, ?)';
         await connection.execute(query, [healthNumber, name, age, phoneNumber, profile_image]);
         await connection.end();
         return { message: 'Patient created successfully' };
-    } catch (error) {
-        console.error('Error creating patient:', error);
-        throw error;
-    }
+    }, maxRetries, retryDelay);
 }
-
 
 // Update an existing patient record
 async function updatePatient(healthNumber, name, age, phoneNumber, profile_image) {
-    try {
+    return retryWithDelay(async () => {
         const connection = await connect();
         const fieldsToUpdate = [];
         const values = [];
@@ -102,7 +110,7 @@ async function updatePatient(healthNumber, name, age, phoneNumber, profile_image
             fieldsToUpdate.push("age = ?");
             values.push(age);
         }
-        if (phoneNumber !== undefined) {  // Check if phoneNumber is provided
+        if (phoneNumber !== undefined) {
             fieldsToUpdate.push("phone_number = ?");
             values.push(phoneNumber);
         }
@@ -121,18 +129,12 @@ async function updatePatient(healthNumber, name, age, phoneNumber, profile_image
             throw new Error('Patient not found');
         }
         return { message: 'Patient updated successfully' };
-    } catch (error) {
-        console.error('Error updating patient:', error);
-        throw error;
-    }
+    }, maxRetries, retryDelay);
 }
-
-
-
 
 // Delete a patient by healthcare number
 async function deletePatient(healthNumber) {
-    try {
+    return retryWithDelay(async () => {
         const connection = await connect();
         const query = 'DELETE FROM Patients WHERE healthcarenumber = ?';
         const [result] = await connection.execute(query, [healthNumber]);
@@ -141,10 +143,7 @@ async function deletePatient(healthNumber) {
             throw new Error('Patient not found');
         }
         return { message: 'Patient deleted successfully' };
-    } catch (error) {
-        console.error('Error deleting patient:', error);
-        throw error;
-    }
+    }, maxRetries, retryDelay);
 }
 
 module.exports = {
@@ -152,5 +151,5 @@ module.exports = {
     fetchPatientByHealthNumber,
     createPatient,
     updatePatient,
-    deletePatient
+    deletePatient,
 };
