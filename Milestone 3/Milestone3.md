@@ -7,7 +7,7 @@ Milestone 3: Create database, server file, API connections for Wait Times Proces
 Milestone 4: Virtual Triage Form, Notifications, Referral Page, Wait Times/Queue front-end
 <br>
 
-We were able to complete most of the goals for Milestone 3, the only task we are pushing to next milestone is the Log In Page.
+We were able to complete most of the goals for Milestone 3 including setting up and connecting a database, a server file, and a router for API calls for patient information, as well as frontend code for a triage form, and wait times . We are pushing the Log In Page and live Wait Times to the next sprint as those still require more work. The backend is functional and ready to facilitate this next Milestone.
 <br>
 # Architecture Tactics - Availability
 
