@@ -83,14 +83,20 @@ In software development, the strategy pattern allows developers to implement mul
 
 **Facade pattern** <br>
 Similarly to a real life facade, the facade pattern is a design pattern in which a front facing interface is used to maske more in-depth and complex structural code. In our Mister ED system, the virtual triage relies on a survey that patients fill out regarding their ailment. The system then takes the information from the patients input and runs diagnosis to evaluate the patients input the provide the triage clinician with a useful analysis. The facade pattern allows us to hide the in depth evaluation the system does from the both the patients and the triage clinician, but still provide the users with the necessary information. <br>
+The patient will see this form for their information <br>
+<img width="797" alt="Screenshot 2024-10-31 at 5 14 56 PM" src="https://github.com/user-attachments/assets/c06cb002-ac3a-4636-a590-6999ff701533"> <br>
+Clinicians (and patients reviewing before submission) will see the form in this format to allow for easier information processing. <br>
+<img width="756" alt="Screenshot 2024-10-31 at 5 16 04 PM" src="https://github.com/user-attachments/assets/f6232fe3-27c1-45d5-9e4c-617a3b959572">
+<br>
 
 
 # Contributions
+
 
 | Name | Contributions | 
 | ----------- | ---------------------- |
 | Ella | Graceful Degredation, Removal of Service |
 | Andra | Singleton pattern, Strategy Pattern, Facade Pattern |
 | Shyla | Self Test, Retry, Exception Handling Availability Tactic, Updating Code README.md , and Sprint Plan |
-| Val | Coded the mentioned tactic/patterns, edited removal of service, state pattern, singleton pattern, retry, graceful degradation| 
+| Val | Coded the mentioned tactic/patterns, edited the following: removal of service, state pattern, singleton pattern, retry, graceful degradation, facade pattern| 
 | Alex | State Pattern, Decorator Pattern |
