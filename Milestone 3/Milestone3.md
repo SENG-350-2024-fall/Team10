@@ -99,4 +99,4 @@ Clinicians (and patients reviewing before submission) will see the form in this 
 | Andra | Singleton pattern, Strategy Pattern, Facade Pattern |
 | Shyla | Self Test, Retry, Exception Handling Availability Tactic, Updating Code README.md , and Sprint Plan |
 | Val | Coded the mentioned tactic/patterns, edited the following: removal of service, state pattern, singleton pattern, retry, graceful degradation, facade pattern| 
-| Alex | State Pattern, Decorator Pattern |
+| Alex | Design Patterns: State Pattern, Decorator Pattern |
