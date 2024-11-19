@@ -7,9 +7,21 @@ const Notifications = ({ user }) => {
         "Please call 911."
     ];
 
+    const generateRandomDate = () => {
+        const startDate = new Date("2024-01-01");
+        const endDate = new Date("2024-10-20");
+        const randomTime = startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime());
+        return new Date(randomTime).toLocaleDateString();
+    };
+
     const stickyOldNotifications = [
-        { id: 1, message: "Your prescription for Nitrous Oxide is ready to pick up." },
-        { id: 2, message: "Reminder: Follow up with your doctor next week." }
+        { id: 1, message: "Your prescription for Nitrous Oxide is ready to pick up.", date: generateRandomDate() },
+        { id: 2, message: "Reminder: Follow up with your doctor next week.", date: generateRandomDate() },
+        { id: 3, message: "Your lab results are now available. Please call 205-785-2394.", date: generateRandomDate() },
+        { id: 4, message: "Appointment confirmed for November 5th, 2024 at 3:00 PM.", date: generateRandomDate() },
+        { id: 5, message: "Your insurance claim has been processed successfully.", date: generateRandomDate() },
+        { id: 6, message: "Annual flu vaccine reminder: Schedule your vaccination soon.", date: generateRandomDate() },
+        { id: 7, message: "You missed your appointment on October 15, 2024. Please reschedule.", date: generateRandomDate() }
     ];
 
     const [newNotifications, setNewNotifications] = useState([]);
@@ -19,16 +31,23 @@ const Notifications = ({ user }) => {
     useEffect(() => {
         const randomMessage =
             notificationMessages[Math.floor(Math.random() * notificationMessages.length)];
-        setNewNotifications([{ id: Date.now(), message: randomMessage, expanded: false }]);
+        setNewNotifications([{ id: Date.now(), message: randomMessage, expanded: false, date: "now" }]);
     }, []);
 
     // Handle moving a notification to old
     const handleDoneNotification = (id) => {
         const notificationToMove = newNotifications.find((n) => n.id === id);
-        setOldNotifications((prev) => [
-            ...prev.slice(-3), // Keep the last 3 old notifications plus the new one
-            { ...notificationToMove, expanded: false }
-        ]);
+        const notificationWithDate = {
+            ...notificationToMove,
+            expanded: false,
+            date: new Date().toLocaleDateString() // Use the current date
+        };
+
+        setOldNotifications((prev) => {
+            const updated = [notificationWithDate, ...prev];
+            return updated.sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date, descending
+        });
+
         setNewNotifications([]);
     };
 
@@ -71,12 +90,6 @@ const Notifications = ({ user }) => {
             gap: '10px',
             flexGrow: 1,
         },
-        arrowButton: {
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            fontSize: '1.2em',
-        },
         doneButton: {
             backgroundColor: 'green',
             color: 'white',
@@ -118,12 +131,7 @@ const Notifications = ({ user }) => {
                                 <span>{notification.message}</span>
                             </div>
                             <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                                <button
-                                    style={notificationStyles.arrowButton}
-                                    onClick={() => toggleExpandNotification(notification.id, true)}
-                                >
-                                    {notification.expanded ? '▲' : '▼'}
-                                </button>
+                                <span style={{ fontSize: '0.8em', color: 'gray' }}>{notification.date}</span>
                                 <button
                                     style={notificationStyles.doneButton}
                                     onClick={(e) => {
@@ -152,10 +160,10 @@ const Notifications = ({ user }) => {
                         }}
                         onClick={() => toggleExpandNotification(notification.id, false)}
                     >
-                        <div style={notificationStyles.content}>{notification.message}</div>
-                        <button style={notificationStyles.arrowButton}>
-                            {notification.expanded ? '▲' : '▼'}
-                        </button>
+                        <div style={notificationStyles.content}>
+                            <span>{notification.message}</span>
+                        </div>
+                        <span style={{ fontSize: '0.8em', color: 'gray' }}>{notification.date}</span>
                     </div>
                 ))}
             </div>

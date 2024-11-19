@@ -86,6 +86,15 @@ const Status = ({ user }) => {
                 <Typography variant="body1" color="textSecondary" mt={2}>
                     {Math.round(progress)}%
                 </Typography>
+                {progress === 100 && (
+                    <Typography
+                        variant="h6"
+                        color="primary"
+                        style={{ marginTop: '1em', fontWeight: 'bold', fontSize: '1.8em' }}
+                    >
+                        Your triage is complete. Check the Notifications tab for further instructions.
+                    </Typography>
+                )}
             </Box>
         </div>
     );
