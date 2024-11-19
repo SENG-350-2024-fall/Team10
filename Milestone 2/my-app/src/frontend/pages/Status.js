@@ -55,7 +55,7 @@ const Status = ({ user }) => {
                             flexGrow={1}
                             display="flex"
                             alignItems="center"
-                            justifyContent="flex-start" // Start fill from the left side
+                            justifyContent="center" // Center the label in the cell
                             color="white"
                             position="relative"
                             style={{
@@ -68,18 +68,27 @@ const Status = ({ user }) => {
                                 width={getFillWidth(stage.start, stage.end)}
                                 height="100%"
                                 bgcolor={stage.color}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
+                                position="absolute" // Overlay to ensure fill doesn't affect label position
+                                left="0"
+                                top="0"
+                                zIndex={1}
                                 style={{
                                     transition: 'width 0.3s ease',
-                                    color: 'white',
                                     borderRadius: index === 0 ? '5px 0 0 5px' : index === stages.length - 1 ? '0 5px 5px 0' : '0'
                                 }}
+                            />
+                            {/* Display label always, dynamically changing its color */}
+                            <Typography
+                                variant="body2"
+                                style={{
+                                    position: 'relative', // Ensures label is above the fill
+                                    zIndex: 2,
+                                    color: progress >= stage.start && progress < stage.end ? 'white' : 'black',
+                                    fontWeight: 'bold',
+                                }}
                             >
-                                {/* Display label only for the active section */}
-                                {progress >= stage.start && progress < stage.end && stage.label}
-                            </Box>
+                                {stage.label}
+                            </Typography>
                         </Box>
                     ))}
                 </Box>

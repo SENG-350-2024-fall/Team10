@@ -22,12 +22,12 @@ const WaitTimes = ({ user }) => {
     const navigate = useNavigate();
 
     const locations = [
-        { name: 'Royal Jubilee Hospital', position: [48.4327, -123.3276], waitTime: '30 minutes' },
-        { name: 'Victoria General Hospital', position: [48.4668, -123.4326], waitTime: '45 minutes' },
-        { name: 'Saanich Peninsula Hospital', position: [48.6005, -123.4167], waitTime: 'X minutes' },
-        { name: 'Lady Minto / Gulf Islands Hospital', position: [48.8546, -123.5007], waitTime: 'X minutes' },
-        { name: 'Cowichan District Hospital', position: [48.7829, -123.7079], waitTime: 'X minutes' },
-        { name: 'Ladysmith Emergency Department', position: [48.9939, -123.8160], waitTime: 'X minutes' },
+        { name: 'Royal Jubilee Hospital', position: [48.4327, -123.3276], waitTime: '8 hours 30 minutes' },
+        { name: 'Victoria General Hospital', position: [48.4668, -123.4326], waitTime: '7 hours 25 minutes' },
+        { name: 'Saanich Peninsula Hospital', position: [48.6005, -123.4167], waitTime: '3 hours 48 minutes' },
+        { name: 'Lady Minto / Gulf Islands Hospital', position: [48.8546, -123.5007], waitTime: '5 hours 15 minutes' },
+        { name: 'Cowichan District Hospital', position: [48.7829, -123.7079], waitTime: '4 hours 18 minutes' },
+        { name: 'Ladysmith Emergency Department', position: [48.9939, -123.8160], waitTime: '7 hours 5 minutes' },
     ];
 
     const position = locations[0].position;
