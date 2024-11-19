@@ -12,9 +12,12 @@
 -result of the review with the 6 step process
 
 3. Design Diagrams and System Description
+To do:
+- Update class diagram to include strategy patterns from last milestone <br>
 
 
-4. System Implementation
+
+5. System Implementation
 
 
-5. Contributions
+6. Contributions
