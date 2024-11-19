@@ -20,4 +20,13 @@ To do:
 5. System Implementation
 
 
-6. Contributions
+# Contributions
+
+
+| Name | Contributions | 
+| ----------- | ---------------------- |
+| Ella |  |
+| Andra | allocation table |
+| Shyla |  |
+| Val |  | 
+| Alex |  |
