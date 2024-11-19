@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Notifications = ({ user }) => {
     const notificationMessages = [
-        "You have been added to the ER queue. Please come in ASAP.",
+        "You have been added to the ER queue. Please come in as soon as possible so we can measure your vitals.",
         "Fortunately, after triaging your health concern, the clinicians decided your issue does not require emergency attention. Please visit your local physician for this health concern.",
         "Please call 911."
     ];
