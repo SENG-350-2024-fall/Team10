@@ -54,16 +54,19 @@ This SAD is organized into the following seven sections:
 - If the current view is the refinement of another view, indicate which one
 
 ## 2. Architecture Background
-
 ### Problem Background
-
 ### System Overview
+General function and purpose for the system
 
 ### Context
+Goals and major contextual factors for the software architecture. <br>
+Includes a description of the role software architecture plays in the life cycle, the relationship to system engineering results and artifacts, and any other relevant factors.
 
 ### Driving Requirements
+Lists the functional requirements quality attributes and design constraints. It may point to a separate requirements document.
 
 ### Solution Background
+The sub-parts of this section provide a description of why the architecture is the way that it is, and a convincing argument that the architecture is the right one to satisfy the behavioral and quality attribute goals levied upon it.
 
 ### Architectural Approaches
 
