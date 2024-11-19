@@ -56,7 +56,8 @@ This SAD is organized into the following seven sections:
 ## 2. Architecture Background
 ### Problem Background
 ### System Overview
-General function and purpose for the system
+The gernal purpose of the MisterED system is to alleviate the overcrowding and overloading of Emergency Departments (EDs) as well as the overly-long patient wait times by using software technology to optimize patient flow and resource management. This purpose will improve the patient expereience as well as help the emergency departments function better. <br>
+The system provides an interace for users to register as a patient, asses the current ED load, perform a virtual triage of their symptoms, check-in to ED's virtually and receive notifications. 
 
 ### Context
 Goals and major contextual factors for the software architecture. <br>
