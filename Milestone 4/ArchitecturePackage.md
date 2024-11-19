@@ -1,4 +1,5 @@
-# SAD 
+# MisterED Software Architecture Document (SAD)
+Content Owners: Ella Palter, Shyla Burns, Andra Rice, Val Savchenko, Alex Moody
 
 ## Sections
 1. Documentation Roadmap and Overview
@@ -12,12 +13,45 @@
 6. Glossary and Acronyms
 
 ## 1. Documentation Roadmap and Overview
+Sub-parts of this section provide information that will help readers or users of the Software Architecture Document (SAD) quickly find information that will enable them to do their jobs. Readers of the SAD seeking an overview should begin here, as should readers interested in finding particular information to answer a specific question.
 
+How the SAD is organized explains the information that is found in each section of the SAD.
+How a view is documented explains how architectural views are documented in this SAD.
 ### Purpose and Scope of the SAD
 
 ### How the SAD is Organized
+This SAD is organized into the following seven sections:
 
+- This Documentation Roadmap and Overview provides information about this document and its intended audience. It provides the roadmap and document overview. Every reader who wishes to find information relevant to the software architecture described in this document should begin by reading this section, which describes how the document is organized, and where information may be found.
+- Architecture Background provides information about the software architecture. It describes the background and rationale for the software architecture. It explains the constraints and influences that led to the current architecture, and it describes the major architectural approaches that have been utilized in the architecture.
+- Views and Mapping Between Views specify the software architecture.
+- Referenced Materials and Glossary and Acronyms provide reference information. Referenced Materials provides look-up information for documents that are cited elsewhere in this SAD. Glossary and Acronyms is an index of architectural elements and relations giving their definition, and where each is used in this SAD.
 ### How a View is Documented 
+1. Primary Presentation
+- Is usually graphical
+- Should include a key that explains the notation
+- Shows elements and relations among them
+- Shows the information you want to convey about the view first
+- Should identify elements that are external to scope of the view
+- If external entities are not clearly marked in the diagram, consider adding a context diagram
+2. Element Catalog
+- Explains elements depicted in primary presentation and their properties
+- Is usually a table with element name and textual description
+- May contain interface documentation
+- May contain behavior documentation
+3. Variability Guide
+- Points where system can be parameterized or reconfigured. Examples:
+- Number of instances in a pool
+- Support for plug-ins or add-ons
+- Support for different versions of OS, database server or runtime environment
+- Maybe the view is a reference architecture
+- Provide guidelines to instantiate it
+4. Other Information
+- Description and rationale for important design decisions (including relevant rejected alternatives)
+- Results of analysis, prototypes and experiments
+- Context diagram
+5. Parent View
+- If the current view is the refinement of another view, indicate which one
 
 ## 2. Architecture Background
 
