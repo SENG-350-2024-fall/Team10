@@ -93,7 +93,9 @@ TODO: Add here links to the parent view and to any children (i.e., refined) view
 
 ### 3.2 C&C Views
 #### Primary Presentation
-TODO: Add here the diagram (or non-graphical representation) that shows the elements and relations in this view. Indicate the language or notation being used. If it's not a standard notation such as UML, add a notation key.
+UML <br> <br>
+![Alt](Diagrams/C&CView.svg)
+
 #### Element Catalog
 
 
