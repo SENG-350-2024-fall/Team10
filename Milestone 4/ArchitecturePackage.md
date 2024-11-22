@@ -108,12 +108,10 @@ The following table lists all elements present in the Primary Presentation shown
 | Triage Service | Responsible for assessing patient condition through virtual triage. Fetches ED load data from the ED Queue Service and updates patient priority in the Mister ED DB. |
 | ED Queue Service | Manages the patient queue in real-time. Updates and retrieves the status of patients in the queue and communicates ED load to the Triage Service for recommendations. |
 | Notification Service | Sends notifications to patients. Retrieves contact information from the Mister ED DB and sends app-based alerts. |
-| Mister ED DB | Central database storing all system information, including user credentials, patient records, triage results, ED load, and notification logs. |
-
+| Mister ED DB | Central database which stores all system information, including user credentials, patient records, triage results, ED load, and notification logs. |
 
 #### Context Diagram
 TODO: Add here a context diagram that graphically shows the scope of the part of the system represented by this view. A context diagram typically shows the part of the system as a single, distinguished box in the middle surrounded by other boxes that are the external entities. Lines show the relations between the part of the system and the external entities.
-
 
 #### Variability Guide
 
@@ -121,8 +119,8 @@ TODO: Add here a context diagram that graphically shows the scope of the part of
 - Add Notification Services: Add new plug-ins for notifications, for example: SMS text and email, during build time/deployment.
 
 #### Rationale
-TODO: Describe here the rationale for any significant design decisions whose scope is limited to this view. Also describe any significant rejected alternatives. This section may also indicate assumptions, constraints, results of analysis and experiments, and architecturally significant requirements that affect the view.
 
+The rationale for choosing an app-based alert is mainly due to time constraints with the project. Our team needed to ensure all other major functionality like authentication and authorization of the log-in page and website were fully implemented to ensure the system was secure. Moving forward with the project, our plan entails adding additional plug-ins for notifications like SMS text and email described above in the variability guide section.
 
 
 ### 3.3 Allocation Views
