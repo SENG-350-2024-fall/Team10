@@ -94,7 +94,7 @@ TODO: Add here links to the parent view and to any children (i.e., refined) view
 ### 3.2 C&C Views
 #### Primary Presentation
 UML <br> <br>
-![Alt](Diagrams/C&CView.svg)
+![Alt](Diagrams/C&C_View.svg)
 
 #### Element Catalog
 
