@@ -163,5 +163,5 @@ Figure #: Home Page
 | Ella |  |
 | Andra | allocation table |
 | Shyla | C&C View Section (primary presentation, element catalog, context diagram, variability, rationale), Plan and conduct the review of the architecture package Section|
-| Val |  | 
+| Val | Section 4, finishing the code, conducting architecture package review, Section 3 | 
 | Alex |  |
