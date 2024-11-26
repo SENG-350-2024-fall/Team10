@@ -132,6 +132,7 @@ To do:
  
  The Notifications page was created to include a Patient's previous notifications and present new notifications from the Clinician's Triage.
   ![Alt](Diagrams/notifications.png)
+  Figure #: Notifications Page
 
 The Current Status page shows the user where they are in the Triage process at that moment (see Figure #) and once the triage is finished, they are told to navigate to the Notifications page to view their results (Figure #).
 
