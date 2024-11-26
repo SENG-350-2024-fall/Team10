@@ -113,6 +113,9 @@ We worked with Team 4.
 To do:
 - Update class diagram to include strategy patterns from last milestone <br>
 
+The requirements for the overall project have not changed significantly. Naturally, the requirements differ from the code that we have due to the lack of time to develop the system fully. Ideally, the backend would be implemented for the Mister Ed platform and the Clinician would have their own view which is different from the Patient. 
+
+A reuirement we added as a "nice touch" was the live Status for the Patient who entered the Triage process. This is described more in Section 4.
 
 
 ### 4. System Implementation
@@ -133,11 +136,11 @@ To do:
  Figure #: Log in is required
  
  The Notifications page was created to include a Patient's previous notifications and present new notifications from the Clinician's Triage.
- 
+
   ![Alt](Diagrams/notifications.png)
   Figure #: Notifications Page
 
-The Current Status page shows the user where they are in the Triage process at that moment (see Figure #) and once the triage is finished, they are told to navigate to the Notifications page to view their results (Figure #).
+The Current Status page shows the user where they are in the Triage process at that moment (see Figure #) and once the triage is finished, they are told to navigate to the Notifications page to view their results (Figure #). With the implemented backend, the Patient's Triage forms would get a unique ID upon submission. This ID would be attached to the Clinician that takes on the Form's Triage. Once accessed by a Clinician, the Triage Form woudld be placed in the "In Triage" Status. Once the Clinician reccommends what to do about the Patient's issue, the Status would go to "Reccomendations Posted". To make this live, the system would need to be trained to predict the time it takes to Triage specific problems and relate it to the live congestion of the ER dealing with the Triage. 
 
 
 ![Alt](Diagrams/liveStatus.png)
