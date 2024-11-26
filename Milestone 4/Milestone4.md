@@ -1,12 +1,12 @@
 ## Milestone 4
 
-### Architecture documentation package.
+### 1. Architecture documentation package.
 
    Please refer to the ArchitecturePackage.md file.
 
+<br>
 
-### Plan and conduct the review of the architecture package
-
+### 2. Plan and conduct the review of the architecture package
 
 The 6 step process for reviewing the architecture package:
 
@@ -107,14 +107,16 @@ We worked with Team 4.
 
 
 
+<br>
 
-### Design Diagrams and System Description
+### 3. Design Diagrams and System Description
 To do:
 - Update class diagram to include strategy patterns from last milestone <br>
 
 
 
-4. System Implementation
+### 4. System Implementation
+
  The goals for Milestone 4 was to finish coding the front-end of the remaining pages: Virtual Triage Form, the Log In Notifications, and the Patient's live status in the triage process.  
  
  The Virtual Triage Form just got a UI tune up.
@@ -142,13 +144,13 @@ All pages can be navgated to via the Home Page
 Figure #: Home Page
 
 
-5. Contributions
+### 5. Contributions
 
 
 | Name | Contributions | 
 | ----------- | ---------------------- |
 | Ella |  |
 | Andra | allocation table |
-| Shyla | C&C View Section (primary presentation, element catalog, context diagram, variability, rationale) |
+| Shyla | C&C View Section (primary presentation, element catalog, context diagram, variability, rationale), Plan and conduct the review of the architecture package Section|
 | Val |  | 
 | Alex |  |
