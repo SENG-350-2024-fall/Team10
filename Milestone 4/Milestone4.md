@@ -125,9 +125,9 @@ To do:
 
   ![Alt](Diagrams/login.png)
  Figure #: The UI for the Log In page
-
+ ![Alt](Diagrams/userDB.png)
  Figure #: The user in the database
-
+ ![Alt](Diagrams/appjs.png)
  Figure #: Log in is required
  
  The Notifications page was created to include a Patient's previous notifications and present new notifications from the Clinician's Triage.
