@@ -81,6 +81,8 @@ Each view must contain the following categories<br>
 TODO: This section can be organized as a dictionary where each entry is an element of the Primary Presentation. For each element, provide additional information and properties that the readers would need that would not fit in the Primary Presentation. Optionally, you can add interface specifications and behavior diagrams (e.g., UML sequence diagrams, statecharts).
 #### Context Diagram
 TODO: Add here a context diagram that graphically shows the scope of the part of the system represented by this view. A context diagram typically shows the part of the system as a single, distinguished box in the middle surrounded by other boxes that are the external entities. Lines show the relations between the part of the system and the external entities.
+
+![Alt](Diagrams/Context_diagram.drawio.svg)
 #### Variability Guide
 TODO: Describe here any variability mechanisms used in the portion of the system shown in this view, along with how and when (build time, deploy time, run time) those mechanisms may be exercised.
 
@@ -111,7 +113,7 @@ The following table lists all elements present in the Primary Presentation shown
 | Mister ED DB | Central database which stores all system information, including user credentials, patient records, triage results, ED load, and notification logs. |
 
 #### Context Diagram
-TODO: Add here a context diagram that graphically shows the scope of the part of the system represented by this view. A context diagram typically shows the part of the system as a single, distinguished box in the middle surrounded by other boxes that are the external entities. Lines show the relations between the part of the system and the external entities.
+See Context Diagram in Module View section.
 
 #### Variability Guide
 
@@ -130,7 +132,7 @@ UML Notation<br> <br>
 #### Element Catalog
 TODO: This section can be organized as a dictionary where each entry is an element of the Primary Presentation. For each element, provide additional information and properties that the readers would need that would not fit in the Primary Presentation. Optionally, you can add interface specifications and behavior diagrams (e.g., UML sequence diagrams, statecharts).
 #### Context Diagram
-TODO: Add here a context diagram that graphically shows the scope of the part of the system represented by this view. A context diagram typically shows the part of the system as a single, distinguished box in the middle surrounded by other boxes that are the external entities. Lines show the relations between the part of the system and the external entities.
+See Context Diagram in Module View section.
 #### Variability Guide
 TODO: Describe here any variability mechanisms used in the portion of the system shown in this view, along with how and when (build time, deploy time, run time) those mechanisms may be exercised.
 
