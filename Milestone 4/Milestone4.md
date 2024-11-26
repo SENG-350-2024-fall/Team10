@@ -118,6 +118,14 @@ The requirements for the overall project have not changed significantly. Natural
 
 A reuirement we added as a "nice touch" was the live Status for the Patient who entered the Triage process. This is described more in Section 4.
 
+Changes: 
+
+Patient 
+- took out "register in queue" because the Clinician will decide whether a Patient's problem requires registering in the ER queue
+
+Clinic
+- we removed the clinic option
+
 
 ### 4. System Implementation
 
