@@ -61,7 +61,18 @@ The system provides an interace for users to register as a patient, asses the cu
 
 ### Context
 Goals and major contextual factors for the software architecture. <br>
-Includes a description of the role software architecture plays in the life cycle, the relationship to system engineering results and artifacts, and any other relevant factors.
+Includes a description of the role software architecture plays in the life cycle, the relationship to system engineering results and artifacts, and any other relevant factors. <br>
+
+Goals of the MisterED Software Architecture:<br>
+1. Improve ED efficiency
+    - Help minimize the overcrowding of ED's by directing non-urgent patients to different care options.
+    - Allow ED staff to prioritize and allocate resources to more critical patients/cases. 
+2. Imrpove the patient healthcare experience
+   - 
+3. 
+   - 
+4. 
+   - 
 
 ### Driving Requirements
 Lists the functional requirements quality attributes and design constraints. It may point to a separate requirements document.
