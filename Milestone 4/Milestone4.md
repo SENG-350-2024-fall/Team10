@@ -78,7 +78,7 @@ We worked with Team 14.
 2. When the system is overwhelmed we can see that a few features get disabled, such as the map.
 3. We can see a singleton pattern to ensure there only one database connection.
 4. They have checks in place such as character validation when creating an account.
-5. Incorporating design patterns such as singleton (database), strategy and decorator.
+5. Incorporating design patterns such as singleton (database), strategy, and decorator.
 6. As with all projects, the database would be risky to update.
 7. Log-in page that verifies their health number, and strict protocols in place.
 8. Theres a self-testing tool within the database to ensure everything is set up properly.
@@ -105,8 +105,9 @@ We worked with Team 4.
 
 #### Step 6: Analyze and summarize results
 
-
-
+During our first review, the reviewers overall provided answers similar to our expected answers from our question set. One reoccurring point was the security of our system. This pain point should be fortified in terms of security in our future milestones. In addition to the security, the reviewers mentioned that our database might be vulnerable to attacks and difficult to update. In the next milestone, we would implement mitigations against SQL injections to help mitigate this issue. Reflecting on the results, our next steps should focus on security and scalability.
+<br>
+In our second review, the reviewers focused on answering the questions with usability in mind, such as the flexible map and system status indicators within the system. They appreciate the fact we accounted for system spikes by turning off the components that require more resources, like the map library. The reviewers specifically mentioned that the signifiers (seen in the status loading bar) we used made our system very intuitive. These reviewers provided a few tips on how to reroute viewers after the notification page, which we will take into account in future iterations. Overall, this review session reassured our system is headed in the right direction, with a few suggestions in place for the future.
 <br>
 
 ### 3. Design Diagrams and System Description
@@ -161,7 +162,7 @@ Figure #: Home Page
 | Name | Contributions | 
 | ----------- | ---------------------- |
 | Ella |  |
-| Andra | allocation table |
+| Andra | allocation table, Analyze and Summarize Results Section |
 | Shyla | C&C View Section (primary presentation, element catalog, context diagram, variability, rationale), Plan and conduct the review of the architecture package Section|
 | Val |  | 
 | Alex |  |
