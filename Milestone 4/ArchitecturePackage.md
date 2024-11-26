@@ -76,7 +76,7 @@ This SAD is organized into the following seven sections:
 ### 3.1 Module Views
 Each view must contain the following categories<br>
 #### Primary Presentation
-TODO: Add here the diagram (or non-graphical representation) that shows the elements and relations in this view. Indicate the language or notation being used. If it's not a standard notation such as UML, add a notation key.
+![Alt](Diagrams/Module_view.drawio.svg)
 #### Element Catalog
 TODO: This section can be organized as a dictionary where each entry is an element of the Primary Presentation. For each element, provide additional information and properties that the readers would need that would not fit in the Primary Presentation. Optionally, you can add interface specifications and behavior diagrams (e.g., UML sequence diagrams, statecharts).
 #### Context Diagram
