@@ -67,12 +67,14 @@ Goals of the MisterED Software Architecture:<br>
 1. Improve ED efficiency
     - Help minimize the overcrowding of ED's by directing non-urgent patients to different care options.
     - Allow ED staff to prioritize and allocate resources to more critical patients/cases. 
-2. Imrpove the patient healthcare experience
-   - 
-3. 
-   - 
-4. 
-   - 
+2. Improve the patient healthcare experience
+   - By providing virtual triage options and real-time updates, patients can avoid long grueling waits at the ED.
+3. Supports Scalabitilty and Felexibility
+   - The software architecture supports varying ED capacities and workflows.
+   - The system allows integration with external systems such as pharmacies, primary care centres, etc.
+  
+Major Contextual Factors:
+1.  
 
 ### Driving Requirements
 Lists the functional requirements quality attributes and design constraints. It may point to a separate requirements document.
