@@ -116,15 +116,17 @@ To do:
 
 The requirements for the overall project have not changed significantly. Naturally, the requirements differ from the code that we have due to the lack of time to develop the system fully. Ideally, the backend would be implemented for the Mister Ed platform and the Clinician would have their own view which is different from the Patient. 
 
-A reuirement we added as a "nice touch" was the live Status for the Patient who entered the Triage process. This is described more in Section 4.
+A requirement we added as a "nice touch" was the live Status for the Patient who entered the Triage process. This is described more in Section 4.
+
+![Alt](Diagrams/ClassDiagram2.drawio)
+Figure #: Updated Class Diagram
 
 Changes: 
-
 Patient 
 - took out "register in queue" because the Clinician will decide whether a Patient's problem requires registering in the ER queue
 
 Clinic
-- we removed the clinic option
+- we removed the clinic option as well as the GP class as the purpose of this application is to help with ER wait times. If the Clinician recommends a GP visit to the Patient, the Patient can use their own judgement to do so. Perhaps a system can be set up to accommodate clinics in the future but we decided that this is out of the scope of this project's MVP.
 
 
 ### 4. System Implementation
