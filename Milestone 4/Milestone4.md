@@ -145,7 +145,7 @@ Figure #: Live Status
 Figure #: Redirection to Notifications
 
 All pages can be navgated to via the Home Page
-
+![Alt](Diagrams/homePage.png)
 Figure #: Home Page
 
 
