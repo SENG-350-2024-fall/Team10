@@ -120,7 +120,7 @@ A requirement we added as a "nice touch" was the live Status for the Patient who
 
 ![Alt](Diagrams/ClassDiagram2.svg)
 
-Figure #: Updated Class Diagram
+Figure 1: Updated Class Diagram
 
 Changes: 
 Patient 
@@ -136,35 +136,35 @@ Clinic
  
  The Virtual Triage Form just got a UI tune up.
 
- Log In was created for Patients and Clinicians. Patients are to sign in with their Health Number and the password they create. Clinicians are to sign in with their Employee ID. Authentification must be handled carefully and requires more work than the time that we have for this, thus, it was coded strictly in the frontend for a specific user that already exists in the database (see Figure #). The Log In is required to use the services and other pages cannot be accessed otherwise (see Figure #). 
+ Log In was created for Patients and Clinicians. Patients are to sign in with their Health Number and the password they create. Clinicians are to sign in with their Employee ID. Authentification must be handled carefully and requires more work than the time that we have for this, thus, it was coded strictly in the frontend for a specific user that already exists in the database (see Figure 3). The Log In is required to use the services and other pages cannot be accessed otherwise (see Figure 4). 
 
   ![Alt](Diagrams/login.png)
- Figure #: The UI for the Log In page
+ Figure 2: The UI for the Log In page
 
  ![Alt](Diagrams/userDB.png)
- Figure #: The user in the database
+ Figure 3: The user in the database
 
  ![Alt](Diagrams/appjs.png)
- Figure #: Log in is required
+ Figure 4: Log in is required
  
  The Notifications page was created to include a Patient's previous notifications and present new notifications from the Clinician's Triage.
 
   ![Alt](Diagrams/notifications.png)
-  Figure #: Notifications Page
+  Figure 5: Notifications Page
 
-The Current Status page shows the user where they are in the Triage process at that moment (see Figure #) and once the triage is finished, they are told to navigate to the Notifications page to view their results (Figure #). With the implemented backend, the Patient's Triage forms would get a unique ID upon submission. This ID would be attached to the Clinician that takes on the Form's Triage. Once accessed by a Clinician, the Triage Form woudld be placed in the "In Triage" Status. Once the Clinician reccommends what to do about the Patient's issue, the Status would go to "Reccomendations Posted". To make this live, the system would need to be trained to predict the time it takes to Triage specific problems and relate it to the live congestion of the ER dealing with the Triage. 
+The Current Status page shows the user where they are in the Triage process at that moment (see Figure 6) and once the triage is finished, they are told to navigate to the Notifications page to view their results (Figure 7). With the implemented backend, the Patient's Triage forms would get a unique ID upon submission. This ID would be attached to the Clinician that takes on the Form's Triage. Once accessed by a Clinician, the Triage Form woudld be placed in the "In Triage" Status. Once the Clinician reccommends what to do about the Patient's issue, the Status would go to "Reccomendations Posted". To make this live, the system would need to be trained to predict the time it takes to Triage specific problems and relate it to the live congestion of the ER dealing with the Triage. 
 
 
 ![Alt](Diagrams/liveStatus.png)
-Figure #: Live Status
+Figure 6: Live Status
  
 
 ![Alt](Diagrams/doneTriage.png)
-Figure #: Redirection to Notifications
+Figure 7: Redirection to Notifications
 
 All pages can be navgated to via the Home Page
 ![Alt](Diagrams/homePage.png)
-Figure #: Home Page
+Figure 8: Home Page
 
 
 ### 5. Contributions
