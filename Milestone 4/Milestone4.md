@@ -77,7 +77,7 @@ To do:
 
  Log In was created for Patients and Clinicians. Patients are to sign in with their Health Number and the password they create. Clinicians are to sign in with their Employee ID. Authentification must be handled carefully and requires more work than the time that we have for this, thus, it was coded strictly in the frontend for a specific user that already exists in the database (see Figure #). The Log In is required to use the services and other pages cannot be accessed otherwise (see Figure #). 
 
-
+  ![Alt](Diagrams/login.png)
  Figure #: The UI for the Log In page
 
  Figure #: The user in the database
@@ -85,12 +85,16 @@ To do:
  Figure #: Log in is required
  
  The Notifications page was created to include a Patient's previous notifications and present new notifications from the Clinician's Triage.
-
+  ![Alt](Diagrams/notifications.png)
 
 The Current Status page shows the user where they are in the Triage process at that moment (see Figure #) and once the triage is finished, they are told to navigate to the Notifications page to view their results (Figure #).
 
-Figure #: Live Status
 
+![Alt](Diagrams/liveStatus.png)
+Figure #: Live Status
+ 
+
+![Alt](Diagrams/doneTriage.png)
 Figure #: Redirection to Notifications
 
 
