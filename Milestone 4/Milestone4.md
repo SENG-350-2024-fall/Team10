@@ -77,7 +77,7 @@ To do:
 
  Log In was created for Patients and Clinicians. Patients are to sign in with their Health Number and the password they create. Clinicians are to sign in with their Employee ID. Authentification must be handled carefully and requires more work than the time that we have for this, thus, it was coded strictly in the frontend for a specific user that already exists in the database (see Figure #). The Log In is required to use the services and other pages cannot be accessed otherwise (see Figure #). 
 
-
+ ![Alt](Diagrams/ClassDiagram.svg)
  Figure #: The UI for the Log In page
 
  Figure #: The user in the database
@@ -92,6 +92,10 @@ The Current Status page shows the user where they are in the Triage process at t
 Figure #: Live Status
 
 Figure #: Redirection to Notifications
+
+All pages can be navgated to via the Home Page
+
+Figure #: Home Page
 
 
 5. Contributions
