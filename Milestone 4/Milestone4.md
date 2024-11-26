@@ -119,6 +119,7 @@ The requirements for the overall project have not changed significantly. Natural
 A requirement we added as a "nice touch" was the live Status for the Patient who entered the Triage process. This is described more in Section 4.
 
 ![Alt](Diagrams/ClassDiagram2.svg)
+
 Figure #: Updated Class Diagram
 
 Changes: 
