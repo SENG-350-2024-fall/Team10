@@ -18,7 +18,7 @@ Sub-parts of this section provide information that will help readers or users of
 How the SAD is organized explains the information that is found in each section of the SAD.
 How a view is documented explains how architectural views are documented in this SAD.
 ### Purpose and Scope of the SAD
-
+TODO
 ### How the SAD is Organized
 This SAD is organized into the following seven sections:
 
@@ -73,24 +73,44 @@ This SAD is organized into the following seven sections:
 
 ## 3. Views
 
-### 3.1 Module Views
-Each view must contain the following categories<br>
+### 3.1 Module View
+
 #### Primary Presentation
 ![Alt](Diagrams/Module_view.drawio.svg)
 #### Element Catalog
-TODO: This section can be organized as a dictionary where each entry is an element of the Primary Presentation. For each element, provide additional information and properties that the readers would need that would not fit in the Primary Presentation. Optionally, you can add interface specifications and behavior diagrams (e.g., UML sequence diagrams, statecharts).
-#### Context Diagram
-TODO: Add here a context diagram that graphically shows the scope of the part of the system represented by this view. A context diagram typically shows the part of the system as a single, distinguished box in the middle surrounded by other boxes that are the external entities. Lines show the relations between the part of the system and the external entities.
+The following table describes all elements included in the primary presentation above. 
 
+| Element Name | Description |
+| -------------| ------------|
+| VirtualTriageManager | Manages the end-to-end process of virtual triage for patients. Coordinates between different subcomponents to ensure accurate data collection and review. |
+| VirtualTriageProcessing | Handles the collection and validation of patient triage form data submitted through the application. |
+| VirtualTriageReview | Finalizes triage information by integrating clinician review to assign urgency levels and queue patients appropriately. |
+| EDWaitTimes | Provides patients with estimated wait times for Emergency Departments (EDs).|
+| Update (EDWaitTimes) | Handles updating ED wait times dynamically as new patients are added to queues. |
+| Display| Displays real-time ED Wait Time information to patients|
+| Status | Manages patient notifications about triage results and wait time updates. Tracks and manages the state of virtual triage objects throughout their lifecycle. |
+| Notify | Sends out notifications to patients based on their triage and queue status. |
+| Update (Status) | Tracks and applies updates to virtual triage objects, ensuring their status reflects the latest changes. |
+| Data | Central repository for managing patient, ED, and triage data. |
+| EDs | Maintains data on emergency department capacities and locations. |
+| Patients | Stores individual patient records, including triage information and notifications. |
+| VirtualTriage | Tracks triage processes and their outcomes. |
+| Relational DB Interface | Provides an interface for data retrieval and updates across the system. |
+#### Context Diagram
 ![Alt](Diagrams/Context_diagram.drawio.svg)
 #### Variability Guide
 TODO: Describe here any variability mechanisms used in the portion of the system shown in this view, along with how and when (build time, deploy time, run time) those mechanisms may be exercised.
 
 Examples of variability include: optional components (e.g., plug-ins, add-ons); configurable replication of components and connectors; selection among different implementations of an element or different vendors; parameterized values set in build flags, .properties files, .ini files, or other config files.
 #### Rationale
-TODO: Describe here the rationale for any significant design decisions whose scope is limited to this view. Also describe any significant rejected alternatives. This section may also indicate assumptions, constraints, results of analysis and experiments, and architecturally significant requirements that affect the view.
+The follwing points summarize the key design decisions visible in this view <br>
+- The system is designed with individual modules to ensure that each has a distinct responsiblity. This approach simplifies maintenance and testing of the system.
+- The Data module acts as a central repository to ensure consistency of patient, triage, and ED data.
+- The VirtualTriageReview module includes a step for clinician review to ensure that patient triage outcomes are medically accurate and trustworthy.
+- Modules like Status and EDWaitTimes are designed to dynamically update their data and status at runtime. This was chosen to ensure real-time accuracy for patient notifications and ED wait times.
+
 #### Related Views
-TODO: Add here links to the parent view and to any children (i.e., refined) views, if they exist.
+N/A
 
 
 ### 3.2 C&C Views
