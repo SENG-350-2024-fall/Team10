@@ -75,10 +75,15 @@ Goals of the MisterED Software Architecture:<br>
   
 Major Contextual Factors:<br>
 1.  Real-time complexity
-   - Real-time data from more than one source (ED capacities, ED wiat times, virtual triage results, etc.) need to be integrated and processed correctly.
+    - Real-time data from more than one source (ED capacities, ED wiat times, virtual triage results, etc.) need to be integrated and processed correctly.
 2. User Diversity
-  - The system caters to a broad user base, including patients with varying levels of technical proficiency, clinicians, and administrative staff.
+    - The system caters to a broad user base, including patients with varying levels of technical proficiency, clinicians, and administrative staff.
 3. 
+    - b
+    - b
+    - b
+    - b
+    - b
 
 ### Driving Requirements
 Lists the functional requirements quality attributes and design constraints. It may point to a separate requirements document.
