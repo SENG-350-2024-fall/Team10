@@ -150,7 +150,12 @@ The rationale for choosing an app-based alert is mainly due to time constraints 
 UML Notation<br> <br>
 ![Alt](Diagrams/allocationdiagram.drawio.png)
 #### Element Catalog
-TODO: This section can be organized as a dictionary where each entry is an element of the Primary Presentation. For each element, provide additional information and properties that the readers would need that would not fit in the Primary Presentation. Optionally, you can add interface specifications and behavior diagrams (e.g., UML sequence diagrams, statecharts).
+The following table describes all elements present in the Primary Presentation above.
+
+| Element Name | Description |
+| -------------| ------------|
+|  |  |
+
 #### Context Diagram
 See Context Diagram in Module View section.
 #### Variability Guide
