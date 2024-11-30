@@ -160,7 +160,7 @@ Examples of variability include: optional components (e.g., plug-ins, add-ons); 
 #### Rationale
 TODO: Describe here the rationale for any significant design decisions whose scope is limited to this view. Also describe any significant rejected alternatives. This section may also indicate assumptions, constraints, results of analysis and experiments, and architecturally significant requirements that affect the view.
 #### Related Views
-TODO: Add here links to the parent view and to any children (i.e., refined) views, if they exist.
+Related views include the Entity relationship diagram and component diagram from milestone 2.
 
 ## 4. Mapping Between Views
 
