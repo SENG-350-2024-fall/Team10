@@ -154,18 +154,35 @@ The following table describes all elements present in the Primary Presentation a
 
 | Element Name | Description |
 | -------------| ------------|
-|  |  |
+| Client Device | Supports the Mister Ed user interface. Is the device users use when accessing the system. |
+| Web Server | Utilizes the API gateway to support our frontend application. | 
+| Application Server | Manages the load and request, and contains the virtual triage model. | 
+| Database Server | Contains the database, supports user requests to access info and provides requested data. | 
+| External Systems | Includes the nurse and clinician api as well as the clinic and ED api. Allows for external parties to privide info to our system. | 
+| Notification Service | Sends SMS and email notifications. | 
+| Patient | Acesses ED and clinic wait times. Submits virtual triage requests. Uses map. | 
+| Virtual Triage | Object acessible by both the patient and virtual triage clinician. Allows patients to submit their requests and recieve advice. | 
+| GP | GP provides professional advice to patients based on virtual triage submissions. | 
+| ED Registration | Object for all users to register with the system regardless of their role. | 
+| ED | ED's register with the system to submit wait times and accept patients.| 
 
 #### Context Diagram
 See Context Diagram in Module View section.
+
 #### Variability Guide
 TODO: Describe here any variability mechanisms used in the portion of the system shown in this view, along with how and when (build time, deploy time, run time) those mechanisms may be exercised.
 
 Examples of variability include: optional components (e.g., plug-ins, add-ons); configurable replication of components and connectors; selection among different implementations of an element or different vendors; parameterized values set in build flags, .properties files, .ini files, or other config files.
+
 #### Rationale
-TODO: Describe here the rationale for any significant design decisions whose scope is limited to this view. Also describe any significant rejected alternatives. This section may also indicate assumptions, constraints, results of analysis and experiments, and architecturally significant requirements that affect the view.
+
+The main design decisions made that are outlined in this view include:
+- Using a web server as the first heirarchical entry to the system. Doing this makes our system more accesible for all users with various devices.
+- Creating just one database for all information, including user logins and triage submissions. This makes the system more reliable as it employs the singleton design pattern for consistency.
+- Utilising a seperate SMS/Email service for notifications allowed us to provide more options for users to recieve their notifications and therefore support more users. 
+
 #### Related Views
-Related views include the Entity relationship diagram and component diagram from milestone 2.
+Related views include the deployment model diagram and component diagram from milestone 2 as allocation views are generally some combination of the two.
 
 ## 4. Mapping Between Views
 
