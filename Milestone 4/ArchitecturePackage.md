@@ -170,9 +170,10 @@ The following table describes all elements present in the Primary Presentation a
 See Context Diagram in Module View section.
 
 #### Variability Guide
-TODO: Describe here any variability mechanisms used in the portion of the system shown in this view, along with how and when (build time, deploy time, run time) those mechanisms may be exercised.
 
-Examples of variability include: optional components (e.g., plug-ins, add-ons); configurable replication of components and connectors; selection among different implementations of an element or different vendors; parameterized values set in build flags, .properties files, .ini files, or other config files.
+-Notification Service: The notification service could be implemented to support either sms, email, or even a push notifcation.
+-Virtual Triage Model: The formatting and permissions for each version (client view vs clinician view) of the triage model could be adapted to meet the specific users needs based on feedback from initial iterations.
+Load Management Module: Currently the load management is set to remove the map during high traffic, this could later be modified to trivialise different or additional components.
 
 #### Rationale
 
