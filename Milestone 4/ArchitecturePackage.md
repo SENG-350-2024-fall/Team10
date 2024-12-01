@@ -171,9 +171,11 @@ See Context Diagram in Module View section.
 
 #### Variability Guide
 
--Notification Service: The notification service could be implemented to support either sms, email, or even a push notifcation.
--Virtual Triage Model: The formatting and permissions for each version (client view vs clinician view) of the triage model could be adapted to meet the specific users needs based on feedback from initial iterations.
-Load Management Module: Currently the load management is set to remove the map during high traffic, this could later be modified to trivialise different or additional components.
+- Notification Service: The notification service could be implemented to support either sms, email, or even a push notifcation.
+  
+- Virtual Triage Model: The formatting and permissions for each version (client view vs clinician view) of the triage model could be adapted to meet the specific users needs based on feedback from initial iterations.
+  
+- Load Management Module: Currently the load management is set to remove the map during high traffic, this could later be modified to trivialise different or additional components.
 
 #### Rationale
 
