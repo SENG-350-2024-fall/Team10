@@ -13,20 +13,20 @@ Content Owners: Ella Palter, Shyla Burns, Andra Rice, Val Savchenko, Alex Moody
 6. Glossary and Acronyms
 
 ## 1. Documentation Roadmap and Overview
-Sub-parts of this section provide information that will help readers or users of the Software Architecture Document (SAD) quickly find information that will enable them to do their jobs. Readers of the SAD seeking an overview should begin here, as should readers interested in finding particular information to answer a specific question.
-
-How the SAD is organized explains the information that is found in each section of the SAD.
-How a view is documented explains how architectural views are documented in this SAD.
+The Documentation Roadmap and Overview section serves as the starting point for understanding the organization and content of the Software Architecture Document (SAD). It provides guidance to readers on how to navigate the document, locate specific information, and understand the documentation framework used for architectural views.
 ### Purpose and Scope of the SAD
-TODO
+The MisterED SAD serves as a comprehensive guide for understanding, analyzing, and maintaining the architecture of the MisterED system. Its purpose is to document the key architectural decisions, structures, and rationales that define the system. By providing detailed views and mappings, this document facilitates communication among stakeholders, supports decision-making during development, and ensures the architecture remains consistent and adaptable over time.
+
+The scope of this SAD includes all major components and subsystems of the MisterED system, such as the virtual triage functionality, emergency department (ED) wait time management, and notification services. It addresses the relationships between these components, the underlying technical decisions, and the rationale for design choices. This document is intended for use by software architects, developers, project managers, and other stakeholders involved in the design, development, and maintenance of the MisterED system.
 ### How the SAD is Organized
-This SAD is organized into the following seven sections:
+This SAD is organized into the following sections:
 
 - This Documentation Roadmap and Overview provides information about this document and its intended audience. It provides the roadmap and document overview. Every reader who wishes to find information relevant to the software architecture described in this document should begin by reading this section, which describes how the document is organized, and where information may be found.
 - Architecture Background provides information about the software architecture. It describes the background and rationale for the software architecture. It explains the constraints and influences that led to the current architecture, and it describes the major architectural approaches that have been utilized in the architecture.
 - Views and Mapping Between Views specify the software architecture.
 - Referenced Materials and Glossary and Acronyms provide reference information. Referenced Materials provides look-up information for documents that are cited elsewhere in this SAD. Glossary and Acronyms is an index of architectural elements and relations giving their definition, and where each is used in this SAD.
 ### How a View is Documented 
+Each view is documented using the view template outlined below: </br>
 1. Primary Presentation
 - Is usually graphical
 - Should include a key that explains the notation
@@ -99,6 +99,7 @@ The following table describes all elements included in the primary presentation 
 #### Context Diagram
 ![Alt](Diagrams/Context_diagram.drawio.svg)
 #### Variability Guide
+
 TODO: Describe here any variability mechanisms used in the portion of the system shown in this view, along with how and when (build time, deploy time, run time) those mechanisms may be exercised.
 
 Examples of variability include: optional components (e.g., plug-ins, add-ons); configurable replication of components and connectors; selection among different implementations of an element or different vendors; parameterized values set in build flags, .properties files, .ini files, or other config files.
@@ -188,3 +189,17 @@ The main design decisions made that are outlined in this view include:
 Related views include the deployment model diagram and component diagram from milestone 2 as allocation views are generally some combination of the two.
 
 ## 4. Mapping Between Views
+
+## 5. Referenced Materials 
+This SAD was developed with reference to [this](https://wiki.sei.cmu.edu/confluence/display/SAD/Software+Architecture+Documentation+Template) online template and the provided [Adventure Builder](https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280205) and [Java Pet Store](https://wiki.sei.cmu.edu/confluence/display/SAD/The+Java+Pet+Store+SAD) example SADs. Additionally, we referenced the Week 10 lecture notes (Building the Architecture Documentation) for guidance in constructing our views. 
+
+## 6. Glossary
+| Term | Definition |
+| -------------| ------------|
+| SAD | Software Architecture Document, a comprehensive guide outlining the architectural design and rationale. |
+| Module View | A representation of the system's structure, focusing on how functionalities are divided into components. |
+| C&C View | Component-and-Connector View, depicting the runtime interactions between components and their relationships. |
+| Allocation View | A view that maps software elements to the underlying hardware or organizational environment. |
+| ED | Emergency Department |
+| Virtual Triage | A process enabling patients to submit medical symptoms online for prioritization and clinician review. |
+
