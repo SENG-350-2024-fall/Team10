@@ -188,8 +188,3 @@ The main design decisions made that are outlined in this view include:
 Related views include the deployment model diagram and component diagram from milestone 2 as allocation views are generally some combination of the two.
 
 ## 4. Mapping Between Views
-
-## 5. Referenced Materials
-
-## 6. Glossary and Acronyms
-
