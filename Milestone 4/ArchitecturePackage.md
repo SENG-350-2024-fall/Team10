@@ -99,10 +99,9 @@ The following table describes all elements included in the primary presentation 
 #### Context Diagram
 ![Alt](Diagrams/Context_diagram.drawio.svg)
 #### Variability Guide
-
-TODO: Describe here any variability mechanisms used in the portion of the system shown in this view, along with how and when (build time, deploy time, run time) those mechanisms may be exercised.
-
-Examples of variability include: optional components (e.g., plug-ins, add-ons); configurable replication of components and connectors; selection among different implementations of an element or different vendors; parameterized values set in build flags, .properties files, .ini files, or other config files.
+- The Notify module can support multiple notification methods, such as SMS or email.
+- The Update (EDWaitTimes) module can be configured to adjust the frequency of real-time updates. This parameter can be set during deployment to balance performance and data freshness.
+- The Data module can support different relational databases (e.g., PostgreSQL, MySQL) by modifying configuration files during deployment.
 #### Rationale
 The follwing points summarize the key design decisions visible in this view <br>
 - The system is designed with individual modules to ensure that each has a distinct responsiblity. This approach simplifies maintenance and testing of the system.
