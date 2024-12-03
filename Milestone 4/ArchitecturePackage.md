@@ -24,7 +24,7 @@ This SAD is organized into the following sections:
 - This Documentation Roadmap and Overview provides information about this document and its intended audience. It provides the roadmap and document overview. Every reader who wishes to find information relevant to the software architecture described in this document should begin by reading this section, which describes how the document is organized, and where information may be found.
 - Architecture Background provides information about the software architecture. It describes the background and rationale for the software architecture. It explains the constraints and influences that led to the current architecture, and it describes the major architectural approaches that have been utilized in the architecture.
 - Views and Mapping Between Views specify the software architecture.
-- Referenced Materials and Glossary and Acronyms provide reference information. Referenced Materials provides look-up information for documents that are cited elsewhere in this SAD. Glossary and Acronyms is an index of architectural elements and relations giving their definition, and where each is used in this SAD.
+- Referenced Materials and Glossary and Acronyms provide reference information. 
 ### How a View is Documented 
 Each view is documented using the view template outlined below: </br>
 1. Primary Presentation
