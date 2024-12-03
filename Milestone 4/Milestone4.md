@@ -167,7 +167,7 @@ Figure 8: Home Page
 
 | Name | Contributions | 
 | ----------- | ---------------------- |
-| Ella | module view section, glossary, referenced material, documentation roadmap, created template |
+| Ella | module view section, glossary, referenced material, documentation roadmap, created template, view mapping |
 | Andra | allocation table, Analyze and Summarize Results Section |
 | Shyla | C&C View Section (primary presentation, element catalog, context diagram, variability, rationale), Plan and conduct the review of the architecture package Section|
 | Val | Section 4, finishing the code, conducting architecture package review, Section 3 | 
