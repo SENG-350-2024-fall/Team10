@@ -188,6 +188,33 @@ The main design decisions made that are outlined in this view include:
 Related views include the deployment model diagram and component diagram from milestone 2 as allocation views are generally some combination of the two.
 
 ## 4. Mapping Between Views
+The following tables summarize the relationships between elements of each pair of views.
+### Module - C&C
+|Module View Element(s)|C&C View Element(s)|
+|-------------|------------|
+| Relational DB Interface| Mister ED DB|
+| Notify | Notification Service |
+| VirtualTriageManager | Triage Service |
+| EDWaitTimes, Status | ED Queue Service|
+| Data | Login Service |
+
+### Module - Allocation
+|Module View Element(s)|Allocation View Element(s)|
+|-------------|------------|
+| Relational DB Interface| Database Server|
+| Notify | Notification Service |
+| VirtualTriageManager | Application Server - Virtual Triage Module |
+| EDWaitTimes, Status | Application Server - Load Management Module|
+| Data | ED Database, User Management Database |
+
+### C&C - Allocation
+|C&C View Element(s)|Allocation View Element(s)|
+|-------------|------------|
+| Triage Service | Application Server - Virtual Triage Module |
+| Mister ED DB | Database Server, ED Database, User Management Database |
+| ED Queue Service | Application Server - Load Management Module |
+| Notification Service | Notification Service |
+
 
 ## 5. Referenced Materials 
 This SAD was developed with reference to [this](https://wiki.sei.cmu.edu/confluence/display/SAD/Software+Architecture+Documentation+Template) online template and the provided [Adventure Builder](https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280205) and [Java Pet Store](https://wiki.sei.cmu.edu/confluence/display/SAD/The+Java+Pet+Store+SAD) example SADs. Additionally, we referenced the Week 10 lecture notes (Building the Architecture Documentation) for guidance in constructing our views. 
