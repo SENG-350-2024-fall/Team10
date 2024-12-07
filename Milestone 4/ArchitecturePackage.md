@@ -56,8 +56,8 @@ Each view is documented using the view template outlined below: </br>
 ## 2. Architecture Background
 ### Problem Background
 ### System Overview
-The general purpose of the MisterED system is to alleviate the overcrowding and overloading of Emergency Departments (EDs) as well as the overly-long patient wait times by using software technology to optimize patient flow and resource management. This purpose will improve the patient expereience as well as help the emergency departments function better. <br>
-The system provides an interace for users to register as a patient, asses the current ED load, perform a virtual triage of their symptoms, check-in to ED's virtually and receive notifications. 
+The general purpose of the MisterED system is to alleviate the overcrowding and overloading of Emergency Departments (EDs) as well as the overly-long patient wait times by using software technology to optimize patient flow and resource management. This purpose will improve the patient experience as well as help the emergency departments function better. <br>
+The system provides an interface for users to register as a patient, asses the current ED load, perform a virtual triage of their symptoms, check-in to ED's virtually and receive notifications. 
 
 ### Context
 Goals of the MisterED Software Architecture:<br>
@@ -66,7 +66,7 @@ Goals of the MisterED Software Architecture:<br>
     - Allow ED staff to prioritize and allocate resources to more critical patients/cases. 
 2. Improve the patient healthcare experience
    - By providing virtual triage options and real-time updates, patients can avoid long grueling waits at the ED.
-3. Supports Scalabitilty and Flexibility
+3. Supports Scalability and Flexibility
    - The software architecture supports varying ED capacities and workflows.
    - The system allows integration with external systems such as pharmacies, primary care centres, etc.
   
@@ -77,24 +77,24 @@ Major Contextual Factors:<br>
     - The system caters to a broad user base, including patients with varying levels of technical proficiency, clinicians, and administrative staff.
 3. System incorporation and regulation requirements
     - The system must be able to integrate seamlessly with other systems such as the ED software systems, appointment scheduling programs at clinics, and more.
-    - The system needs to be comliant with healthcare legal standards for data privacy
+    - The system needs to be compliant with healthcare legal standards for data privacy
 4. Performance
     - Must handle many concurrent requests efficiently and without error, especially during healthcare surges
   
 Role of Software Architecture in System Lifecycle <br>
 1. Development
      - Defines a clear plan for design, testing, development and integration of system pieces.
-     - Ensures alignment with largerer system goals such as performance, function, scalanbility and more.
+     - Ensures alignment with larger system goals such as performance, function, scalability and more.
 2. Facilitates communication
      - The architecture serves as a common language and landscape between developers and stakeholders.
 3. Relationship to System Engineering Artifacts
-     - It links the systems requirements to the actual software implimentation.
+     - It links the systems requirements to the actual software implementation.
      - Uses and incorporates teh results of system analysis into software design decisions
 4. Helps manage complexity.
      - it helps to mange the complexity by breaking the system down into smaller more manageable components that have their own clear responsibilities.
 6. Lifecycle Support
-     - The architecture accomodates future iintegration and development.
-     - Supports iterative development methadolagies.
+     - The architecture accommodates future integration and development.
+     - Supports iterative development methodologies.
 
 ### Driving Requirements
 #### Functional Requirements
@@ -102,7 +102,7 @@ Role of Software Architecture in System Lifecycle <br>
 Patients are able to answer questions about their symptoms to determine the severity of their condition and further actions.
 
 2. ED Load monitoring<br>
-The system displays real-time ED capcities and wait times for ED's near by.
+The system displays real-time ED capacities and wait times for ED's near by.
 
 3. Virtual sign up / login<br>
 Patients/users can sign up and register online as well as log in once an account has been created. 
@@ -111,10 +111,10 @@ Patients/users can sign up and register online as well as log in once an account
 Notifies patients when it is time to visit the ED or receive care.
 
 5. Care guidance<br>
-Provide instructions and next actions to take or care to receive. This includes directiosn to nearby clinics, pharmacies or ED's. Can offer self-care recommendations for less critical cases.
+Provide instructions and next actions to take or care to receive. This includes directions to nearby clinics, pharmacies or ED's. Can offer self-care recommendations for less critical cases.
 
 6. System admin<br>
-Administrators can update data, manage workflows and access sytem analytics.
+Administrators can update data, manage workflows and access system analytics.
 
 7. Integration<br>
 Integrate with external systems such as ED systems, appointment schedulers, etc.
@@ -135,7 +135,7 @@ Patient data is protected in a safe and secure manner.
 5. Usability<br>
 Provide an intuitive and accessible interface for diverse users and user-groups. 
 
-6. Maintanability<br>
+6. Maintainability<br>
 Use modular, well-documented code to facilitate future updates and troubleshooting. Allow fairly seamless integration of new algorithms or features.
 
 #### Design Constraints
@@ -154,7 +154,7 @@ Accommodates the differences in regulations, software systems and other resource
 The interface is designed with accessibility and ease-of-use for users and patients in mind. Diverse user groups, including patients and clinicians, can interact seamlessly with the system. This aligns with our usability and performance goals by simplifying the experience.
 
 2. Integratable<br>
-The sytem adheres to a base standard taht allows it to be easuly integratable with other softeware systems at EDs and clinics. This standardization ensures compatibility, data accuracy, and compliance. This architectural choice aligns with our integration goals by helping the system integrate with any basic software system.
+The system adheres to a base standard taht allows it to be easily integrable with other software systems at EDs and clinics. This standardization ensures compatibility, data accuracy, and compliance. This architectural choice aligns with our integration goals by helping the system integrate with any basic software system.
 
 3. Modular Microservices Architecture<br>
 The system is decomposed into distinct, independently deployable services, each responsible for a specific function (e.g., triage, notifications, load monitoring).
@@ -168,7 +168,7 @@ Behavioral Goals<br>
 Quality Attributes<br>
     Scalability: Modular design supports future growth.<br>
     Reliability: Simple, high availability design with distributed deployment.<br>
-    Security: Pricate data and information protected appropriately.<br>
+    Security: Private data and information protected appropriately.<br>
     Usability: Accessible, intuitive interfaces for all users.<br>
 
 Design Constraints<br>
@@ -187,9 +187,9 @@ Why Chosen: <br>
 <br>Alternatives Considered:<br>
         Basic UI with Limited Accessibility: Rejected as it would alienate non-technical users and fail to meet inclusivity goals.
 
-**Integratability <br>**
+**Integrability <br>**
 Why Chosen:<br>
-        Integrability: THis facilitates seamless integration with existing ED systems and external services, ensuring the correct data exchange.
+        Integrability: This facilitates seamless integration with existing ED systems and external services, ensuring the correct data exchange.
 <br>Alternatives Considered:<br>
         Custom Protocols: Rejected due to potential integrability issues and higher maintenance cost.
         
@@ -203,7 +203,7 @@ Why Chosen:<br>
 
 ### Analysis Results
 Usability Testing<br>
-Method:<br>Conducted usability tests with a diverse group of participants and potential users. THen, evaluated the ease of navigation, accessibility, and response time. <br>
+Method:<br>Conducted usability tests with a diverse group of participants and potential users. Then, evaluated the ease of navigation, accessibility, and response time. <br>
 Results:<br>
 The majority of participants described the interface as intuitive and easy to navigate.
 <br><br>
@@ -232,14 +232,14 @@ Average processing time for virtual triage questions was low (a few seconds) whi
 | **Scalability**             | **Microservices Architecture Design**                  | Supports scaling of individual services to accommodate changing user demand. |
 | **Performance**             | **Event-Driven Communication**                        | Low-latency messaging ensures real-time notifications. |
 | **Security**                | **Secure Data Storage**                               | Implements secure protocols to protect patient data. |
-| **Usability**               | **User-Centered Design**                                   | Provides an intuitive, accessible interface, ensuring usabiligty by diverse user groups. |
+| **Usability**               | **User-Centered Design**                                   | Provides an intuitive, accessible interface, ensuring usability by diverse user groups. |
 | **Maintainability**         | **Modular Codebase**        | Modular design simplifies updates and maintenance. |
 
 #### Design Constraints
 | **Constraint**              | **Architectural Element**                                              | **Description**                                                                 |
 |-----------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| **Technological**           | **Cross-Platform Development Frameworks (e.g., React, Flutter)**       | Enables deployment across web browsers, mobile devices, and desktop platforms seamlessly. |
-| **Integration**             | **Integration Layer with Standards (HL7, FHIR)**                      | Adheres to established healthcare data exchange protocols, ensuring compatibility with existing ED and clinic systems. |
+| **Technological**           | **Cross-Platform Development Frameworks**       | Enables deployment across web browsers, mobile devices, and desktop platforms seamlessly. |
+| **Integration**             | **Integration Layer with Standards **                      | Adheres to established healthcare data exchange protocols, ensuring compatibility with existing ED and clinic systems. |
 | **Geographic**              | **Configurable Localization Features**                                | Supports region-specific regulatory requirements, language options, and healthcare workflows. |
 
 
