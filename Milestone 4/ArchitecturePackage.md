@@ -60,9 +60,6 @@ The general purpose of the MisterED system is to alleviate the overcrowding and 
 The system provides an interace for users to register as a patient, asses the current ED load, perform a virtual triage of their symptoms, check-in to ED's virtually and receive notifications. 
 
 ### Context
-Goals and major contextual factors for the software architecture. <br>
-Includes a description of the role software architecture plays in the life cycle, the relationship to system engineering results and artifacts, and any other relevant factors. <br>
-
 Goals of the MisterED Software Architecture:<br>
 1. Improve ED efficiency
     - Help minimize the overcrowding of ED's by directing non-urgent patients to different care options.
@@ -152,9 +149,36 @@ Designed to be compatible with ED and other clinic software systems.
 Accommodates the differences in regulations, software systems and other resources/factors across different healthcare regions.
 
 ### Solution Background
-The sub-parts of this section provide a description of why the architecture is the way that it is, and a convincing argument that the architecture is the right one to satisfy the behavioral and quality attribute goals levied upon it.
+#### Key Architectural Choices
+1. User centred design
+The interface is designed with accessibility and ease-of-use for users and patients in mind. Diverse user groups, including patients and clinicians, can interact seamlessly with the system. This aligns with our usability and performance goals by simplifying the experience.
 
+2. Integratable
+The sytem adheres to a base standard taht allows it to be easuly integratable with other softeware systems at EDs and clinics. This standardization ensures compatibility, data accuracy, and compliance. This architectural choice aligns with our integration goals by helping the system integrate with any basic software system.
+
+3. Modular Microservices Architecture
+The system is decomposed into distinct, independently deployable services, each responsible for a specific function (e.g., triage, notifications, load monitoring).
+This approach provides flexibility, scalability, and maintainability. Each service can be updated or scaled independently to handle increased demand or incorporate new features.
+
+#### Why this architecture works
+Behavioral Goals
+    Supports virtual triage, real-time ED monitoring, and timely notifications.
+    Handles high demand efficiently with modular and scalable components.
+
+Quality Attributes
+    Scalability: Modular design supports future growth.
+    Reliability: Simple, high availability design with distributed deployment.
+    Security: Pricate data and information protected appropriately.
+    Usability: Accessible, intuitive interfaces for all users.
+
+Design Constraints
+    Complies with and integrates seamlessly with existing healthcare systems.
+
+#### Conclusion
+Our Mister Ed architecture balances functionality, scalability, and security, meeting its goals of reducing ED overcrowding while improving patient care and experience.
+ 
 ### Architectural Approaches
+
 
 ### Analysis Results
 
