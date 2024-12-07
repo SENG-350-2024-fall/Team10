@@ -83,9 +83,25 @@ Major Contextual Factors:<br>
     - The system needs to be comliant with healthcare legal standards for data privacy
 4. Performance
     - Must handle many concurrent requests efficiently and without error, especially during healthcare surges
+  
+Role of Software Architecture in System Lifecycle <br>
+1. Development
+     - Defines a clear plan for design, testing, development and integration of system pieces.
+     - Ensures alignment with largerer system goals such as performance, function, scalanbility and more.
+2. Facilitates communication
+     - The architecture serves as a common language and landscape between developers and stakeholders.
+3. Relationship to System Engineering Artifacts
+     - It links the systems requirements to the actual software implimentation.
+     - Uses and incorporates teh results of system analysis into software design decisions
+4. Helps manage complexity.
+     - it helps to mange the complexity by breaking the system down into smaller more manageable components that have their own clear responsibilities.
+6. Lifecycle Support
+     - The architecture accomodates future iintegration and development.
+     - Supports iterative development methadolagies
 
 ### Driving Requirements
 Lists the functional requirements quality attributes and design constraints. It may point to a separate requirements document.
+
 
 ### Solution Background
 The sub-parts of this section provide a description of why the architecture is the way that it is, and a convincing argument that the architecture is the right one to satisfy the behavioral and quality attribute goals levied upon it.
