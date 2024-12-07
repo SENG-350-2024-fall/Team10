@@ -175,10 +175,31 @@ Design Constraints
     Complies with and integrates seamlessly with existing healthcare systems.
 
 #### Conclusion
-Our Mister Ed architecture balances functionality, scalability, and security, meeting its goals of reducing ED overcrowding while improving patient care and experience.
+Our Mister Ed architecture balances functionality, usability, and performance to meet its goals of reducing ED overcrowding while improving patient care and experience.
  
 ### Architectural Approaches
+#### Design Rationale
+The Mister Ed system architecture reflects important decisions made to address the challenges of ED overcrowding and meet the outlined goals for efficiency, scalability, and user experience. Key architectural decisions were made based on their ability to satisfy the functional and quality requirements while adhering to the design constraints.
 
+**User-Centered Design<br>**
+Why Chosen: <br>
+        Usability: An intuitive, accessible interface caters to diverse user groups, including patients and clinicians, ensuring inclusivity.
+<br>Alternatives Considered:<br>
+        Basic UI with Limited Accessibility: Rejected as it would alienate non-technical users and fail to meet inclusivity goals.
+
+**Integratability <br>**
+Why Chosen:<br>
+        Integrability: THis facilitates seamless integration with existing ED systems and external services, ensuring the correct data exchange.
+<br>Alternatives Considered:<br>
+        Custom Protocols: Rejected due to potential integrability issues and higher maintenance cost.
+        
+**Microservices Architecture<br>**
+Why Chosen:<br>
+        Scalability: Each service (e.g., triage, notifications, monitoring) operates independently, allowing horizontal scaling to handle high demand.
+        <br>Maintainability: This modularity enables easier updates, debugging, and incremental feature additions.
+        <br>Alignment with Goals: Matches the scalability and reliability requirements, supports integration with diverse systems, and simplifies geographic customizations.
+<br>Alternatives Considered:<br>
+        Monolithic Architecture: Rejected due to the challenges in scaling and maintaining a single large codebase. It was less suited for accommodating regional and functional differences across varying healthcare systems.
 
 ### Analysis Results
 
