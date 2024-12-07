@@ -202,8 +202,38 @@ Why Chosen:<br>
         Monolithic Architecture: Rejected due to the challenges in scaling and maintaining a single large codebase. It was less suited for accommodating regional and functional differences across varying healthcare systems.
 
 ### Analysis Results
+Usability Testing<br>
+Method: Conducted usability tests with a diverse group of participants and potential users. THen, evaluated the ease of navigation, accessibility, and response time. <br>
+Results:<br>
+The majority of participants described the interface as intuitive and easy to navigate.
+<br>
+Performance Modeling<br>
+Method: Simulated concurrent virtual triage to measure system under various loads.<br>
+Results:<br>
+Average processing time for virtual triage questions was low (a few seconds) which was deemed as more than acceptable.
 
 ### Mapping Requirements to Architecture
+| **Requirement**            | **Architectural Element**                                              | **Description**                                                                 |
+|-----------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| **Virtual Triage**          | **Triage Service**                                                | Processes patient symptom inputs, applies decision-tree algorithms, and provides guidance or recommendations. |
+| **ED Load Monitoring**      | **Load Monitoring Service**                                       | Continuously fetches and aggregates real-time ED load and wait time data from external systems. |
+| **Virtual Signup/Login**    | **User Management Service**                                       | Handles user registration, ensuring secure and compliant management of patient data. |
+| **Notifications**           | **Notification Service**                                         | Sends real-time alerts to patients about ED visit times or care updates using an event-driven messaging system. |
+| **Care Guidance**           | **Decision Support System (within Triage Service)**              | Suggests alternate care options (GPs, pharmacies, self-care) based on triage results. |
+| **System Admin**            | **Administrative Interface and Backend**                              | Allows administrators to manage workflows, update triage protocols, and access analytics. |
+| **Integration**             | **Integration Layer**                                                 | Connects with ED systems and third-party services like appointment schedulers and clinic directories. |
+
+
+| **Quality Attribute**       | **Architectural Element**                                              | **Description**                                                                 |
+|-----------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| **Reliability**             | **Event-Driven Architecture Design**                      | Ensures fault tolerance with fail/rollback mechanisms. |
+| **Scalability**             | **Microservices Architecture Design**                  | Supports scaling of individual services to accommodate changing user demand. |
+| **Performance**             | **Event-Driven Communication**                        | Low-latency messaging ensures real-time notifications. |
+| **Security**                | **Secure Data Storage**                               | Implements secure protocols to protect patient data. |
+| **Usability**               | **User-Centered Design**                                   | Provides an intuitive, accessible interface, ensuring usabiligty by diverse user groups. |
+| **Maintainability**         | **Modular Codebase**        | Modular design simplifies updates and maintenance. |
+
+
 
 ## 3. Views
 
