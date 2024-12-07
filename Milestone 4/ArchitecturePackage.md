@@ -213,6 +213,8 @@ Results:<br>
 Average processing time for virtual triage questions was low (a few seconds) which was deemed as more than acceptable.
 
 ### Mapping Requirements to Architecture
+
+#### Functional Requirements
 | **Requirement**            | **Architectural Element**                                              | **Description**                                                                 |
 |-----------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | **Virtual Triage**          | **Triage Service**                                                | Processes patient symptom inputs, applies decision-tree algorithms, and provides guidance or recommendations. |
@@ -223,7 +225,7 @@ Average processing time for virtual triage questions was low (a few seconds) whi
 | **System Admin**            | **Administrative Interface and Backend**                              | Allows administrators to manage workflows, update triage protocols, and access analytics. |
 | **Integration**             | **Integration Layer**                                                 | Connects with ED systems and third-party services like appointment schedulers and clinic directories. |
 
-
+#### Quality Attributes
 | **Quality Attribute**       | **Architectural Element**                                              | **Description**                                                                 |
 |-----------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | **Reliability**             | **Event-Driven Architecture Design**                      | Ensures fault tolerance with fail/rollback mechanisms. |
@@ -233,6 +235,12 @@ Average processing time for virtual triage questions was low (a few seconds) whi
 | **Usability**               | **User-Centered Design**                                   | Provides an intuitive, accessible interface, ensuring usabiligty by diverse user groups. |
 | **Maintainability**         | **Modular Codebase**        | Modular design simplifies updates and maintenance. |
 
+#### Design Constraints
+| **Constraint**              | **Architectural Element**                                              | **Description**                                                                 |
+|-----------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| **Technological**           | **Cross-Platform Development Frameworks (e.g., React, Flutter)**       | Enables deployment across web browsers, mobile devices, and desktop platforms seamlessly. |
+| **Integration**             | **Integration Layer with Standards (HL7, FHIR)**                      | Adheres to established healthcare data exchange protocols, ensuring compatibility with existing ED and clinic systems. |
+| **Geographic**              | **Configurable Localization Features**                                | Supports region-specific regulatory requirements, language options, and healthcare workflows. |
 
 
 ## 3. Views
