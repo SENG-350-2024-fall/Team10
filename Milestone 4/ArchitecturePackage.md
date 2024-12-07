@@ -69,21 +69,20 @@ Goals of the MisterED Software Architecture:<br>
     - Allow ED staff to prioritize and allocate resources to more critical patients/cases. 
 2. Improve the patient healthcare experience
    - By providing virtual triage options and real-time updates, patients can avoid long grueling waits at the ED.
-3. Supports Scalabitilty and Felexibility
+3. Supports Scalabitilty and Flexibility
    - The software architecture supports varying ED capacities and workflows.
    - The system allows integration with external systems such as pharmacies, primary care centres, etc.
   
 Major Contextual Factors:<br>
 1.  Real-time complexity
-    - Real-time data from more than one source (ED capacities, ED wiat times, virtual triage results, etc.) need to be integrated and processed correctly.
+    - Real-time data from more than one source (ED capacities, ED wait times, virtual triage results, etc.) need to be integrated and processed correctly.
 2. User Diversity
     - The system caters to a broad user base, including patients with varying levels of technical proficiency, clinicians, and administrative staff.
-3. 
-    - b
-    - b
-    - b
-    - b
-    - b
+3. System incorporation and regulation requirements
+    - The system must be able to integrate seamlessly with other systems such as the ED software systems, electronic health records, appointment scheduling programs at clinics, and more.
+    - The system needs to be comliant with healthcare legal standards for data privacy
+4. Performance
+    - Must handle many concurrent requests efficiently and without error, especially during healthcare surges
 
 ### Driving Requirements
 Lists the functional requirements quality attributes and design constraints. It may point to a separate requirements document.
