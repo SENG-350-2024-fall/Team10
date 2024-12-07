@@ -79,7 +79,7 @@ Major Contextual Factors:<br>
 2. User Diversity
     - The system caters to a broad user base, including patients with varying levels of technical proficiency, clinicians, and administrative staff.
 3. System incorporation and regulation requirements
-    - The system must be able to integrate seamlessly with other systems such as the ED software systems, electronic health records, appointment scheduling programs at clinics, and more.
+    - The system must be able to integrate seamlessly with other systems such as the ED software systems, appointment scheduling programs at clinics, and more.
     - The system needs to be comliant with healthcare legal standards for data privacy
 4. Performance
     - Must handle many concurrent requests efficiently and without error, especially during healthcare surges
@@ -97,11 +97,59 @@ Role of Software Architecture in System Lifecycle <br>
      - it helps to mange the complexity by breaking the system down into smaller more manageable components that have their own clear responsibilities.
 6. Lifecycle Support
      - The architecture accomodates future iintegration and development.
-     - Supports iterative development methadolagies
+     - Supports iterative development methadolagies.
 
 ### Driving Requirements
-Lists the functional requirements quality attributes and design constraints. It may point to a separate requirements document.
+#### Functional Requirements
+1. Virtual Triage
+Patients are able to answer questions about their symptoms to determine the severity of their condition and further actions.
 
+2. ED Load monitoring
+The system displays real-time ED capcities and wait times for ED's near by.
+
+3. Virtual sign up / login
+Patients/users can sign up and register online as well as log in once an account has been created. 
+
+4. Notifications
+Notifies patients when it is time to visit the ED or receive care.
+
+5. Care guidance
+Provide instructions and next actions to take or care to receive. This includes directiosn to nearby clinics, pharmacies or ED's. Can offer self-care recommendations for less critical cases.
+
+6. System admin
+Administrators can update data, manage workflows and access sytem analytics.
+
+7. Integration
+Integrate with external systems such as ED systems, appointment schedulers, etc.
+
+#### Quality Attributes
+1. Reliability
+Ensure reliability of system, especially during high demand periods. This could include fail-safe mechanisms for critical features in case of failure.
+
+2. Scalability
+Scale easily to include new regions or additional hospitals.
+
+3. Performance
+Process triage results and load data quickly (under 30s) for each patient. Notifications are sent in near-real time. 
+
+4. Security
+Patient data is protected in a safe and secure manner. 
+
+5. Usability
+Provide an intuitive and accessible interface for diverse users and user-groups. 
+
+6. Maintanability
+Use modular, well-documented code to facilitate future updates and troubleshooting. Allow fairly seamless integration of new algorithms or features.
+
+#### Design Constraints
+1. Technological
+It supports operation on common platforms (web browsers, mobile apps, desktop, mobile browsers, etc.).
+
+2. Integration
+Designed to be compatible with ED and other clinic software systems. 
+
+3. Geographic
+Accommodates the differences in regulations, software systems and other resources/factors across different healthcare regions.
 
 ### Solution Background
 The sub-parts of this section provide a description of why the architecture is the way that it is, and a convincing argument that the architecture is the right one to satisfy the behavioral and quality attribute goals levied upon it.
