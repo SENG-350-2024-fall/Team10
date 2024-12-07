@@ -98,80 +98,80 @@ Role of Software Architecture in System Lifecycle <br>
 
 ### Driving Requirements
 #### Functional Requirements
-1. Virtual Triage
+1. Virtual Triage<br>
 Patients are able to answer questions about their symptoms to determine the severity of their condition and further actions.
 
-2. ED Load monitoring
+2. ED Load monitoring<br>
 The system displays real-time ED capcities and wait times for ED's near by.
 
-3. Virtual sign up / login
+3. Virtual sign up / login<br>
 Patients/users can sign up and register online as well as log in once an account has been created. 
 
-4. Notifications
+4. Notifications<br>
 Notifies patients when it is time to visit the ED or receive care.
 
-5. Care guidance
+5. Care guidance<br>
 Provide instructions and next actions to take or care to receive. This includes directiosn to nearby clinics, pharmacies or ED's. Can offer self-care recommendations for less critical cases.
 
-6. System admin
+6. System admin<br>
 Administrators can update data, manage workflows and access sytem analytics.
 
-7. Integration
+7. Integration<br>
 Integrate with external systems such as ED systems, appointment schedulers, etc.
 
 #### Quality Attributes
-1. Reliability
+1. Reliability<br>
 Ensure reliability of system, especially during high demand periods. This could include fail-safe mechanisms for critical features in case of failure.
 
-2. Scalability
+2. Scalability<br>
 Scale easily to include new regions or additional hospitals.
 
-3. Performance
+3. Performance<br>
 Process triage results and load data quickly (under 30s) for each patient. Notifications are sent in near-real time. 
 
-4. Security
+4. Security<br>
 Patient data is protected in a safe and secure manner. 
 
-5. Usability
+5. Usability<br>
 Provide an intuitive and accessible interface for diverse users and user-groups. 
 
-6. Maintanability
+6. Maintanability<br>
 Use modular, well-documented code to facilitate future updates and troubleshooting. Allow fairly seamless integration of new algorithms or features.
 
 #### Design Constraints
-1. Technological
+1. Technological<br>
 It supports operation on common platforms (web browsers, mobile apps, desktop, mobile browsers, etc.).
 
-2. Integration
+2. Integration<br>
 Designed to be compatible with ED and other clinic software systems. 
 
-3. Geographic
+3. Geographic<br>
 Accommodates the differences in regulations, software systems and other resources/factors across different healthcare regions.
 
 ### Solution Background
 #### Key Architectural Choices
-1. User centred design
+1. User centred design<br>
 The interface is designed with accessibility and ease-of-use for users and patients in mind. Diverse user groups, including patients and clinicians, can interact seamlessly with the system. This aligns with our usability and performance goals by simplifying the experience.
 
-2. Integratable
+2. Integratable<br>
 The sytem adheres to a base standard taht allows it to be easuly integratable with other softeware systems at EDs and clinics. This standardization ensures compatibility, data accuracy, and compliance. This architectural choice aligns with our integration goals by helping the system integrate with any basic software system.
 
-3. Modular Microservices Architecture
+3. Modular Microservices Architecture<br>
 The system is decomposed into distinct, independently deployable services, each responsible for a specific function (e.g., triage, notifications, load monitoring).
 This approach provides flexibility, scalability, and maintainability. Each service can be updated or scaled independently to handle increased demand or incorporate new features.
 
 #### Why this architecture works
-Behavioral Goals
-    Supports virtual triage, real-time ED monitoring, and timely notifications.
+Behavioral Goals<br>
+    Supports virtual triage, real-time ED monitoring, and timely notifications.<br>
     Handles high demand efficiently with modular and scalable components.
 
-Quality Attributes
-    Scalability: Modular design supports future growth.
-    Reliability: Simple, high availability design with distributed deployment.
-    Security: Pricate data and information protected appropriately.
-    Usability: Accessible, intuitive interfaces for all users.
+Quality Attributes<br>
+    Scalability: Modular design supports future growth.<br>
+    Reliability: Simple, high availability design with distributed deployment.<br>
+    Security: Pricate data and information protected appropriately.<br>
+    Usability: Accessible, intuitive interfaces for all users.<br>
 
-Design Constraints
+Design Constraints<br>
     Complies with and integrates seamlessly with existing healthcare systems.
 
 #### Conclusion
