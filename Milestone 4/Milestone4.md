@@ -171,4 +171,4 @@ Figure 8: Home Page
 | Andra | allocation table, Analyze and Summarize Results Section |
 | Shyla | C&C View Section (primary presentation, element catalog, context diagram, variability, rationale), Plan and conduct the review of the architecture package Section|
 | Val | Section 4, finishing the code, conducting architecture package review, Section 3 | 
-| Alex |  |
+| Alex | Architecture Background Section (Background, System Overview, Context, Driving Requirements, Solution, Architectural Approaches, Analysis Results, Mapping Requirements to Architecture) |
