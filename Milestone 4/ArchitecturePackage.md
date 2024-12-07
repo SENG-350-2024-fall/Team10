@@ -203,12 +203,12 @@ Why Chosen:<br>
 
 ### Analysis Results
 Usability Testing<br>
-Method: Conducted usability tests with a diverse group of participants and potential users. THen, evaluated the ease of navigation, accessibility, and response time. <br>
+Method:<br>Conducted usability tests with a diverse group of participants and potential users. THen, evaluated the ease of navigation, accessibility, and response time. <br>
 Results:<br>
 The majority of participants described the interface as intuitive and easy to navigate.
-<br>
+<br><br>
 Performance Modeling<br>
-Method: Simulated concurrent virtual triage to measure system under various loads.<br>
+Method:<br>Simulated concurrent virtual triage to measure system under various loads.<br>
 Results:<br>
 Average processing time for virtual triage questions was low (a few seconds) which was deemed as more than acceptable.
 
